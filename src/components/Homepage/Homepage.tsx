@@ -1,3 +1,4 @@
+import Navbar from "../Navbar/Navbar"
 import Callback from "./Callback"
 import CSRCommunity from "./CSRCommunity"
 import LandingPage from "./LandingPage"
@@ -7,6 +8,7 @@ import ThreeStep from "./ThreeStep"
 const Homepage = () => {
     return (
         <div>
+            <Navbar />
             <LandingPage />
             <Stats />
             <ThreeStep />

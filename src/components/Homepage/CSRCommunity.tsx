@@ -1,71 +1,142 @@
-// import React from 'react';
-import { ArrowRight } from 'lucide-react'; // or use react-icons
+import { ArrowRight } from 'lucide-react';
 
 const CSRCommunity = () => {
     return (
-        <div className="w-full bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="w-full bg-white py-8 lg:py-16 px-4">
+            <div className="mx-auto" style={{ maxWidth: '1512px' }}>
                 
-                {/* Main Container - Two Column Layout */}
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                {/* Main Container */}
+                <div 
+                    className="flex flex-col lg:flex-row items-start"
+                    style={{
+                        maxWidth: '1308px',
+                        gap: '76px',
+                        margin: '0 auto'
+                    }}
+                >
                     
-                    {/* Left Side - Image with Blue Border Overlay */}
-                    <div className="w-full lg:w-[45%] relative">
-                        {/* Blue Border Overlay */}
-                        <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-cyan-300 to-blue-400 rounded-3xl z-0"></div>
+                    {/* Image Section */}
+                    <div 
+                        className="relative flex-shrink-0 w-full lg:w-auto"
+                        style={{
+                            maxWidth: '606px',
+                            aspectRatio: '606 / 486.67'
+                        }}
+                    >
+                        <div 
+                            className="absolute bg-gradient-to-br from-cyan-300 to-blue-400"
+                            style={{
+                                top: '-16px',
+                                left: '-16px',
+                                right: '16px',
+                                bottom: '16px',
+                                borderRadius: '10px',
+                                zIndex: 0
+                            }}
+                        />
                         
-                        {/* Main Image */}
-                        <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+                        <div 
+                            className="relative overflow-hidden shadow-2xl"
+                            style={{
+                                borderRadius: '10px',
+                                zIndex: 10
+                            }}
+                        >
                             <img 
                                 src="/Homepage/Nurse.png" 
-                                alt="Healthcare worker providing community health services" 
+                                alt="Healthcare worker providing community health services"
                                 className="w-full h-full object-cover"
+                                style={{ borderRadius: '10px' }}
                             />
                         </div>
                     </div>
 
-                    {/* Right Side - Content Section */}
-                    <div className="w-full lg:w-[55%] relative">
+                    {/* Content Section */}
+                    <div 
+                        className="flex flex-col w-full lg:w-auto"
+                        style={{
+                            maxWidth: '626px',
+                            gap: '23px'
+                        }}
+                    >
                         
                         {/* Heading */}
-                        <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                            <span className="text-blue-600">CSR & Community Health</span>
-                            <br/>
-                            <span className="text-gray-900">Initiatives</span>
+                        <h2 
+                            className="text-3xl lg:text-[46px]"
+                            style={{
+                                fontFamily: "'Source Serif Pro', serif",
+                                fontWeight: 600,
+                                lineHeight: '121%',
+                                letterSpacing: '-0.02em',
+                                textTransform: 'capitalize',
+                                color: '#000000'
+                            }}
+                        >
+                            Community Connect: <span style={{ color: '#1566B7' }}>CSR</span><br/>
+                            <span style={{ color: '#1566B7' }}>Across India</span>
                         </h2>
 
-                        {/* Description Paragraph */}
-                        <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                            We conduct community <span className="font-bold">health programs, rural outreach and preventive healthcare camps</span> to make healthcare accessible beyond hospitals and cities.
+                        {/* Description */}
+                        <p 
+                            style={{
+                                fontFamily: "'DM Sans', sans-serif",
+                                fontWeight: 300,
+                                fontSize: '18px',
+                                lineHeight: '27px',
+                                color: '#000000'
+                            }}
+                        >
+                            We run structured community healthcare programs focused on preventive care, rural outreach and access to essential medical services.
                         </p>
 
-                        {/* Bullet Points List */}
-                        <ul className="space-y-3 mb-8">
-                            <li className="flex items-start gap-3 text-gray-800 text-base lg:text-lg">
-                                <span className="text-blue-600 font-bold mt-1">•</span>
-                                <span>Free health check-up camps</span>
-                            </li>
-                            <li className="flex items-start gap-3 text-gray-800 text-base lg:text-lg">
-                                <span className="text-blue-600 font-bold mt-1">•</span>
-                                <span>Mobile medical unit outreach in rural areas</span>
-                            </li>
-                            <li className="flex items-start gap-3 text-gray-800 text-base lg:text-lg">
-                                <span className="text-blue-600 font-bold mt-1">•</span>
-                                <span>School and community health awareness programs</span>
-                            </li>
-                            <li className="flex items-start gap-3 text-gray-800 text-base lg:text-lg">
-                                <span className="text-blue-600 font-bold mt-1">•</span>
-                                <span>Eye-care and primary healthcare support drives</span>
-                            </li>
-                        </ul>
+                        {/* List */}
+                        <div 
+                            style={{
+                                fontFamily: "'DM Sans', sans-serif",
+                                fontWeight: 600,
+                                fontSize: '18px',
+                                lineHeight: '30px',
+                                color: '#000000'
+                            }}
+                        >
+                            <p style={{ marginBottom: '8px' }}>Community Connect has enabled:</p>
+                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                                <li className="flex gap-3 mb-1">
+                                    <span style={{ color: '#1566B7' }}>•</span>
+                                    <span>Healthcare access for communities and families across multiple regions in India</span>
+                                </li>
+                                <li className="flex gap-3 mb-1">
+                                    <span style={{ color: '#1566B7' }}>•</span>
+                                    <span>Coverage of villages and remote areas through Mobile Medical Unit (MMU) deployments</span>
+                                </li>
+                                <li className="flex gap-3 mb-1">
+                                    <span style={{ color: '#1566B7' }}>•</span>
+                                    <span>Delivery of preventive health check-ups and health awareness programs</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span style={{ color: '#1566B7' }}>•</span>
+                                    <span>Ambulance support and donations for community healthcare requirements</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                        {/* CTA Link/Button */}
+                        {/* CTA */}
                         <a 
-                            href="#csr-initiatives" 
-                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-lg hover:text-blue-700 transition-colors duration-300 group"
+                            href="#csr-initiatives"
+                            className="inline-flex items-center gap-2 group hover:opacity-80 transition-opacity"
+                            style={{
+                                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                                fontWeight: 600,
+                                fontSize: '15px',
+                                lineHeight: '100%',
+                                letterSpacing: '0.15em',
+                                textTransform: 'uppercase',
+                                color: '#1566B7',
+                                textDecoration: 'none'
+                            }}
                         >
                             EXPLORE CSR INITIATIVES
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </a>
                     </div>
                 </div>

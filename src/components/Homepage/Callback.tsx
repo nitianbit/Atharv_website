@@ -1,39 +1,116 @@
-// import React from 'react';
-
 const Callback = () => {
     return (
-        <div className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="w-full bg-white py-8 lg:py-12 px-4">
+            <div className="mx-auto" style={{ maxWidth: '1512px' }}>
                 
                 {/* Main Container */}
-                <div className="relative flex flex-col lg:flex-row items-center bg-gradient-to-r from-[#1E5BA8] via-[#2668B8] to-[#2E75C8] rounded-3xl overflow-visible shadow-2xl">
+                <div 
+                    className="relative flex items-center overflow-visible mx-auto"
+                    style={{
+                        maxWidth: '1311px',
+                        minHeight: '346px',
+                        borderRadius: '20px',
+                        background: '#1566B7',
+                        border: '3px solid #1566B7'
+                    }}
+                >
                     
-                    {/* Left Side - Doctor Image (Overlapping) */}
-                    <div className="w-full lg:w-[35%] relative z-20 -mb-12 lg:mb-0 lg:-mr-8">
+                    {/* Doctor Image - Overlapping */}
+                    <div 
+                        className="absolute hidden lg:block"
+                        style={{
+                            width: '431px',
+                            height: '550px',
+                            top: '-75px',
+                            left: '65px',
+                            zIndex: 20
+                        }}
+                    >
                         <img 
                             src="/Homepage/maledoctor.png" 
-                            alt="Healthcare professional ready to assist" 
-                            className="w-full h-auto object-contain"
+                            alt="Healthcare professional"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'contain'
+                            }}
                         />
                     </div>
 
-                    {/* Right Side - Content Section */}
-                    <div className="w-full lg:w-[65%] relative z-10 px-8 sm:px-12 lg:px-16 lg:pl-20 py-12 lg:py-16">
+                    {/* Content Section */}
+                    <div 
+                        className="w-full lg:ml-auto flex flex-col p-8 lg:p-0"
+                        style={{
+                            maxWidth: '593px',
+                            gap: '13px',
+                            paddingRight: '0',
+                            marginLeft: 'auto'
+                        }}
+                    >
                         
-                        {/* Main Heading */}
-                        <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                            Need Healthcare<br/>
-                            Help? We'll Call You Back.
+                        {/* Heading */}
+                        <h2 
+                            className="lg:w-[586px]"
+                            style={{
+                                fontFamily: "'Source Serif Pro', serif",
+                                fontWeight: 600,
+                                fontSize: 'clamp(32px, 5vw, 46px)',
+                                lineHeight: '121%',
+                                letterSpacing: '-0.02em',
+                                textTransform: 'capitalize',
+                                color: '#FFFFFF',
+                                margin: 0
+                            }}
+                        >
+                            Need healthcare help?<br/>
+                            We'll call you back.
                         </h2>
 
-                        {/* Description Text */}
-                        <p className="text-white text-base sm:text-lg leading-relaxed mb-8">
-                            Tell us briefly what you need — <strong className="font-bold">online doctor consultation, medicines, lab tests, or ambulance service</strong>.
+                        {/* Description */}
+                        <p 
+                            className="lg:w-[540px]"
+                            style={{
+                                fontFamily: "'DM Sans', sans-serif",
+                                fontWeight: 300,
+                                fontSize: '18px',
+                                lineHeight: '30px',
+                                color: '#FFFFFF',
+                                margin: 0
+                            }}
+                        >
+                            Tell us briefly what you need — <span style={{ fontWeight: 600 }}>online doctor consultation, medicines, lab tests, or ambulance service</span>.
                         </p>
 
-                        {/* CTA Button */}
-                        <button className="bg-white text-gray-900 font-bold text-sm sm:text-base px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 uppercase tracking-wide">
-                            REQUEST A CALL BACK
+                        {/* Button */}
+                        <button 
+                            className="hover:opacity-90 transition-all hover:shadow-xl"
+                            style={{
+                                width: '267px',
+                                height: '50px',
+                                borderRadius: '192px',
+                                padding: '16px 28px',
+                                background: '#FFFFFF',
+                                border: '1px solid #1566B7',
+                                boxShadow: '1px 6px 7.7px 0px rgba(49, 119, 225, 0.24)',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}
+                        >
+                            <span 
+                                style={{
+                                    fontFamily: "'DM Sans', sans-serif",
+                                    fontWeight: 600,
+                                    fontSize: '16px',
+                                    lineHeight: '100%',
+                                    textTransform: 'uppercase',
+                                    color: '#142349',
+                                    whiteSpace: 'nowrap'
+                                }}
+                            >
+                                REQUEST A CALL BACK
+                            </span>
                         </button>
                     </div>
                 </div>

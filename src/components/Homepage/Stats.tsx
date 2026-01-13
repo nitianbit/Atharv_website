@@ -1,58 +1,242 @@
-// import React from 'react';
-
 const Stats = () => {
     return (
-        <div className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-white">
-            {/* Main Blue Container */}
-            <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#2B7FD8] via-[#3B8BE8] to-[#4A96F0] rounded-[32px] px-6 sm:px-12 py-14 shadow-2xl">
+        <div className="w-full relative" style={{ height: '463px' }}>
+            <div
+                className="absolute"
+                style={{
+                    width: '1312px',
+                    height: '463px',
+                    top: '20px',
+                    left: '50%', 
+                    transform: 'translateX(-50%)', 
+                    borderRadius: '20px',
+                    background: 'linear-gradient(126.19deg, #176EC6 21.84%, #0F58A1 78.16%)',
+                }}
+            >
                 
-                {/* Title */}
-                <h2 className="text-white text-4xl sm:text-5xl font-bold text-center mb-12 tracking-wide">
+                <h2
+                    className="absolute flex items-center justify-center"
+                    style={{
+                        width: '727px',
+                        height: '58px',
+                        top: '38px', 
+                        left: '292px', 
+                        fontFamily: "'Source Serif Pro', serif",
+                        fontWeight: 600,
+                        fontSize: '46px',
+                        lineHeight: '100%',
+                        letterSpacing: '0.02em',
+                        textAlign: 'center',
+                        textTransform: 'capitalize',
+                        color: '#FFFFFF', 
+                        backgroundColor: 'transparent',
+                    }}
+                >
                     Our Statistics
                 </h2>
 
-                {/* Stats Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+                <div
+                    className="absolute flex justify-between"
+                    style={{
+                        width: '1174px',
+                        height: '290px',
+                        top: '131px', 
+                        left: '69px', 
+                    }}
+                >
                     
-                    {/* Card 1 - 7+ */}
-                    <div className="stat-card bg-blue-600/0 border-[2px] border-blue-400/30 rounded-2xl px-6 py-10 flex flex-col items-center justify-center min-h-[200px] hover:bg-white/10 transition-all duration-300">
-                        <h3 className="text-white text-[80px] leading-none font-extrabold mb-3">
+                    <div className="flex flex-col items-center"
+                        style={{
+                            width: '249px',
+                            height: '265px',
+                            borderRadius: '20px',
+                            borderWidth: '2px', 
+                            paddingTop: '54px',
+                            paddingBottom: '54px',
+                            background: 'linear-gradient(180deg, rgba(18, 137, 255, 0.1) 0%, rgba(7, 74, 155, 0.1) 49.52%, rgba(3, 23, 73, 0.1) 100%)',
+                            border: '2px solid rgba(222, 222, 222, 0.2)', 
+                            boxShadow: '0px 0px 4px 0px #00000036',
+                        }}
+                    >
+                        <div style={{
+                            width: '96px',
+                            height: '95px', 
+                            fontFamily: "'Poppins', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '84px',
+                            lineHeight: '27px',
+                            letterSpacing: '-0.04em',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginBottom: '2px', 
+                        }}>
                             7+
-                        </h3>
-                        <p className="text-white text-[13px] font-bold text-center uppercase tracking-wider">
-                            Years Of Proven<br/>Healthcare
-                        </p>
+                        </div>
+                        <div style={{
+                            width: '209px',
+                            height: '56px',
+                            fontFamily: "'DM Sans', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '20px',
+                            lineHeight: '100%',
+                            letterSpacing: '0%',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            marginTop: '25px', 
+                        }}>
+                            Years Of Proven Healthcare
+                        </div>
                     </div>
 
-                    {/* Card 2 - 20+ */}
-                    <div className="stat-card bg-blue-600/0 border-[2px] border-blue-400/30 rounded-2xl px-6 py-10 flex flex-col items-center justify-center min-h-[200px] hover:bg-white/10 transition-all duration-300">
-                        <h3 className="text-white text-[80px] leading-none font-extrabold mb-3">
+                    {/* Card 2 */}
+                    <div className="flex flex-col items-center"
+                        style={{
+                            width: '249px',
+                            height: '265px',
+                            borderRadius: '20px',
+                            borderWidth: '2px',
+                            paddingTop: '54px',
+                            paddingBottom: '54px',
+                            background: 'linear-gradient(180deg, rgba(18, 137, 255, 0.1) 0%, rgba(7, 74, 155, 0.1) 49.52%, rgba(3, 23, 73, 0.1) 100%)',
+                            border: '2px solid rgba(222, 222, 222, 0.2)',
+                            boxShadow: '0px 0px 4px 0px #00000036',
+                        }}
+                    >
+                        <div style={{
+                            height: '95px',
+                            fontFamily: "'Poppins', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '84px',
+                            lineHeight: '27px',
+                            letterSpacing: '-0.04em',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginBottom: '2px',
+                        }}>
                             20+
-                        </h3>
-                        <p className="text-white text-[13px] font-bold text-center uppercase tracking-wider">
-                            Years Of Proven<br/>Healthcare
-                        </p>
+                        </div>
+                        <div style={{
+                            width: '209px',
+                            height: '56px',
+                            fontFamily: "'DM Sans', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '20px',
+                            lineHeight: '100%',
+                            letterSpacing: '0%',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            marginTop: '25px',
+                        }}>
+                            Years Of Proven Healthcare
+                        </div>
                     </div>
 
-                    {/* Card 3 - 100+ */}
-                    <div className="stat-card bg-blue-600/0 border-[2px] border-blue-400/30 rounded-2xl px-6 py-10 flex flex-col items-center justify-center min-h-[200px] hover:bg-white/10 transition-all duration-300">
-                        <h3 className="text-white text-[80px] leading-none font-extrabold mb-3">
+                    {/* Card 3 */}
+                    <div className="flex flex-col items-center"
+                        style={{
+                            width: '249px',
+                            height: '265px',
+                            borderRadius: '20px',
+                            borderWidth: '2px',
+                            paddingTop: '54px',
+                            paddingBottom: '54px',
+                            background: 'linear-gradient(180deg, rgba(18, 137, 255, 0.1) 0%, rgba(7, 74, 155, 0.1) 49.52%, rgba(3, 23, 73, 0.1) 100%)',
+                            border: '2px solid rgba(222, 222, 222, 0.2)',
+                            boxShadow: '0px 0px 4px 0px #00000036',
+                        }}
+                    >
+                        <div style={{
+                            height: '95px',
+                            fontFamily: "'Poppins', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '84px',
+                            lineHeight: '27px',
+                            letterSpacing: '-0.04em',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginBottom: '2px',
+                        }}>
                             100+
-                        </h3>
-                        <p className="text-white text-[13px] font-bold text-center uppercase tracking-wider">
-                            Years Of Proven<br/>Healthcare
-                        </p>
+                        </div>
+                        <div style={{
+                            width: '209px',
+                            height: '56px',
+                            fontFamily: "'DM Sans', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '20px',
+                            lineHeight: '100%',
+                            letterSpacing: '0%',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            marginTop: '25px',
+                        }}>
+                            Years Of Proven Healthcare
+                        </div>
                     </div>
 
-                    {/* Card 4 - 10+ */}
-                    <div className="stat-card bg-blue-600/0 border-[2px] border-blue-400/30 rounded-2xl px-6 py-10 flex flex-col items-center justify-center min-h-[200px] hover:bg-white/10 transition-all duration-300">
-                        <h3 className="text-white text-[80px] leading-none font-extrabold mb-3">
+                    {/* Card 4 */}
+                    <div className="flex flex-col items-center"
+                        style={{
+                            width: '249px',
+                            height: '265px',
+                            borderRadius: '20px',
+                            borderWidth: '2px',
+                            paddingTop: '54px',
+                            paddingBottom: '54px',
+                            background: 'linear-gradient(180deg, rgba(18, 137, 255, 0.1) 0%, rgba(7, 74, 155, 0.1) 49.52%, rgba(3, 23, 73, 0.1) 100%)',
+                            border: '2px solid rgba(222, 222, 222, 0.2)',
+                            boxShadow: '0px 0px 4px 0px #00000036',
+                        }}
+                    >
+                        <div style={{
+                            height: '95px',
+                            fontFamily: "'Poppins', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '84px',
+                            lineHeight: '27px',
+                            letterSpacing: '-0.04em',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginBottom: '2px',
+                        }}>
                             10+
-                        </h3>
-                        <p className="text-white text-[13px] font-bold text-center uppercase tracking-wider">
-                            Years Of Proven<br/>Healthcare
-                        </p>
+                        </div>
+                        <div style={{
+                            width: '209px',
+                            height: '56px',
+                            fontFamily: "'DM Sans', sans-serif",
+                            fontWeight: 700,
+                            fontSize: '20px',
+                            lineHeight: '100%',
+                            letterSpacing: '0%',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            color: '#FFFFFF',
+                            marginTop: '25px',
+                        }}>
+                            Years Of Proven Healthcare
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
