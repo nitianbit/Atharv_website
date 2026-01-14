@@ -6,7 +6,8 @@ const ThreeStep = () => {
             <div
                 className="absolute inset-0"
                 style={{
-                    width: '1511px',
+                    width: '100%',
+                    maxWidth: '1511px',
                     height: '638px',
                     left: '1px',
                     background: 'linear-gradient(126.19deg, #2B7FD8 21.84%, #4A96F0 78.16%)',
@@ -30,7 +31,8 @@ const ThreeStep = () => {
                 <div
                     className="absolute flex flex-col items-center"
                     style={{
-                        width: '1009px',
+                        width: '100%',
+                        maxWidth: '1009px',
                         height: '412px',
                         left: '415px',
                         top: '70px',
@@ -39,7 +41,8 @@ const ThreeStep = () => {
                 >
                     {/* Title */}
                     <div style={{
-                        width: '727px',
+                        width: '100%',
+                        maxWidth: '727px',
                         textAlign: 'center',
                     }}>
                         <h2 style={{
@@ -69,7 +72,8 @@ const ThreeStep = () => {
                     <div
                         className="relative flex justify-center w-full"
                         style={{
-                            width: '1009px',
+                            width: '100%',
+                            maxWidth: '1009px',
                             height: '240px',
                             gap: '62px', // Gap between flex items
                         }}
@@ -78,7 +82,8 @@ const ThreeStep = () => {
                         <div
                             className="absolute"
                             style={{
-                                width: '655px',
+                                width: '65%',
+                                maxWidth: '655px',
                                 height: '0px',
                                 borderTopWidth: '2px',
                                 borderTopStyle: 'dashed',

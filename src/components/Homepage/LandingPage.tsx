@@ -4,7 +4,7 @@ const LandingPage = () => {
             <div className="xl:hidden w-full px-6 py-12 flex flex-col gap-8 bg-[linear-gradient(228deg,#9ADDFC_14.6%,rgba(79,197,224,0)_68.04%)]">
                 <div className="space-y-8 max-w-2xl mx-auto">
                     <h1 className="font-['Source Serif 4'] font-semibold text-4xl md:text-5xl text-[#142349] leading-tight capitalize">
-                        <span style={{ color: '#1566B7' }}>Building Trusted Healthcare </span>
+                        <span className="text-[#1566B7]">Building Trusted Healthcare </span>
                         Access for India Since 2019
                     </h1>
 
@@ -31,7 +31,8 @@ const LandingPage = () => {
 
             <div className="hidden xl:block relative shrink-0 text-left"
                 style={{
-                    width: '1512.5px',
+                    width: '100%',
+                    maxWidth: '1512.5px',
                     height: '768px',
                     background: 'linear-gradient(228deg, #9ADDFC 14.6%, rgba(79, 197, 224, 0) 68.04%)',
                 }}
@@ -39,8 +40,9 @@ const LandingPage = () => {
 
                 <div className="absolute flex flex-col gap-[26px]"
                     style={{
-                        width: '630px',
-                        height: '393px',
+                        width: '90%',
+                        maxWidth: '630px',
+                        height: 'auto',
                         top: '254px',
                         left: '102px',
                     }}
@@ -48,20 +50,22 @@ const LandingPage = () => {
 
                     <h1 className="font-['Source_Serif_4'] font-semibold text-[#142349] capitalize"
                         style={{
-                            width: '600px',
+                            width: '100%',
+                            maxWidth: '600px',
                             fontSize: '60px',
                             lineHeight: '114%',
                             letterSpacing: '-0.02em',
                         }}
                     >
-                        Building Trusted Healthcare Access for India Since 2019
+                        <span className="text-[#1566B7]">Building Trusted Healthcare </span>Access for India Since 2019
                     </h1>
 
 
                     <div className="font-['DM_Sans'] text-[#142349]"
                         style={{
-                            width: '630px',
-                            height: '90px',
+                            width: '100%',
+                            maxWidth: '630px',
+                            height: 'auto',
                             fontSize: '18px',
                             lineHeight: '30px',
                             fontWeight: 300,
