@@ -1,3 +1,30 @@
+import { useEffect, useRef } from 'react';
+import { animate, useInView } from 'framer-motion';
+
+const Counter = ({ from, to }: { from: number; to: number }) => {
+    const nodeRef = useRef<HTMLSpanElement>(null);
+    const isInView = useInView(nodeRef, { once: true, margin: "-50px" });
+
+    useEffect(() => {
+        if (!isInView) return;
+
+        const node = nodeRef.current;
+        const controls = animate(from, to, {
+            duration: 2.5,
+            onUpdate(value) {
+                if (node) {
+                    node.textContent = value.toFixed(0);
+                }
+            },
+            ease: "easeOut"
+        });
+
+        return () => controls.stop();
+    }, [from, to, isInView]);
+
+    return <span ref={nodeRef} />;
+};
+
 const Stats = () => {
     return (
         <div className="w-full relative" style={{ height: '463px' }}>
@@ -61,7 +88,7 @@ const Stats = () => {
                         }}
                     >
                         <div style={{
-                            width: '96px',
+                            width: 'fit-content',
                             height: '95px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: 700,
@@ -76,7 +103,7 @@ const Stats = () => {
                             justifyContent: 'center',
                             marginBottom: '2px',
                         }}>
-                            7+
+                            <Counter from={0} to={7} />+
                         </div>
                         <div style={{
                             width: '209px',
@@ -124,7 +151,7 @@ const Stats = () => {
                             justifyContent: 'center',
                             marginBottom: '2px',
                         }}>
-                            20+
+                            <Counter from={0} to={20} />+
                         </div>
                         <div style={{
                             width: '209px',
@@ -172,7 +199,7 @@ const Stats = () => {
                             justifyContent: 'center',
                             marginBottom: '2px',
                         }}>
-                            100+
+                            <Counter from={0} to={100} />+
                         </div>
                         <div style={{
                             width: '209px',
@@ -220,7 +247,7 @@ const Stats = () => {
                             justifyContent: 'center',
                             marginBottom: '2px',
                         }}>
-                            10+
+                            <Counter from={0} to={10} />+
                         </div>
                         <div style={{
                             width: '209px',

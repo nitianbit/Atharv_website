@@ -1,4 +1,9 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 const Services = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <div className="w-full bg-white py-16 px-4">
             <div className="mx-auto" style={{ maxWidth: '1512px' }}>
@@ -36,11 +41,14 @@ const Services = () => {
 
                         {/* Card 1: Online Doctor Consultation - Detailed Card with White Overlay Box */}
                         <div
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                             style={{
                                 width: '571.74px',
                                 height: '637px',
                                 position: 'relative',
-                                boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)'
+                                boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+                                cursor: 'pointer'
                             }}
                         >
                             {/* Background Image */}
@@ -58,7 +66,10 @@ const Services = () => {
                             />
 
                             {/* White Content Box Overlay */}
-                            <div
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: isHovered ? 1 : 0 }}
+                                transition={{ duration: 0.7 }}
                                 style={{
                                     width: '515px',
                                     height: '425px',
@@ -169,8 +180,9 @@ const Services = () => {
                                         CONSULT DOCTOR ONLINE
                                     </span>
                                 </button>
-                            </div>
+                            </motion.div>
                         </div>
+
 
                         {/* Card 2: Online Pharmacy & Medicine Home Delivery */}
                         <div

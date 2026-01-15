@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -21,13 +22,13 @@ const Navbar = () => {
                     height: '127px',
                 }}
             >
-                <a href="/" className="block w-full h-full">
+                <Link to="/" className="block w-full h-full">
                     <img
                         src="/Homepage/AtharvLOGO.png"
                         alt="Atharv Health Care Logo"
                         className="w-full h-full object-contain"
                     />
-                </a>
+                </Link>
             </div>
 
             {/* Navbar Box - The Glassmorphism Container */}
@@ -45,20 +46,20 @@ const Navbar = () => {
                 <div className="flex items-center gap-[30px]" style={{ marginLeft: '61px' }}>
 
                     {/* Home Link */}
-                    <a href="/"
+                    <Link to="/"
                         className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors"
                         style={{ color: '#1566B7' }} // Primary color for active/home
                     >
                         Home
-                    </a>
+                    </Link>
 
                     {/* About Us Link */}
-                    <a href="/about"
+                    <Link to="/about"
                         className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors"
                         style={{ color: '#142349' }}
                     >
                         About Us
-                    </a>
+                    </Link>
 
                     {/* Services Dropdown */}
                     <div
@@ -76,18 +77,18 @@ const Navbar = () => {
                         {/* Dropdown Menu */}
                         {activeDropdown === 'services' && (
                             <div className="absolute top-full left-0 mt-6 w-56 bg-white rounded-xl shadow-xl py-3 z-50 border border-gray-100">
-                                <a href="/services/consultation" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                <Link to="/services/consultation" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Online Consultation
-                                </a>
-                                <a href="/services/pharmacy" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                </Link>
+                                <Link to="/services/pharmacy" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Pharmacy
-                                </a>
-                                <a href="/services/lab" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                </Link>
+                                <Link to="/services/lab" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Lab Tests
-                                </a>
-                                <a href="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                </Link>
+                                <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Ambulance Service
-                                </a>
+                                </Link>
                             </div>
                         )}
                     </div>
@@ -108,34 +109,34 @@ const Navbar = () => {
                         {/* Dropdown Menu */}
                         {activeDropdown === 'industries' && (
                             <div className="absolute top-full left-0 mt-6 w-56 bg-white rounded-xl shadow-xl py-3 z-50 border border-gray-100">
-                                <a href="/industries/corporate" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                <Link to="/industries/corporate" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Corporate Healthcare
-                                </a>
-                                <a href="/industries/hospitals" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                </Link>
+                                <Link to="/industries/hospitals" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Hospitals
-                                </a>
-                                <a href="/industries/clinics" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                </Link>
+                                <Link to="/industries/clinics" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Clinics
-                                </a>
+                                </Link>
                             </div>
                         )}
                     </div>
 
                     {/* Why Choose Us */}
-                    <a href="/why-choose-us"
+                    <Link to="/why-choose-us"
                         className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors"
                         style={{ color: '#142349' }}
                     >
                         Why Choose Us
-                    </a>
+                    </Link>
 
                     {/* Gallery */}
-                    <a href="/gallery"
+                    <Link to="/gallery"
                         className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors"
                         style={{ color: '#142349' }}
                     >
                         Gallery
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Contact Us Button */}
@@ -143,11 +144,11 @@ const Navbar = () => {
                     style={{
                         right: '28px',
                         left: '1000px',
-                        top: '16px', 
+                        top: '16px',
                     }}
                 >
-                    <a
-                        href="/contact"
+                    <Link
+                        to="/contact"
                         className="flex items-center justify-center transition-all hover:opacity-90 hover:scale-105 active:scale-95"
                         style={{
                             width: '236px',
@@ -166,7 +167,7 @@ const Navbar = () => {
                         }}
                     >
                         CONTACT US
-                    </a>
+                    </Link>
                 </div>
             </div>
         </nav>
