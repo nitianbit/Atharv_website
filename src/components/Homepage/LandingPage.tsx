@@ -1,7 +1,7 @@
 const LandingPage = () => {
     return (
         <div className="w-full min-h-screen flex justify-center overflow-x-hidden bg-white">
-            <div className="xl:hidden w-full px-6 py-12 flex flex-col gap-8 bg-[linear-gradient(228deg,#9ADDFC_14.6%,rgba(79,197,224,0)_68.04%)]">
+            {/* <div className="xl:hidden w-full px-6 py-12 flex flex-col gap-8 bg-[linear-gradient(228deg,#9ADDFC_14.6%,rgba(79,197,224,0)_68.04%)]">
                 <div className="space-y-8 max-w-2xl mx-auto">
                     <h1 className="font-['Source Serif 4'] font-semibold text-4xl md:text-5xl text-[#142349] leading-tight capitalize">
                         <span className="text-[#1566B7]">Building Trusted Healthcare </span>
@@ -27,7 +27,7 @@ const LandingPage = () => {
                 <div className="relative w-full aspect-square max-h-[500px] mx-auto mt-8">
                     <img src="/Homepage/LandingPage.png" alt="Doctor" className="w-full h-full object-cover rounded-2xl sm:rounded-none" />
                 </div>
-            </div>
+            </div> */}
 
 
             <div className="hidden xl:block relative shrink-0 text-left"
@@ -52,7 +52,7 @@ const LandingPage = () => {
                     <h1 className="font-['Source_Serif_4'] font-semibold text-[#142349] capitalize"
                         style={{
                             width: '100%',
-                            maxWidth: '600px',
+                            maxWidth: '620px',
                             fontSize: '60px',
                             lineHeight: '114%',
                             letterSpacing: '-0.02em',

@@ -54,7 +54,7 @@ const Navbar = () => {
                     </Link>
 
                     {/* About Us Link */}
-                    <Link to="/about"
+                    <Link to="/aboutus"
                         className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors"
                         style={{ color: '#142349' }}
                     >
