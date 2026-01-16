@@ -67,9 +67,12 @@ const Services = () => {
 
                             {/* White Content Box Overlay */}
                             <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: isHovered ? 1 : 0 }}
-                                transition={{ duration: 0.7 }}
+                                initial={{ opacity: 0, y: 0 }}
+                                animate={{
+                                    opacity: isHovered ? 1 : 0,
+                                    y: isHovered ? -15 : 0
+                                }}
+                                transition={{ duration: 0.7, ease: 'easeOut' }}
                                 style={{
                                     width: '515px',
                                     height: '425px',

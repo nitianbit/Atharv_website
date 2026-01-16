@@ -89,11 +89,11 @@ const Testimonials = () => {
 
                 {/* ClientCircle Image Container */}
                 <div style={{
-                    width: '529px',
-                    height: '458.5037841796875px',
+                    width: '527px',
+                    height: '558.5037841796875px',
                     position: 'absolute',
-                    left: '100px',
-                    top: '195px',
+                    left: '30px',
+                    top: '160px',
                     // background: '#FFFFFF'
                 }}>
                     <img

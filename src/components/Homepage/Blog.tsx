@@ -1,21 +1,87 @@
+import { useState, useEffect } from 'react';
+
+const blogData = [
+    {
+        id: 1,
+        title: "Benefits of online doctor consultation in India",
+        img: "/Homepage/BlogGirl1.png",
+        bgColor: "#1566B7",
+        textColor: "#FFFFFF",
+        width: "374px"
+    },
+    {
+        id: 2,
+        title: "How home sample collection works for lab tests",
+        img: "/Homepage/BlogGirl2.png",
+        bgColor: "rgba(255, 255, 255, 0.9)",
+        textColor: "#142349",
+        width: "374.71px"
+    },
+    {
+        id: 3,
+        title: "Benefits of online doctor consultation in India",
+        img: "/Homepage/BlogGirl1.png",
+        bgColor: "#1566B7",
+        textColor: "#FFFFFF",
+        width: "374px"
+    },
+    {
+        id: 4,
+        title: "How home sample collection works for lab tests",
+        img: "/Homepage/BlogGirl2.png",
+        bgColor: "rgba(255, 255, 255, 0.9)",
+        textColor: "#142349",
+        width: "374.71px"
+    }
+];
+
 const Blog = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((current) => current + 1);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (activeIndex === 4) {
+            const timeout = setTimeout(() => {
+                setIsTransitioning(false);
+                setActiveIndex(0);
+                
+                // Force a reflow to ensure the transition is properly disabled
+                setTimeout(() => {
+                    setIsTransitioning(true);
+                }, 50);
+            }, 500);
+
+            return () => clearTimeout(timeout);
+        }
+    }, [activeIndex]);
+
+    const handleDotClick = (index: number) => {
+        setIsTransitioning(true);
+        setActiveIndex(index);
+    };
+
     return (
         <div className="w-full bg-white py-16 px-4">
             <div style={{ maxWidth: '1512px', margin: '0 auto' }}>
-                
-                {/* Overall Container - 1308.5px × 498.96px */}
-                <div 
+                {/* Overall Container */}
+                <div
                     style={{
                         width: '1308.5px',
-                        height: '498.96px',
+                        height: '540px',
                         margin: '0 auto',
                         position: 'relative',
-                        overflow: 'hidden'
+                        overflow: 'visible'
                     }}
                 >
-                    
-                    {/* Left Text Section - 475px × 283px, gap: 28px */}
-                    <div 
+                    {/* Left Text Section */}
+                    <div
                         style={{
                             width: '475px',
                             height: '283px',
@@ -27,8 +93,8 @@ const Blog = () => {
                             gap: '28px'
                         }}
                     >
-                        {/* Heading - 475px × 58px */}
-                        <h2 
+                        {/* Heading */}
+                        <h2
                             style={{
                                 width: '475px',
                                 height: '58px',
@@ -45,8 +111,8 @@ const Blog = () => {
                             <span style={{ color: '#1566B7' }}>Our Blog</span>
                         </h2>
 
-                        {/* Description - 410px × 150px */}
-                        <p 
+                        {/* Description */}
+                        <p
                             style={{
                                 width: '410px',
                                 height: '150px',
@@ -62,8 +128,8 @@ const Blog = () => {
                             Stay informed with easy, trusted insights on health, medicines, diagnostics and healthcare services. Explore expert articles, tips and explainers designed to help you make better health decisions.
                         </p>
 
-                        {/* Button - 144px × 19px, gap: 8px */}
-                        <a 
+                        {/* Button */}
+                        <a
                             href="/blog"
                             style={{
                                 width: '144px',
@@ -77,7 +143,7 @@ const Blog = () => {
                             }}
                             className="hover:opacity-80 transition-opacity"
                         >
-                            <span 
+                            <span
                                 style={{
                                     width: '122px',
                                     height: '20px',
@@ -87,189 +153,134 @@ const Blog = () => {
                                     lineHeight: '100%',
                                     letterSpacing: '0',
                                     textTransform: 'uppercase',
-                                    // textDecoration: 'underline',
                                     color: '#1566B7'
                                 }}
                             >
                                 VIEW ALL BLOGS
                             </span>
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1566B7" strokeWidth="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                                <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
                     </div>
 
-                    {/* Girl 1 Card - 374px × 456px */}
-                    <div 
+                    {/* Carousel Container */}
+                    <div
                         style={{
-                            width: '374px',
+                            width: '793.5px',
                             height: '456px',
                             position: 'absolute',
                             top: 0,
                             left: '515px',
-                            boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)'
+                            overflow: 'hidden'
                         }}
-                        className="cursor-pointer hover:shadow-lg transition-shadow"
                     >
-                        {/* Image */}
-                        <div 
+                        <div
                             style={{
-                                width: '374px',
-                                height: '368px',
-                                overflow: 'hidden'
-                            }}
-                        >
-                            <img 
-                                src="/Homepage/BlogGirl1.png"
-                                alt="Benefits of online doctor consultation"
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'fill'
-                                }}
-                            />
-                        </div>
-
-                        {/* Text Box - 374px × 88px */}
-                        <div 
-                            style={{
-                                width: '374px',
-                                height: '88px',
-                                background: '#1566B7',
                                 display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '11px'
+                                width: 'max-content',
+                                gap: '44.79px',
+                                transform: `translateX(-${[0, 418.79, 837.58, 1256.37, 1675.16][activeIndex]}px)`,
+                                transition: isTransitioning ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
+                                paddingLeft: '2px',
+                                paddingTop: '2px',
+                                willChange: 'transform'
                             }}
                         >
-                            <h3 
-                                style={{
-                                    width: '327px',
-                                    height: '52px',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                    fontWeight: 700,
-                                    fontSize: '20px',
-                                    lineHeight: '100%',
-                                    letterSpacing: '0',
-                                    textAlign: 'center',
-                                    textTransform: 'capitalize',
-                                    color: '#FFFFFF',
-                                    margin: 0,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                            >
-                                Benefits of online doctor consultation in India
-                            </h3>
-                        </div>
-                    </div>
+                            {[...blogData, blogData[0]].map((item, index) => (
+                                <div
+                                    key={`${item.id}-${index}`}
+                                    style={{
+                                        width: item.width,
+                                        height: '456px',
+                                        boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+                                        flexShrink: 0
+                                    }}
+                                    className="cursor-pointer hover:shadow-lg transition-shadow"
+                                    onClick={() => handleDotClick(index % 4)}
+                                >
+                                    {/* Image */}
+                                    <div
+                                        style={{
+                                            width: item.width,
+                                            height: '368px',
+                                            overflow: 'hidden'
+                                        }}
+                                    >
+                                        <img
+                                            src={item.img}
+                                            alt={item.title}
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover'
+                                            }}
+                                        />
+                                    </div>
 
-                    {/* Girl 2 Card - 374.71px × 456px */}
-                    <div 
-                        style={{
-                            width: '374.71px',
-                            height: '456px',
-                            position: 'absolute',
-                            top: 0,
-                            left: '933.79px',
-                            boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)'
-                        }}
-                        className="cursor-pointer hover:shadow-lg transition-shadow"
-                    >
-                        {/* Image - 373.53px × 456px */}
-                        <div 
-                            style={{
-                                width: '373.53px',
-                                height: '368px',
-                                overflow: 'hidden'
-                            }}
-                        >
-                            <img 
-                                src="/Homepage/BlogGirl2.png"
-                                alt="How home sample collection works"
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'fill'
-                                }}
-                            />
-                        </div>
-
-                        {/* Text Box - 374.71px × 88.14px */}
-                        <div 
-                            style={{
-                                width: '374.71px',
-                                height: '88.14px',
-                                background: 'rgba(255, 255, 255, 0.9)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '11px'
-                            }}
-                        >
-                            <h3 
-                                style={{
-                                    width: '345px',
-                                    height: '52px',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                    fontWeight: 700,
-                                    fontSize: '20px',
-                                    lineHeight: '100%',
-                                    letterSpacing: '0',
-                                    textAlign: 'center',
-                                    textTransform: 'capitalize',
-                                    color: '#142349',
-                                    margin: 0,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                            >
-                                How home sample collection works for lab tests
-                            </h3>
+                                    {/* Text Box */}
+                                    <div
+                                        style={{
+                                            width: item.width,
+                                            height: '88px',
+                                            background: item.bgColor,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            padding: '11px'
+                                        }}
+                                    >
+                                        <h3
+                                            style={{
+                                                fontFamily: "'DM Sans', sans-serif",
+                                                fontWeight: 700,
+                                                fontSize: '20px',
+                                                lineHeight: '26px',
+                                                letterSpacing: '0',
+                                                textAlign: 'center',
+                                                textTransform: 'capitalize',
+                                                color: item.textColor,
+                                                margin: 0,
+                                                padding: '0 10px'
+                                            }}
+                                        >
+                                            {item.title}
+                                        </h3>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
                     {/* Pagination Dots */}
-                    <div 
+                    <div
                         style={{
                             position: 'absolute',
-                            bottom: '-40px',
-                            left: '50%',
-                            transform: 'translateX(-50%)',
+                            bottom: '20px',
+                            left: '515px',
+                            width: '793.5px',
                             display: 'flex',
+                            justifyContent: 'center',
                             gap: '10px',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            zIndex: 10
                         }}
                     >
-                        <span 
-                            style={{
-                                width: '32px',
-                                height: '10px',
-                                borderRadius: '5px',
-                                background: '#1566B7',
-                                cursor: 'pointer'
-                            }}
-                        ></span>
-                        <span 
-                            style={{
-                                width: '10px',
-                                height: '10px',
-                                borderRadius: '50%',
-                                background: '#D1D5DB',
-                                cursor: 'pointer'
-                            }}
-                        ></span>
-                        <span 
-                            style={{
-                                width: '10px',
-                                height: '10px',
-                                borderRadius: '50%',
-                                background: '#D1D5DB',
-                                cursor: 'pointer'
-                            }}
-                        ></span>
+                        {[0, 1, 2, 3].map((index) => (
+                            <span
+                                key={index}
+                                onClick={() => handleDotClick(index)}
+                                style={{
+                                    width: (activeIndex % 4) === index ? '32px' : '10px',
+                                    height: '10px',
+                                    borderRadius: (activeIndex % 4) === index ? '5px' : '50%',
+                                    background: (activeIndex % 4) === index ? '#1566B7' : '#D1D5DB',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease',
+                                    flexShrink: 0
+                                }}
+                            ></span>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -10,8 +10,9 @@ const LandingPage = () => {
 
 
                     <p className="font-['DM_Sans'] text-[#142349] text-lg leading-[30px] font-light">
-                        <span className="font-semibold">With 7+ years of experience, Atharv Healthcare</span> delivers dependable primary healthcare services — online doctor consultations, genuine medicines, lab tests at home and ambulance assistance across India.
+                        With <span className="font-semibold">7+ years of experience, Atharv Healthcare</span> delivers dependable primary healthcare services — online doctor consultations, genuine medicines, lab tests at home and ambulance assistance across India.
                     </p>
+
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
                         <button className="flex items-center justify-center gap-[10px] w-full sm:w-auto bg-[#1566B7] text-white px-7 py-4 rounded-[192px] font-['DM_Sans'] font-semibold text-base uppercase shadow-lg hover:opacity-90 transition-opacity">
@@ -71,7 +72,7 @@ const LandingPage = () => {
                             fontWeight: 300,
                         }}
                     >
-                        <span className="font-semibold" style={{ fontWeight: 600 }}>With 7+ years of experience, Atharv Healthcare</span> delivers dependable primary healthcare services — online doctor consultations, genuine medicines, lab tests at home and ambulance assistance across India.
+                        With <span className="font-semibold" style={{ fontWeight: 600 }}>7+ years of experience, Atharv Healthcare</span> delivers dependable primary healthcare services — online doctor consultations, genuine medicines, lab tests at home and ambulance assistance across India.
                     </div>
 
 
@@ -87,11 +88,13 @@ const LandingPage = () => {
                                 width: '268px',
                                 height: '50px',
                                 padding: '16px 28px',
+                                boxShadow: '1px 6px 7.7px 0px #3177E13D',
                                 fontFamily: 'DM Sans',
                                 fontWeight: 600,
                                 fontSize: '16px',
                                 lineHeight: '100%',
                                 textTransform: 'uppercase',
+                                cursor: 'pointer',
                             }}
                         >
                             Consult Doctor Online
@@ -109,6 +112,7 @@ const LandingPage = () => {
                                 fontSize: '16px',
                                 lineHeight: '100%',
                                 textTransform: 'uppercase',
+                                cursor: 'pointer',
                             }}
                         >
                             Order Medicines Online
