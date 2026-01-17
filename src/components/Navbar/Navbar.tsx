@@ -89,6 +89,9 @@ const Navbar = () => {
                                 <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Ambulance Service
                                 </Link>
+                                <Link to="/occupational-health-centres" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                    Occupational Health Centres
+                                </Link>
                             </div>
                         )}
                     </div>
