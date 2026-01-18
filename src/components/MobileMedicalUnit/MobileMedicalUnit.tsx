@@ -18,6 +18,9 @@ import FAQ from "../Homepage/FAQ";
 import Companies from "../Homepage/Companies";
 import FullWidthImageSection from "./FullWidthImageSection";
 import SecondStatsSection from "./SecondStatSection";
+import MMUUseCases from "./MMUUseCases";
+import ExperienceSection from "./ExperienceSection";
+import MMUServicesSection from "./MMUServiceSection";
 
 const MobileMedicalUnit = () => {
     return (
@@ -36,8 +39,11 @@ const MobileMedicalUnit = () => {
             <IndustriesSection />
             <BenefitsSection />
             <HowItWorksSection />
+            <MMUUseCases/>
             <SocialProofSection />
             <SecondStatsSection/>
+            <ExperienceSection/>
+            <MMUServicesSection/>
             <Companies/>
             <FAQ />
             {/* <FinalCTASection /> */}
