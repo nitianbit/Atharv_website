@@ -16,6 +16,8 @@ import SocialProofSection from "./SocialProofSection";
 // import FinalCTASection from "./FinalCTASection";
 import FAQ from "../Homepage/FAQ";
 import Companies from "../Homepage/Companies";
+import FullWidthImageSection from "./FullWidthImageSection";
+import SecondStatsSection from "./SecondStatSection";
 
 const MobileMedicalUnit = () => {
     return (
@@ -30,10 +32,12 @@ const MobileMedicalUnit = () => {
             <MedicalServicesSection />
             <InfrastructureSection />
             <StaffingSection />
+            <FullWidthImageSection />
             <IndustriesSection />
             <BenefitsSection />
             <HowItWorksSection />
             <SocialProofSection />
+            <SecondStatsSection/>
             <Companies/>
             <FAQ />
             {/* <FinalCTASection /> */}
