@@ -1,5 +1,5 @@
 // import { IoChatbubblesSharp } from 'react-icons/io5';
-import {  FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 const Testimonials = () => {
     const testimonials = [
@@ -34,135 +34,53 @@ const Testimonials = () => {
     ];
 
     return (
-        <section style={{
-            width: '1512px',
-            height: '875px',
-            margin: '0 auto',
-            background: '#3177E11A',
-            position: 'relative',
-            padding: '64px 0'
-        }}>
-            <div style={{
-                maxWidth: '1512px',
-                margin: '0 auto',
-                position: 'relative'
-            }}>
+        <section className="w-full xl:w-full xl:max-w-[1512px] mx-auto bg-[#3177E11A] relative py-16 xl:py-[64px] xl:h-[875px]">
+            <div className="max-w-[1512px] mx-auto relative flex flex-col items-center xl:block h-full gap-10 xl:gap-0">
                 {/* Left Section - Heading */}
-                <div style={{
-                    width: '616px',
-                    position: 'absolute',
-                    left: '100px',
-                    top: '0',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '12px'
-                }}>
+                <div className="relative w-full px-4 text-center xl:text-left xl:absolute xl:left-[100px] xl:top-0 xl:w-[616px] xl:px-0 flex flex-col gap-3 xl:gap-[12px]">
                     {/* Heading */}
-                    <h2 style={{
-                        width: '616px',
-                        fontFamily: "'Source Serif Pro', serif",
-                        fontWeight: 600,
-                        fontSize: '46px',
-                        lineHeight: '100%',
-                        letterSpacing: '0.92px',
-                        textTransform: 'capitalize',
-                        color: '#142349',
-                        margin: 0
-                    }}>
-                        What <span style={{ color: '#1566B7' }}>Our Clients</span> Say
+                    <h2 className="font-['Source_Serif_Pro'] font-semibold text-[#142349] capitalize text-3xl md:text-4xl xl:text-[46px] xl:leading-[100%] xl:tracking-[0.92px] m-0">
+                        What <span className="text-[#1566B7]">Our Clients</span> Say
                     </h2>
 
                     {/* Description */}
-                    <p style={{
-                        width: '495px',
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontWeight: 300,
-                        fontSize: '18px',
-                        lineHeight: '30px',
-                        letterSpacing: '0',
-                        color: '#142349',
-                        margin: 0
-                    }}>
+                    <p className="font-['DM_Sans'] font-light text-[#142349] text-base md:text-lg xl:text-[18px] xl:leading-[30px] xl:w-[495px] m-0">
                         Real feedback from organizations and communities we support across India.
                     </p>
                 </div>
 
                 {/* ClientCircle Image Container */}
-                <div style={{
-                    width: '527px',
-                    height: '558.5037841796875px',
-                    position: 'absolute',
-                    left: '30px',
-                    top: '160px',
-                    // background: '#FFFFFF'
-                }}>
+                <div className="relative w-[80%] max-w-[500px] aspect-square xl:aspect-auto xl:w-[527px] xl:h-[558.5px] xl:absolute xl:left-[30px] xl:top-[160px] xl:m-0">
                     <img
                         src="/Homepage/ClientCircle.png"
                         alt="Client Circle"
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'contain'
-                        }}
+                        className="w-full h-full object-contain"
                     />
                 </div>
 
                 {/* Right Section - Testimonial Cards */}
-                
+
+                {/* A container for cards on mobile to manage grid/stack if needed, 
+                    but strict preservation suggests keeping them as direct children for Desktop absolute positioning.
+                    We will style them individually as requested. */}
+
                 {/* Card 1 - Top Left */}
-                <div style={{
-                    width: '328px',
-                    height: '270px',
-                    position: 'absolute',
-                    left: '626px',
-                    top: '163px'
-                }}>
+                <div className="relative w-full max-w-[340px] h-[270px] xl:absolute xl:w-[328px] xl:left-[626px] xl:top-[163px] xl:max-w-none">
                     {/* Icon */}
-                    <div style={{
-                        width: '78px',
-                        height: '71px',
-                        position: 'absolute',
-                        left: '22px',
-                        top: '0',
-                        zIndex: 2
-                    }}>
+                    <div className="absolute left-[22px] top-0 w-[78px] h-[71px] z-[2]">
                         <img
                             src={testimonials[0].image}
                             alt={testimonials[0].name}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                borderRadius: '12px'
-                            }}
+                            className="w-full h-full object-cover rounded-[12px]"
                         />
                     </div>
 
                     {/* White Box */}
-                    <div style={{
-                        width: '328px',
-                        height: '238px',
-                        position: 'absolute',
-                        top: '32px',
-                        left: '0',
-                        borderRadius: '12px',
-                        background: '#FFFFFF',
-                        boxShadow: '0px 0px 25.9px 0px #0E295105',
-                        padding: '52px 16px 16px 16px',
-                        boxSizing: 'border-box'
-                    }}>
+                    <div className="absolute top-[32px] left-0 w-full h-[238px] rounded-[12px] bg-white shadow-[0px_0px_25.9px_0px_#0E295105] p-[52px_16px_16px] box-border">
                         {/* Star Rating */}
-                        <div style={{
-                            display: 'flex',
-                            gap: '4px',
-                            marginBottom: '12px'
-                        }}>
+                        <div className="flex gap-[4px] mb-[12px]">
                             {[...Array(5)].map((_, i) => (
-                                <div key={i} style={{
-                                    width: '20px',
-                                    height: '19px',
-                                    borderRadius: '0.5px'
-                                }}>
+                                <div key={i} className="w-[20px] h-[19px] rounded-[0.5px]">
                                     <FaStar
                                         size={20}
                                         color={i < testimonials[0].rating ? '#FF9140' : '#E5E7EB'}
@@ -172,103 +90,39 @@ const Testimonials = () => {
                         </div>
 
                         {/* Testimonial Text */}
-                        <p style={{
-                            width: '296px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '14px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.28px',
-                            color: '#142349',
-                            margin: '0 0 16px 0'
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[14px] leading-[100%] tracking-[0.28px] text-[#142349] mb-4 xl:w-[296px]">
                             {testimonials[0].text}
                         </p>
 
                         {/* Name */}
-                        <h4 style={{
-                            width: '155px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 500,
-                            fontSize: '15px',
-                            lineHeight: '100%',
-                            letterSpacing: '0',
-                            color: '#1566B7',
-                            margin: '0 0 4px 0'
-                        }}>
+                        <h4 className="font-['DM_Sans'] font-medium text-[15px] leading-[100%] text-[#1566B7] mb-1 xl:w-[155px]">
                             {testimonials[0].name}
                         </h4>
 
                         {/* Role */}
-                        <p style={{
-                            width: '199px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '12px',
-                            lineHeight: '20px',
-                            letterSpacing: '0',
-                            color: '#7688B6',
-                            margin: 0
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[12px] leading-[20px] text-[#7688B6] xl:w-[199px]">
                             {testimonials[0].role}
                         </p>
                     </div>
                 </div>
 
                 {/* Card 2 - Top Right */}
-                <div style={{
-                    width: '333px',
-                    height: '270px',
-                    position: 'absolute',
-                    left: '996px',
-                    top: '133px'
-                }}>
+                <div className="relative w-full max-w-[340px] h-[270px] xl:absolute xl:w-[333px] xl:left-[996px] xl:top-[133px] xl:max-w-none">
                     {/* Icon */}
-                    <div style={{
-                        width: '78px',
-                        height: '71px',
-                        position: 'absolute',
-                        left: '22px',
-                        top: '0',
-                        zIndex: 2
-                    }}>
+                    <div className="absolute left-[22px] top-0 w-[78px] h-[71px] z-[2]">
                         <img
                             src={testimonials[1].image}
                             alt={testimonials[1].name}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                borderRadius: '12px'
-                            }}
+                            className="w-full h-full object-cover rounded-[12px]"
                         />
                     </div>
 
                     {/* White Box */}
-                    <div style={{
-                        width: '333px',
-                        height: '238px',
-                        position: 'absolute',
-                        top: '32px',
-                        left: '0',
-                        borderRadius: '12px',
-                        background: '#FFFFFF',
-                        boxShadow: '0px 0px 25.9px 0px #0E295105',
-                        padding: '52px 16px 16px 16px',
-                        boxSizing: 'border-box'
-                    }}>
+                    <div className="absolute top-[32px] left-0 w-full h-[238px] rounded-[12px] bg-white shadow-[0px_0px_25.9px_0px_#0E295105] p-[52px_16px_16px] box-border">
                         {/* Star Rating */}
-                        <div style={{
-                            display: 'flex',
-                            gap: '4px',
-                            marginBottom: '12px'
-                        }}>
+                        <div className="flex gap-[4px] mb-[12px]">
                             {[...Array(5)].map((_, i) => (
-                                <div key={i} style={{
-                                    width: '20px',
-                                    height: '19px',
-                                    borderRadius: '0.5px'
-                                }}>
+                                <div key={i} className="w-[20px] h-[19px] rounded-[0.5px]">
                                     <FaStar
                                         size={20}
                                         color={i < testimonials[1].rating ? '#FF9140' : '#E5E7EB'}
@@ -278,103 +132,39 @@ const Testimonials = () => {
                         </div>
 
                         {/* Testimonial Text */}
-                        <p style={{
-                            width: '296px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '14px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.28px',
-                            color: '#142349',
-                            margin: '0 0 16px 0'
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[14px] leading-[100%] tracking-[0.28px] text-[#142349] mb-4 xl:w-[296px]">
                             {testimonials[1].text}
                         </p>
 
                         {/* Name */}
-                        <h4 style={{
-                            width: '155px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 500,
-                            fontSize: '15px',
-                            lineHeight: '100%',
-                            letterSpacing: '0',
-                            color: '#1566B7',
-                            margin: '0 0 4px 0'
-                        }}>
+                        <h4 className="font-['DM_Sans'] font-medium text-[15px] leading-[100%] text-[#1566B7] mb-1 xl:w-[155px]">
                             {testimonials[1].name}
                         </h4>
 
                         {/* Role */}
-                        <p style={{
-                            width: '199px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '12px',
-                            lineHeight: '20px',
-                            letterSpacing: '0',
-                            color: '#7688B6',
-                            margin: 0
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[12px] leading-[20px] text-[#7688B6] xl:w-[199px]">
                             {testimonials[1].role}
                         </p>
                     </div>
                 </div>
 
                 {/* Card 3 - Bottom Left */}
-                <div style={{
-                    width: '328px',
-                    height: '270px',
-                    position: 'absolute',
-                    left: '626px',
-                    top: '463px'
-                }}>
+                <div className="relative w-full max-w-[340px] h-[270px] xl:absolute xl:w-[328px] xl:left-[626px] xl:top-[463px] xl:max-w-none">
                     {/* Icon */}
-                    <div style={{
-                        width: '78px',
-                        height: '71px',
-                        position: 'absolute',
-                        left: '22px',
-                        top: '0',
-                        zIndex: 2
-                    }}>
+                    <div className="absolute left-[22px] top-0 w-[78px] h-[71px] z-[2]">
                         <img
                             src={testimonials[2].image}
                             alt={testimonials[2].name}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                borderRadius: '12px'
-                            }}
+                            className="w-full h-full object-cover rounded-[12px]"
                         />
                     </div>
 
                     {/* White Box */}
-                    <div style={{
-                        width: '328px',
-                        height: '238px',
-                        position: 'absolute',
-                        top: '32px',
-                        left: '0',
-                        borderRadius: '12px',
-                        background: '#FFFFFF',
-                        boxShadow: '0px 0px 25.9px 0px #0E295105',
-                        padding: '52px 16px 16px 16px',
-                        boxSizing: 'border-box'
-                    }}>
+                    <div className="absolute top-[32px] left-0 w-full h-[238px] rounded-[12px] bg-white shadow-[0px_0px_25.9px_0px_#0E295105] p-[52px_16px_16px] box-border">
                         {/* Star Rating */}
-                        <div style={{
-                            display: 'flex',
-                            gap: '4px',
-                            marginBottom: '12px'
-                        }}>
+                        <div className="flex gap-[4px] mb-[12px]">
                             {[...Array(5)].map((_, i) => (
-                                <div key={i} style={{
-                                    width: '20px',
-                                    height: '19px',
-                                    borderRadius: '0.5px'
-                                }}>
+                                <div key={i} className="w-[20px] h-[19px] rounded-[0.5px]">
                                     <FaStar
                                         size={20}
                                         color={i < testimonials[2].rating ? '#FF9140' : '#E5E7EB'}
@@ -384,103 +174,39 @@ const Testimonials = () => {
                         </div>
 
                         {/* Testimonial Text */}
-                        <p style={{
-                            width: '296px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '14px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.28px',
-                            color: '#142349',
-                            margin: '0 0 16px 0'
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[14px] leading-[100%] tracking-[0.28px] text-[#142349] mb-4 xl:w-[296px]">
                             {testimonials[2].text}
                         </p>
 
                         {/* Name */}
-                        <h4 style={{
-                            width: '155px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 500,
-                            fontSize: '15px',
-                            lineHeight: '100%',
-                            letterSpacing: '0',
-                            color: '#1566B7',
-                            margin: '0 0 4px 0'
-                        }}>
+                        <h4 className="font-['DM_Sans'] font-medium text-[15px] leading-[100%] text-[#1566B7] mb-1 xl:w-[155px]">
                             {testimonials[2].name}
                         </h4>
 
                         {/* Role */}
-                        <p style={{
-                            width: '199px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '12px',
-                            lineHeight: '20px',
-                            letterSpacing: '0',
-                            color: '#7688B6',
-                            margin: 0
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[12px] leading-[20px] text-[#7688B6] xl:w-[199px]">
                             {testimonials[2].role}
                         </p>
                     </div>
                 </div>
 
                 {/* Card 4 - Bottom Right */}
-                <div style={{
-                    width: '333px',
-                    height: '270px',
-                    position: 'absolute',
-                    left: '996px',
-                    top: '433px'
-                }}>
+                <div className="relative w-full max-w-[340px] h-[270px] xl:absolute xl:w-[333px] xl:left-[996px] xl:top-[433px] xl:max-w-none">
                     {/* Icon */}
-                    <div style={{
-                        width: '78px',
-                        height: '71px',
-                        position: 'absolute',
-                        left: '22px',
-                        top: '0',
-                        zIndex: 2
-                    }}>
+                    <div className="absolute left-[22px] top-0 w-[78px] h-[71px] z-[2]">
                         <img
                             src={testimonials[3].image}
                             alt={testimonials[3].name}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                borderRadius: '12px'
-                            }}
+                            className="w-full h-full object-cover rounded-[12px]"
                         />
                     </div>
 
                     {/* White Box */}
-                    <div style={{
-                        width: '333px',
-                        height: '238px',
-                        position: 'absolute',
-                        top: '32px',
-                        left: '0',
-                        borderRadius: '12px',
-                        background: '#FFFFFF',
-                        boxShadow: '0px 0px 25.9px 0px #0E295105',
-                        padding: '52px 16px 16px 16px',
-                        boxSizing: 'border-box'
-                    }}>
+                    <div className="absolute top-[32px] left-0 w-full h-[238px] rounded-[12px] bg-white shadow-[0px_0px_25.9px_0px_#0E295105] p-[52px_16px_16px] box-border">
                         {/* Star Rating */}
-                        <div style={{
-                            display: 'flex',
-                            gap: '4px',
-                            marginBottom: '12px'
-                        }}>
+                        <div className="flex gap-[4px] mb-[12px]">
                             {[...Array(5)].map((_, i) => (
-                                <div key={i} style={{
-                                    width: '20px',
-                                    height: '19px',
-                                    borderRadius: '0.5px'
-                                }}>
+                                <div key={i} className="w-[20px] h-[19px] rounded-[0.5px]">
                                     <FaStar
                                         size={20}
                                         color={i < testimonials[3].rating ? '#FF9140' : '#E5E7EB'}
@@ -490,44 +216,17 @@ const Testimonials = () => {
                         </div>
 
                         {/* Testimonial Text */}
-                        <p style={{
-                            width: '296px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '14px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.28px',
-                            color: '#142349',
-                            margin: '0 0 16px 0'
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[14px] leading-[100%] tracking-[0.28px] text-[#142349] mb-4 xl:w-[296px]">
                             {testimonials[3].text}
                         </p>
 
                         {/* Name */}
-                        <h4 style={{
-                            width: '155px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 500,
-                            fontSize: '15px',
-                            lineHeight: '100%',
-                            letterSpacing: '0',
-                            color: '#1566B7',
-                            margin: '0 0 4px 0'
-                        }}>
+                        <h4 className="font-['DM_Sans'] font-medium text-[15px] leading-[100%] text-[#1566B7] mb-1 xl:w-[155px]">
                             {testimonials[3].name}
                         </h4>
 
                         {/* Role */}
-                        <p style={{
-                            width: '199px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '12px',
-                            lineHeight: '20px',
-                            letterSpacing: '0',
-                            color: '#7688B6',
-                            margin: 0
-                        }}>
+                        <p className="font-['DM_Sans'] font-light text-[12px] leading-[20px] text-[#7688B6] xl:w-[199px]">
                             {testimonials[3].role}
                         </p>
                     </div>

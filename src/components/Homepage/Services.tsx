@@ -56,65 +56,39 @@ const Services = () => {
     ];
 
     return (
-        <div className="w-full bg-white py-16 px-4">
-            <div className="mx-auto" style={{ maxWidth: '1512px' }}>
+        <div className="w-full bg-white py-12 md:py-16 px-4">
+            <div className="w-full max-w-[1512px] mx-auto">
 
-                {/* Main Container - 1311px × 1493px */}
-                <div
-                    style={{
-                        width: '100%',
-                        maxWidth: '1311px',
-                        margin: '0 auto'
-                    }}
-                >
+                {/* Main Container - 1311px × 1493px (Desktop) */}
+                <div className="w-full max-w-[1311px] mx-auto">
 
                     {/* Heading - "Our Services" */}
                     <h2
-                        style={{
-                            width: '488px',
-                            height: '68px',
-                            margin: '0 auto 80px',
-                            fontFamily: "'Source Serif Pro', serif",
-                            fontWeight: 600,
-                            fontSize: '60px',
-                            lineHeight: '114%',
-                            letterSpacing: '-0.02em',
-                            textAlign: 'center',
-                            textTransform: 'capitalize',
-                            color: '#142349'
-                        }}
+                        className="font-['Source_Serif_Pro'] font-semibold text-center text-[#142349] capitalize
+                        text-[40px] mb-10
+                        md:text-[50px]
+                        xl:w-[488px] xl:h-[68px] xl:mx-auto xl:mb-[80px] xl:text-[60px] xl:leading-[114%] -tracking-[0.02em]"
                     >
                         Our Services
                     </h2>
 
                     {/* Services Grid - 2x2 */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px' }}>
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-[30px] justify-items-center">
 
                         {services.map((service) => (
                             <div
                                 key={service.id}
                                 onMouseEnter={() => setHoveredCard(service.id)}
                                 onMouseLeave={() => setHoveredCard(null)}
-                                style={{
-                                    width: '571.74px',
-                                    height: '637px',
-                                    position: 'relative',
-                                    boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
-                                    cursor: 'pointer'
-                                }}
+                                className="relative shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)] cursor-pointer group overflow-hidden
+                                w-full max-w-[571px] aspect-[571.74/637]
+                                xl:w-[571.74px] xl:h-[637px] xl:max-w-none xl:overflow-visible"
                             >
                                 {/* Background Image */}
                                 <img
                                     src={service.image}
                                     alt={service.title}
-                                    style={{
-                                        width: '571.74px',
-                                        height: '637px',
-                                        objectFit: 'cover',
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0
-                                    }}
+                                    className="absolute top-0 left-0 w-full h-full object-cover"
                                 />
 
                                 {/* White Content Box Overlay */}
@@ -125,75 +99,42 @@ const Services = () => {
                                         y: hoveredCard === service.id ? -15 : 0
                                     }}
                                     transition={{ duration: 0.7, ease: 'easeOut' }}
-                                    style={{
-                                        width: '515px',
-                                        height: '425px',
-                                        position: 'absolute',
-                                        top: '134.87px',
-                                        left: '28px',
-                                        background: 'rgba(255, 255, 255, 0.9)',
-                                        padding: '27px',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        gap: '11px',
-                                        zIndex: 10
-                                    }}
+                                    // Using percentages for mobile/tablet to maintain proportions
+                                    // Desktop overrides with exact pixels
+                                    className="absolute bg-[rgba(255,255,255,0.9)] flex flex-col z-10
+                                    w-[90%] left-[5%] top-[21%] p-[5%] gap-[2%]
+                                    xl:w-[515px] xl:h-[425px] xl:left-[28px] xl:top-[134.87px] xl:p-[27px] xl:gap-[11px]"
                                 >
                                     {/* Title */}
                                     <h3
-                                        style={{
-                                            width: '463px',
-                                            height: 'auto',
-                                            minHeight: '38px',
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 700,
-                                            fontSize: '29px',
-                                            lineHeight: '100%',
-                                            letterSpacing: '0',
-                                            textTransform: 'capitalize',
-                                            color: '#1566B7',
-                                            margin: 0
-                                        }}
+                                        className="font-['DM_Sans'] font-bold text-[#1566B7] capitalize m-0
+                                        text-xl
+                                        md:text-2xl
+                                        xl:w-[463px] xl:min-h-[38px] xl:text-[29px] xl:leading-[100%] tracking-normal"
                                     >
                                         {service.title}
                                     </h3>
 
                                     {/* Description */}
                                     <p
-                                        style={{
-                                            width: '453px',
-                                            height: '109px',
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 400,
-                                            fontSize: '18px',
-                                            lineHeight: '27px',
-                                            letterSpacing: '0',
-                                            color: '#142349',
-                                            margin: 0
-                                        }}
+                                        className="font-['DM_Sans'] font-normal text-[#142349] m-0
+                                        text-sm leading-relaxed
+                                        md:text-base md:leading-[1.5]
+                                        xl:w-[453px] xl:h-[109px] xl:text-[18px] xl:leading-[27px] tracking-normal"
                                     >
                                         {service.description}
                                     </p>
 
                                     {/* Bullet Points */}
                                     <ul
-                                        style={{
-                                            width: '469px',
-                                            height: '97px',
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 300,
-                                            fontSize: '18px',
-                                            lineHeight: '27px',
-                                            letterSpacing: '0',
-                                            color: '#142349',
-                                            margin: 0,
-                                            padding: 0,
-                                            listStyle: 'none'
-                                        }}
+                                        className="font-['DM_Sans'] font-light text-[#142349] m-0 p-0 list-none
+                                        text-sm leading-relaxed
+                                        md:text-base md:leading-[1.5]
+                                        xl:w-[469px] xl:h-[97px] xl:text-[18px] xl:leading-[27px] tracking-normal"
                                     >
                                         {service.points.map((point, index) => (
-                                            <li key={index} style={{ display: 'flex', gap: '8px' }}>
-                                                <span style={{ color: '#1566B7' }}>•</span>
+                                            <li key={index} className="flex gap-2">
+                                                <span className="text-[#1566B7]">•</span>
                                                 <span>{point}</span>
                                             </li>
                                         ))}
@@ -201,68 +142,35 @@ const Services = () => {
 
                                     {/* Button */}
                                     <button
-                                        className="hover:opacity-90 transition-opacity"
-                                        style={{
-                                            width: '247px',
-                                            height: '37px',
-                                            borderRadius: '192px',
-                                            background: '#1566B7',
-                                            border: 'none',
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            marginTop: '11px'
-                                        }}
+                                        className="hover:opacity-90 transition-opacity rounded-[192px] bg-[#1566B7] border-none cursor-pointer flex items-center justify-center mt-auto xl:mt-[11px]
+                                        w-[200px] h-[36px]
+                                        md:w-[220px]
+                                        xl:w-[247px] xl:h-[37px]"
                                     >
                                         <span
-                                            style={{
-                                                width: 'auto',
-                                                height: '18px',
-                                                fontFamily: "'DM Sans', sans-serif",
-                                                fontWeight: 600,
-                                                fontSize: '14px',
-                                                lineHeight: '100%',
-                                                letterSpacing: '0',
-                                                textTransform: 'uppercase',
-                                                color: '#FFFFFF'
-                                            }}
+                                            className="font-['DM_Sans'] font-semibold uppercase text-white
+                                            text-xs
+                                            md:text-sm
+                                            xl:w-auto xl:h-[18px] xl:text-[14px] xl:leading-[100%] tracking-normal"
                                         >
                                             {service.buttonText}
                                         </span>
                                     </button>
                                 </motion.div>
 
-                                {/* Default Text Box at Bottom (Visible when not hovered, or behind the overlay) */}
+                                {/* Default Text Box at Bottom (Visible when not hovered) */}
                                 <motion.div
                                     animate={{ opacity: hoveredCard === service.id ? 0 : 1 }}
                                     transition={{ duration: 0.3 }}
-                                    style={{
-                                        width: '573.54px',
-                                        height: '123.13px',
-                                        position: 'absolute',
-                                        bottom: 0,
-                                        left: 0,
-                                        background: 'rgba(255, 255, 255, 0.9)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        padding: '11px'
-                                    }}
+                                    className="absolute bottom-0 left-0 bg-[rgba(255,255,255,0.9)] flex items-center justify-center
+                                    w-full h-[100px] p-4
+                                    xl:w-[573.54px] xl:h-[123.13px] xl:p-[11px]"
                                 >
                                     <h3
-                                        style={{
-                                            width: '90%',
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 700,
-                                            fontSize: '29px',
-                                            lineHeight: '100%',
-                                            letterSpacing: '0',
-                                            textAlign: 'center',
-                                            textTransform: 'capitalize',
-                                            color: '#142349',
-                                            margin: 0
-                                        }}
+                                        className="font-['DM_Sans'] font-bold text-center capitalize text-[#142349] m-0
+                                        text-xl w-[95%]
+                                        md:text-2xl
+                                        xl:text-[29px] xl:leading-[100%] xl:w-[90%] tracking-normal"
                                     >
                                         {service.title}
                                     </h3>

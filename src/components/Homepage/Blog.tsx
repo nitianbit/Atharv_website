@@ -1,47 +1,16 @@
 import { useState, useEffect } from 'react';
 
-const blogData = [
-    {
-        id: 1,
-        title: "Benefits of online doctor consultation in India",
-        img: "/Homepage/BlogGirl1.png",
-        bgColor: "#1566B7",
-        textColor: "#FFFFFF",
-        width: "374px"
-    },
-    {
-        id: 2,
-        title: "How home sample collection works for lab tests",
-        img: "/Homepage/BlogGirl2.png",
-        bgColor: "rgba(255, 255, 255, 0.9)",
-        textColor: "#142349",
-        width: "374.71px"
-    },
-    {
-        id: 3,
-        title: "Benefits of online doctor consultation in India",
-        img: "/Homepage/BlogGirl1.png",
-        bgColor: "#1566B7",
-        textColor: "#FFFFFF",
-        width: "374px"
-    },
-    {
-        id: 4,
-        title: "How home sample collection works for lab tests",
-        img: "/Homepage/BlogGirl2.png",
-        bgColor: "rgba(255, 255, 255, 0.9)",
-        textColor: "#142349",
-        width: "374.71px"
-    }
-];
-
 const Blog = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(true);
 
+    // Desktop configuration
+    const desktopCardWidth = 374;
+    const desktopGap = 44.79;
+
     useEffect(() => {
         const interval = setInterval(() => {
-            setActiveIndex((current) => current + 1);
+            setActiveIndex((current: number) => current + 1);
         }, 3000);
         return () => clearInterval(interval);
     }, []);
@@ -51,13 +20,10 @@ const Blog = () => {
             const timeout = setTimeout(() => {
                 setIsTransitioning(false);
                 setActiveIndex(0);
-                
-                // Force a reflow to ensure the transition is properly disabled
                 setTimeout(() => {
                     setIsTransitioning(true);
                 }, 50);
             }, 500);
-
             return () => clearTimeout(timeout);
         }
     }, [activeIndex]);
@@ -67,63 +33,65 @@ const Blog = () => {
         setActiveIndex(index);
     };
 
+    const blogData = [
+        {
+            id: 1,
+            title: "Benefits of online doctor consultation in India",
+            img: "/Homepage/BlogGirl1.png",
+            bgColor: "#1566B7",
+            textColor: "#FFFFFF",
+        },
+        {
+            id: 2,
+            title: "How home sample collection works for lab tests",
+            img: "/Homepage/BlogGirl2.png",
+            bgColor: "rgba(255, 255, 255, 0.9)",
+            textColor: "#142349",
+        },
+        {
+            id: 3,
+            title: "Benefits of online doctor consultation in India",
+            img: "/Homepage/BlogGirl1.png",
+            bgColor: "#1566B7",
+            textColor: "#FFFFFF",
+        },
+        {
+            id: 4,
+            title: "How home sample collection works for lab tests",
+            img: "/Homepage/BlogGirl2.png",
+            bgColor: "rgba(255, 255, 255, 0.9)",
+            textColor: "#142349",
+        }
+    ];
+
     return (
-        <div className="w-full bg-white py-16 px-4">
-            <div style={{ maxWidth: '1512px', margin: '0 auto' }}>
+        <div className="w-full bg-white py-12 px-4 md:py-16 xl:py-16">
+            <div className="w-full mx-auto" style={{ maxWidth: '1512px' }}>
                 {/* Overall Container */}
                 <div
-                    style={{
-                        width: '1308.5px',
-                        height: '540px',
-                        margin: '0 auto',
-                        position: 'relative',
-                        overflow: 'visible'
-                    }}
+                    className="relative w-full flex flex-col gap-10
+                    xl:w-[1308.5px] xl:h-[540px] xl:mx-auto xl:block xl:gap-0"
                 >
                     {/* Left Text Section */}
                     <div
-                        style={{
-                            width: '475px',
-                            height: '283px',
-                            position: 'absolute',
-                            top: '45px',
-                            left: 0,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '28px'
-                        }}
+                        className="flex flex-col gap-6 w-full max-w-[600px] mx-auto text-center items-center
+                        xl:absolute xl:top-[45px] xl:left-0 xl:w-[475px] xl:h-[283px] xl:text-left xl:items-start xl:gap-[28px] xl:mx-0 xl:max-w-none"
                     >
                         {/* Heading */}
                         <h2
-                            style={{
-                                width: '475px',
-                                height: '58px',
-                                fontFamily: "'Source Serif Pro', serif",
-                                fontWeight: 600,
-                                fontSize: '46px',
-                                lineHeight: '100%',
-                                letterSpacing: '0.02em',
-                                textTransform: 'capitalize',
-                                margin: 0
-                            }}
+                            className="font-['Source_Serif_Pro'] font-semibold capitalize text-3xl
+                            md:text-4xl
+                            xl:w-[475px] xl:h-[58px] xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:m-0"
                         >
-                            <span style={{ color: '#142349' }}>From </span>
-                            <span style={{ color: '#1566B7' }}>Our Blog</span>
+                            <span className="text-[#142349]">From </span>
+                            <span className="text-[#1566B7]">Our Blog</span>
                         </h2>
 
                         {/* Description */}
                         <p
-                            style={{
-                                width: '410px',
-                                height: '150px',
-                                fontFamily: "'DM Sans', sans-serif",
-                                fontWeight: 300,
-                                fontSize: '18px',
-                                lineHeight: '30px',
-                                letterSpacing: '0',
-                                color: '#142349',
-                                margin: 0
-                            }}
+                            className="font-['DM_Sans'] font-light text-[#142349] text-base leading-relaxed
+                            md:text-lg
+                            xl:w-[410px] xl:h-[150px] xl:text-[18px] xl:leading-[30px] xl:tracking-normal xl:m-0"
                         >
                             Stay informed with easy, trusted insights on health, medicines, diagnostics and healthcare services. Explore expert articles, tips and explainers designed to help you make better health decisions.
                         </p>
@@ -131,56 +99,60 @@ const Blog = () => {
                         {/* Button */}
                         <a
                             href="/blog"
-                            style={{
-                                width: '144px',
-                                height: '19px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '8px',
-                                borderRadius: '5px',
-                                textDecoration: 'none',
-                                cursor: 'pointer'
-                            }}
-                            className="hover:opacity-80 transition-opacity"
+                            className="group flex items-center gap-2 rounded-[5px] decoration-0 cursor-pointer hover:opacity-80 transition-opacity
+                            xl:w-[144px] xl:h-[19px]"
                         >
                             <span
-                                style={{
-                                    width: '122px',
-                                    height: '20px',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                    fontWeight: 600,
-                                    fontSize: '15px',
-                                    lineHeight: '100%',
-                                    letterSpacing: '0',
-                                    textTransform: 'uppercase',
-                                    color: '#1566B7'
-                                }}
+                                className="font-['DM_Sans'] font-semibold text-[#1566B7] uppercase text-sm
+                                xl:w-[122px] xl:h-[20px] xl:text-[15px] xl:leading-[100%] xl:tracking-normal"
                             >
                                 VIEW ALL BLOGS
                             </span>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1566B7" strokeWidth="2">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1566B7" strokeWidth="2" className="group-hover:translate-x-1 transition-transform">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
                     </div>
 
-                    {/* Carousel Container */}
+                    {/* Mobile/Tablet Card List (Simple Scroll) */}
+                    <div className="flex xl:hidden overflow-x-auto gap-4 pb-4 w-full snap-x snap-mandatory">
+                        {blogData.map((item, index) => (
+                            <div
+                                key={index}
+                                className="min-w-[300px] w-[85vw] max-w-[380px] snap-center flex-shrink-0 shadow-md rounded-lg overflow-hidden"
+                            >
+                                <div className="h-[250px] w-full overflow-hidden">
+                                    <img
+                                        src={item.img}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div
+                                    className="h-[88px] flex items-center justify-center p-3"
+                                    style={{ background: item.bgColor }}
+                                >
+                                    <h3
+                                        className="font-['DM_Sans'] font-bold text-lg text-center capitalize px-2 leading-tight"
+                                        style={{ color: item.textColor }}
+                                    >
+                                        {item.title}
+                                    </h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Desktop Carousel Container - EXACT XL DESIGN */}
                     <div
-                        style={{
-                            width: '793.5px',
-                            height: '456px',
-                            position: 'absolute',
-                            top: 0,
-                            left: '515px',
-                            overflow: 'hidden'
-                        }}
+                        className="hidden xl:block absolute top-0 left-[515px] w-[793.5px] h-[456px] overflow-hidden"
                     >
                         <div
                             style={{
                                 display: 'flex',
                                 width: 'max-content',
-                                gap: '44.79px',
-                                transform: `translateX(-${[0, 418.79, 837.58, 1256.37, 1675.16][activeIndex]}px)`,
+                                gap: `${desktopGap}px`,
+                                transform: `translateX(-${activeIndex * (desktopCardWidth + desktopGap)}px)`,
                                 transition: isTransitioning ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
                                 paddingLeft: '2px',
                                 paddingTop: '2px',
@@ -191,7 +163,7 @@ const Blog = () => {
                                 <div
                                     key={`${item.id}-${index}`}
                                     style={{
-                                        width: item.width,
+                                        width: `${desktopCardWidth}px`,
                                         height: '456px',
                                         boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
                                         flexShrink: 0
@@ -200,28 +172,18 @@ const Blog = () => {
                                     onClick={() => handleDotClick(index % 4)}
                                 >
                                     {/* Image */}
-                                    <div
-                                        style={{
-                                            width: item.width,
-                                            height: '368px',
-                                            overflow: 'hidden'
-                                        }}
-                                    >
+                                    <div style={{ width: `${desktopCardWidth}px`, height: '368px', overflow: 'hidden' }}>
                                         <img
                                             src={item.img}
                                             alt={item.title}
-                                            style={{
-                                                width: '100%',
-                                                height: '100%',
-                                                objectFit: 'cover'
-                                            }}
+                                            className="w-full h-full object-cover"
                                         />
                                     </div>
 
                                     {/* Text Box */}
                                     <div
                                         style={{
-                                            width: item.width,
+                                            width: `${desktopCardWidth}px`,
                                             height: '88px',
                                             background: item.bgColor,
                                             display: 'flex',
@@ -252,19 +214,9 @@ const Blog = () => {
                         </div>
                     </div>
 
-                    {/* Pagination Dots */}
+                    {/* Pagination Dots - Desktop Only */}
                     <div
-                        style={{
-                            position: 'absolute',
-                            bottom: '20px',
-                            left: '515px',
-                            width: '793.5px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            gap: '10px',
-                            alignItems: 'center',
-                            zIndex: 10
-                        }}
+                        className="hidden xl:flex absolute bottom-[20px] left-[515px] w-[793.5px] justify-center gap-[10px] items-center z-10"
                     >
                         {[0, 1, 2, 3].map((index) => (
                             <span
