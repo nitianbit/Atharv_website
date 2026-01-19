@@ -31,7 +31,7 @@ const HowItWorksSection = () => {
 
 
     return (
-        <div className={`w-full py-12 md:py-20 px-4 ${styles.blueGradientBg}`}>
+        <div className={`w-full py-12 md:py-20 px-4 bg-[#0F58A1] `}>
             <div className="max-w-7xl mx-auto">
                 <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} text-center mb-16 text-white max-w-4xl mx-auto`}>
                     <span className="text-white">How Our MMU Programs Are Delivered </span>
@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
 
     {/* DOTTED LINE — perfectly centered */}
     <div
-        className="hidden lg:block absolute top-[40px] left-[80px] right-[80px]
+        className="hidden lg:block absolute top-[40px] left-32 right-32
                    border-t-2 border-dotted border-white/30 z-0"
     />
 
@@ -52,8 +52,8 @@ const HowItWorksSection = () => {
                 className="flex flex-col items-center text-center flex-1"
             >
                 {/* NUMBER */}
-                <div className="w-20 h-20 flex items-center justify-center mb-6 relative z-20">
-                    <span className="text-white text-6xl lg:text-7xl font-bold leading-none">
+                <div className="w-25 h-20 flex items-center justify-center mb-6 relative z-20">
+                    <span className="text-white text-6xl lg:text-7xl font-bold leading-none bg-[#0F58A1]">
                         {step.number}
                     </span>
                 </div>
