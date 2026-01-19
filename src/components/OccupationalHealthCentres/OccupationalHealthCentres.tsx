@@ -14,7 +14,7 @@ import BenefitsSection from "./BenefitsSection";
 import HowItWorksSection from "./HowItWorksSection";
 import SocialProofSection from "./SocialProofSection";
 // import FinalCTASection from "./FinalCTASection";
-import FAQ from "../Homepage/FAQ";
+import FAQ from "./FAQ";
 import Companies from "../Homepage/Companies";
 
 const OccupationalHealthCentres = () => {
