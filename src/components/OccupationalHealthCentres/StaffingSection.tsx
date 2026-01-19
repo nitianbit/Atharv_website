@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import styles from './ohc.module.css';
 
 const StaffingSection = () => {
+    const [showStaffingOptions, setShowStaffingOptions] = useState(true);
     const [showDeployment, setShowDeployment] = useState(false);
 
     const staffTypes = [
@@ -51,18 +52,29 @@ const StaffingSection = () => {
 
                         {/* Staffing Options */}
                         <div className="bg-white rounded-xl p-6 mb-4 ">
-                            <div className="w-full flex justify-between items-center mb-4">
+                            <button
+                                onClick={() => setShowStaffingOptions(!showStaffingOptions)}
+                                className="w-full flex justify-between items-center mb-4"
+                                aria-expanded={showStaffingOptions}
+                                type="button"
+                            >
                                 <h3 className={`${styles.primaryBlue} text-lg font-bold`}>Staffing Options Include:</h3>
-                                <ChevronUp className={styles.primaryBlue} size={24} />
-                            </div>
-                            <ul className="space-y-3">
-                                {staffTypes.map((type, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <span className={`${styles.primaryBlue} font-bold text-xl flex-shrink-0`}>•</span>
-                                        <span className={`${styles.bodyTextLight} text-lg`}>{type}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                                <ChevronDown
+                                    className={`${styles.primaryBlue} transition-transform ${showStaffingOptions ? 'rotate-180' : ''}`}
+                                    size={24}
+                                />
+                            </button>
+                            {showStaffingOptions && (
+                                <ul className="space-y-3 animate-fadeIn">
+                                    {staffTypes.map((type, index) => (
+                                        <li key={index} className="flex items-start gap-3">
+                                            <span className={`${styles.primaryBlue} font-bold text-xl shrink-0`}>•</span>
+                                        <span className={`${styles.primaryBlue} font-bold text-xl shrink-0`}>•</span>
+                                            <span className={`${styles.bodyTextLight} text-lg`}>{type}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
 
                         {/* Deployment Models */}
