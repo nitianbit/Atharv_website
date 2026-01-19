@@ -28,22 +28,24 @@ const MobileMedicalUnit = () => {
             <Navbar />
             <LandingOverviewSection />
             <StatsSection />
-            <WhatIsOHCSection />
-            <ServicesSection />
-
-            <ComplianceSection />
-            <MedicalServicesSection />
-            <InfrastructureSection />
-            <StaffingSection />
             <FullWidthImageSection />
-            <IndustriesSection />
+            <WhatIsOHCSection />
+            <MMUServicesSection/>
+            {/* <ServicesSection /> */}
+
+            {/* <ComplianceSection /> */}
+            {/* <MedicalServicesSection /> */}
+            {/* <InfrastructureSection /> */}
+            <StaffingSection />
+            {/* <IndustriesSection /> */}
+            <MMUUseCases/>
             <BenefitsSection />
             <HowItWorksSection />
-            <MMUUseCases/>
-            <SocialProofSection />
+
+            {/* <SocialProofSection /> */}
             <SecondStatsSection/>
             <ExperienceSection/>
-            <MMUServicesSection/>
+
             <Companies/>
             <FAQ />
             {/* <FinalCTASection /> */}
