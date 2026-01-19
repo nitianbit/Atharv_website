@@ -30,25 +30,52 @@ const HowItWorksSection = () => {
     ];
 
     return (
-        <div className={`w-full py-12 md:py-20 px-4 ${styles.blueGradientBg}`}>
+        <div className={`w-full py-12 md:py-20 px-4 bg-[#0F58A1]`}>
             <div className="max-w-7xl mx-auto">
                 <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} text-center mb-16 text-white max-w-2xl mx-auto`}>
                     <span className="text-white">How Our OHC Engagement Works</span>
                 </h2>
 
-                <div className="relative">
-                    <div className="hidden lg:block absolute top-[40px] left-0 right-0 border-t-2 border-dotted border-white/30" style={{ width: 'calc(100% - 160px)', left: '80px', right: '80px' }}></div>
-                    
-                    <div className="flex flex-col lg:flex-row items-start lg:items-start justify-between gap-8 lg:gap-4">
-                        {steps.map((step, index) => (
-                            <div key={index} className="flex flex-col items-center text-center flex-1 relative z-10">
-                                <div className="w-20 h-20 rounded-full bg-[#1566B7] text-white flex items-center justify-center text-4xl font-bold mb-6 shadow-lg flex-shrink-0 mx-auto">
-                                    <span className="flex items-center justify-center w-full h-full leading-none">{step.number}</span>
+                {/* Mobile/tablet: stacked for readability */}
+                <div className="lg:hidden space-y-10">
+                    {steps.map((step) => (
+                        <div key={step.number} className="text-center">
+                            <div className="text-white font-extrabold text-6xl leading-none tracking-tight">
+                                {step.number}
+                            </div>
+                            <h3 className="mt-4 text-white font-medium text-base">{step.title}</h3>
+                            <p className="mt-2 text-white/90 font-light text-sm leading-relaxed">{step.description}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop: big numbers + dotted connectors (stepper) like the reference UI */}
+                <div className="hidden lg:block">
+                    <div className="relative">
+                        {/* dotted connector line */}
+                        <div className="absolute left-32 right-32 top-1/2 -translate-y-1/2 border-t-2 border-dotted border-white/35 " />
+                        {/* numbers */}
+                        <div className="grid grid-cols-5 items-center relative z-10">
+                            {steps.map((step) => (
+                                <div key={step.number} className="flex justify-center">
+                                    <div className="text-white font-extrabold text-7xl xl:text-8xl leading-none tracking-tight bg-[#0F58A1]">
+                                        {step.number}
+                                    </div>
                                 </div>
-                                <div className="flex items-start justify-center mb-2">
-                                    <h3 className="text-white font-medium text-base lg:text-lg">{step.title}</h3>
-                                </div>
-                                <p className="text-white/90 font-light text-xs lg:text-sm leading-relaxed">{step.description}</p>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* text */}
+                    <div className="mt-8 grid grid-cols-5 gap-x-10">
+                        {steps.map((step) => (
+                            <div key={step.number} className="text-center px-2">
+                                <h3 className="text-white font-semibold text-lg leading-snug">
+                                    {step.title}
+                                </h3>
+                                <p className="mt-3 text-white/90 font-light text-base leading-relaxed max-w-[18rem] mx-auto">
+                                    {step.description}
+                                </p>
                             </div>
                         ))}
                     </div>
