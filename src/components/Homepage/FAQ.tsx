@@ -10,15 +10,15 @@ const FAQ = () => {
         },
         {
             question: "Do you offer medicine home delivery?",
-            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            answer: "Yes - through our online pharmacy. Upload prescription, order medicines online, and get doorstep delivery where available."
         },
         {
             question: "Can I book lab tests at home?",
-            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            answer: "Yes. You can book lab tests online with home sample collection and secure digital reports."
         },
         {
             question: "Is ambulance service 24×7?",
-            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            answer: "Emergency ambulance service availability depends on your city. Check availability while booking."
         }
     ];
 
@@ -44,9 +44,10 @@ const FAQ = () => {
                             <div key={index}>
                                 {/* Question Box */}
                                 <div
-                                    className={`w-full border-t border-b border-[#E5E5E5] relative cursor-pointer transition-all duration-300
-                                                ${activeIndex === index ? 'py-6 xl:py-0 xl:h-[88px]' : 'py-5 xl:py-0 xl:h-[71.078125px]'}`}
+                                    className={`w-full border-t border-b border-[#E5E5E5] relative cursor-pointer transition-all duration-300 select-none outline-none focus:outline-none focus:ring-0
+                                                ${activeIndex === index ? 'py-6 xl:py-0 xl:h-[104px]' : 'py-5 xl:py-0 xl:h-[71.078125px]'}`}
                                     onClick={() => toggleAccordion(index)}
+                                    style={{ WebkitTapHighlightColor: 'transparent' }}
                                 >
                                     {/* Question Row */}
                                     <div className="w-full flex justify-between items-center xl:absolute xl:top-[25.67px] xl:left-[4.11px] xl:w-full xl:pr-4">

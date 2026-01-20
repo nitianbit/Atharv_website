@@ -39,263 +39,101 @@ const UpcomingEvent = () => {
     ];
 
     return (
-        <div 
-            style={{
-                width: '100%',
-                background: '#FFFFFF',
-                padding: '80px 0',
-                display: 'flex',
-                justifyContent: 'center'
-            }}
-        >
-            <div 
-                style={{
-                    width: '1310px',
-                    height: '564px',
-                    position: 'relative',
-                    margin: '0 auto'
-                }}
-            >
+        <div className="w-full bg-white py-12 xl:py-[80px] flex justify-center">
+            <div className="w-full px-4 flex flex-col xl:block xl:w-[1310px] xl:h-[564px] xl:px-0 xl:relative xl:mx-auto">
+
                 {/* Header Section */}
-                <div 
-                    style={{
-                        width: '1308.97px',
-                        height: '88px',
-                        position: 'relative',
-                        marginBottom: '41px'
-                    }}
-                >
-                    <h2 
-                        style={{
-                            width: '727px',
-                            height: '58px',
-                            fontFamily: "'Source Serif Pro', serif",
-                            fontWeight: 600,
-                            fontSize: '46px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.02em',
-                            textTransform: 'capitalize',
-                            color: '#142349',
-                            margin: 0,
-                            padding: 0
-                        }}
-                    >
-                        Upcoming <span style={{ color: '#1566B7' }}>Events</span>
+                <div className="flex flex-col items-center text-center gap-2 mb-8 xl:block xl:relative xl:w-[1308.97px] xl:h-[88px] xl:mb-[41px] xl:text-left xl:gap-0">
+                    <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize text-[#142349] leading-tight
+                                   text-3xl md:text-4xl
+                                   xl:w-[727px] xl:h-[58px] xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:m-0">
+                        Upcoming <span className="text-[#1566B7]">Events</span>
                     </h2>
-                    <p 
-                        style={{
-                            width: '780px',
-                            height: '30px',
-                            position: 'absolute',
-                            top: '58px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '18px',
-                            lineHeight: '30px',
-                            letterSpacing: '0',
-                            color: '#142349',
-                            margin: 0,
-                            padding: 0
-                        }}
-                    >
+                    <p className="font-['DM_Sans'] font-light text-[#142349]
+                                  text-base md:text-lg mt-2
+                                  xl:w-[780px] xl:h-[30px] xl:absolute xl:top-[58px] xl:text-[18px] xl:leading-[30px] xl:tracking-0 xl:m-0 xl:mt-0 px-1">
                         Stay updated with Atharv Healthcare's upcoming:
                     </p>
                 </div>
 
                 {/* Events Cards Container */}
-                <div 
-                    style={{
-                        width: '1310px',
-                        height: '435px',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        gap: '0'
-                    }}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6
+                                xl:flex xl:justify-between xl:w-[1310px] xl:h-[435px] xl:gap-0">
                     {events.map((event) => (
                         <div
                             key={event.id}
-                            style={{
-                                width: '305px',
-                                height: '435px',
-                                // border: '1px solid #1566B7',
-                                borderRadius: '10px',
-                                position: 'relative',
-                                background: 'rgba(49, 119, 225, 0.1)'
-                            }}
+                            className="group flex flex-col p-5 rounded-[10px] bg-[#3177E11A] h-auto gap-4
+                                       xl:block xl:relative xl:w-[305px] xl:h-[435px] xl:p-0 xl:gap-0"
                         >
                             {/* Event Image */}
-                            <div 
-                                style={{
-                                    width: '265px',
-                                    height: '203.54px',
-                                    position: 'absolute',
-                                    top: '17.7px',
-                                    left: '20px',
-                                    borderRadius: '10px',
-                                    overflow: 'hidden',
-                                    background: '#FFFFFF'
-                                }}
-                            >
-                                <img 
+                            <div className="w-full h-48 rounded-[10px] overflow-hidden bg-white shrink-0
+                                            xl:absolute xl:w-[265px] xl:h-[203.54px] xl:top-[17.7px] xl:left-[20px] xl:h-auto">
+                                <img
                                     src={event.image}
                                     alt={event.title}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        display: 'block'
-                                    }}
+                                    className="w-full h-full object-cover block"
                                 />
                             </div>
 
                             {/* Title */}
-                            <h3 
-                                style={{
-                                    width: '130px',
-                                    height: '25px',
-                                    position: 'absolute',
-                                    top: '241px',
-                                    left: '20px',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                    fontWeight: 700,
-                                    fontSize: '18px',
-                                    lineHeight: '155%',
-                                    letterSpacing: '0.015em',
-                                    color: '#1566B7',
-                                    margin: 0,
-                                    padding: 0
-                                }}
-                            >
+                            <h3 className="font-['DM_Sans'] font-bold text-[#1566B7]
+                                           text-xl leading-snug
+                                           xl:absolute xl:top-[241px] xl:left-[20px] xl:w-[130px] xl:h-[25px] xl:text-[18px] xl:leading-[155%] xl:tracking-[0.015em] xl:m-0">
                                 {event.title}
                             </h3>
 
                             {/* Description */}
-                            <p 
-                                style={{
-                                    width: '139px',
-                                    height: '25px',
-                                    position: 'absolute',
-                                    top: '268px',
-                                    left: '20px',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                    fontWeight: 300,
-                                    fontSize: '16px',
-                                    lineHeight: '30px',
-                                    letterSpacing: '0',
-                                    color: '#3C4959',
-                                    margin: 0,
-                                    padding: 0
-                                }}
-                            >
+                            <p className="font-['DM_Sans'] font-light text-[#3C4959]
+                                          text-base leading-relaxed
+                                          xl:absolute xl:top-[268px] xl:left-[20px] xl:w-[139px] xl:h-[25px] xl:text-[16px] xl:leading-[30px] xl:tracking-0 xl:m-0">
                                 {event.description}
                             </p>
 
-                            {/* Location Icon */}
-                            <svg 
-                                width="19" 
-                                height="17" 
-                                viewBox="0 0 24 24" 
-                                fill="none"
-                                style={{
-                                    position: 'absolute',
-                                    top: '301px',
-                                    left: '21px'
-                                }}
-                            >
-                                <path 
-                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" 
-                                    fill="#1566B7"
-                                />
-                            </svg>
+                            {/* Location & Date Group */}
+                            <div className="flex flex-col gap-2 mt-auto xl:block xl:mt-0">
+                                <div className="flex items-start gap-2 xl:contents">
+                                    {/* Location Icon */}
+                                    <svg
+                                        width="19" height="17" viewBox="0 0 24 24" fill="none"
+                                        className="shrink-0 mt-1 xl:absolute xl:top-[301px] xl:left-[21px] xl:mt-0"
+                                    >
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#1566B7" />
+                                    </svg>
 
-                            {/* Date Icon */}
-                            <svg 
-                                width="19" 
-                                height="20" 
-                                viewBox="0 0 24 24" 
-                                fill="none"
-                                style={{
-                                    position: 'absolute',
-                                    top: '327px',
-                                    left: '21px'
-                                }}
-                            >
-                                <path 
-                                    d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z" 
-                                    fill="#1566B7"
-                                />
-                            </svg>
+                                    {/* Address Text */}
+                                    <span className="font-['DM_Sans'] font-normal text-[#3C4959] text-base
+                                                     xl:absolute xl:top-[298px] xl:left-[48px] xl:text-[16px] xl:leading-[160%] xl:tracking-[0.015em]">
+                                        {event.address}
+                                    </span>
+                                </div>
 
-                            {/* Address and Date Text */}
-                            <div 
-                                style={{
-                                    width: '101px',
-                                    height: '50px',
-                                    position: 'absolute',
-                                    top: '298px',
-                                    left: '48px',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                    fontWeight: 400,
-                                    fontSize: '16px',
-                                    lineHeight: '160%',
-                                    letterSpacing: '0.015em',
-                                    color: '#3C4959'
-                                }}
-                            >
-                                <div style={{ marginBottom: '6px' }}>{event.address}</div>
-                                <div>{event.date}</div>
+                                <div className="flex items-start gap-2 xl:contents">
+                                    {/* Date Icon */}
+                                    <svg
+                                        width="19" height="20" viewBox="0 0 24 24" fill="none"
+                                        className="shrink-0 mt-1 xl:absolute xl:top-[327px] xl:left-[21px] xl:mt-0"
+                                    >
+                                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z" fill="#1566B7" />
+                                    </svg>
+
+                                    {/* Date Text */}
+                                    <span className="font-['DM_Sans'] font-normal text-[#3C4959] text-base
+                                                     xl:absolute xl:top-[322px] xl:left-[48px] xl:text-[16px] xl:leading-[160%] xl:tracking-[0.015em]">
+                                        {event.date}
+                                    </span>
+                                </div>
                             </div>
 
                             {/* Register Button */}
                             <button
-                                style={{
-                                    width: '265px',
-                                    height: '38px',
-                                    position: 'absolute',
-                                    top: '371px',
-                                    left: '20px',
-                                    borderRadius: '192px',
-                                    border: event.isPrimary ? 'none' : '1px solid #1566B7',
-                                    background: event.isPrimary ? '#1566B7' : '#FFFFFF',
-                                    boxShadow: event.isPrimary ? 'none' : '1px 6px 7.7px 0px rgba(49, 119, 225, 0.24)',
-                                    padding: '16px 27px 16px 28px',
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    gap: '10px',
-                                    transition: 'all 0.3s ease'
-                                }}
-                                onMouseEnter={(e) => {
-                                    if (event.isPrimary) {
-                                        e.currentTarget.style.background = '#0F58A1';
-                                    } else {
-                                        e.currentTarget.style.background = '#EBF4FF';
-                                    }
-                                }}
-                                onMouseLeave={(e) => {
-                                    if (event.isPrimary) {
-                                        e.currentTarget.style.background = '#1566B7';
-                                    } else {
-                                        e.currentTarget.style.background = '#FFFFFF';
-                                    }
-                                }}
+                                className={`w-full h-[38px] rounded-[192px] flex items-center justify-center gap-[10px] uppercase font-['DM_Sans'] font-semibold text-sm transition-all duration-300 mt-4 xl:mt-0
+                                            xl:absolute xl:w-[265px] xl:top-[371px] xl:left-[20px] xl:py-[16px]
+                                            ${event.isPrimary
+                                        ? 'bg-[#1566B7] text-white hover:bg-[#0F58A1] shadow-none border-none'
+                                        : 'bg-white text-[#1566B7] border border-[#1566B7] hover:bg-[#EBF4FF] shadow-[1px_6px_7.7px_0px_rgba(49,119,225,0.24)]'
+                                    }`}
                             >
-                                <span
-                                    style={{
-                                        width: '103px',
-                                        height: '18px',
-                                        fontFamily: "'DM Sans', sans-serif",
-                                        fontWeight: 600,
-                                        fontSize: '14px',
-                                        lineHeight: '100%',
-                                        letterSpacing: '0',
-                                        textTransform: 'uppercase',
-                                        color: event.isPrimary ? '#FFFFFF' : '#1566B7',
-                                        verticalAlign: 'middle'
-                                    }}
-                                >
+                                <span className="xl:block xl:w-[103px] xl:h-[18px] xl:leading-[100%] xl:tracking-0">
                                     REGISTER NOW
                                 </span>
                             </button>

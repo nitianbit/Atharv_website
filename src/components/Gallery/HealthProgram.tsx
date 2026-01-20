@@ -1,274 +1,73 @@
 const HealthProgram = () => {
     return (
-        <div 
-            style={{
-                width: '100%',
-                background: '#FFFFFF',
-                padding: '80px 0 120px',
-                display: 'flex',
-                justifyContent: 'center',
-                position: 'relative'
-            }}
-        >
-            <div 
-                style={{
-                    width: '1316px',
-                    height: '805px',
-                    position: 'relative',
-                    margin: '0 auto'
-                }}
-            >
+        <div className="w-full bg-white py-12 xl:py-[80px] xl:pb-[120px] flex justify-center relative">
+            <div className="w-full px-4 flex flex-col gap-8 xl:block xl:w-[1316px] xl:h-[805px] xl:px-0 xl:gap-0 xl:relative xl:mx-auto">
+
                 {/* Header Section */}
-                <div 
-                    style={{
-                        width: '983px',
-                        height: '123px',
-                        position: 'absolute',
-                        top: '0px',
-                        left: '167px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '5px',
-                        alignItems: 'center'
-                    }}
-                >
-                    <h2 
-                        style={{
-                            width: '983px',
-                            height: '58px',
-                            fontFamily: "'Source Serif Pro', serif",
-                            fontWeight: 600,
-                            fontSize: '46px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.02em',
-                            textAlign: 'center',
-                            textTransform: 'capitalize',
-                            color: '#142349',
-                            margin: 0,
-                            padding: 0
-                        }}
-                    >
-                        Our <span style={{ color: '#1566B7' }}>Healthcare Programs</span> In Action
+                <div className="flex flex-col items-center gap-4 text-center xl:gap-[5px] xl:absolute xl:top-0 xl:left-[167px] xl:w-[983px] xl:h-[123px]">
+                    <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize text-[#142349] leading-tight
+                                   text-3xl md:text-4xl
+                                   xl:w-[983px] xl:h-[58px] xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:m-0">
+                        Our <span className="text-[#1566B7]">Healthcare Programs</span> In Action
                     </h2>
-                    <p 
-                        style={{
-                            width: '983px',
-                            height: '60px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '18px',
-                            lineHeight: '30px',
-                            letterSpacing: '0',
-                            textAlign: 'center',
-                            color: '#000000',
-                            margin: 0,
-                            padding: 0
-                        }}
-                    >
+                    <p className="font-['DM_Sans'] font-light text-black
+                                  text-base md:text-lg leading-relaxed max-w-3xl
+                                  xl:w-[983px] xl:h-[60px] xl:text-[18px] xl:leading-[30px] xl:tracking-0 xl:max-w-none xl:m-0">
                         Recent photographs from Atharv Healthcare's on-ground programs including CSR health camps, mobile medical unit services, workplace health initiatives, and community medical outreach across India.
                     </p>
                 </div>
 
-                {/* Images Section - Absolute Positioning */}
-                <div 
-                    style={{
-                        width: '1316px',
-                        height: '642px',
-                        position: 'absolute',
-                        top: '163px',
-                        left: '0px'
-                    }}
-                >
+                {/* Images Section - Responsive Grid for Mobile, Absolute Collage for Desktop */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full
+                                xl:block xl:absolute xl:top-[163px] xl:left-0 xl:w-[1316px] xl:h-[642px]">
+
                     {/* Image 4 - Bottom Left Small */}
-                    <div 
-                        style={{
-                            width: '254px',
-                            height: '254px',
-                            position: 'absolute',
-                            top: '106px',
-                            left: '0px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/4.png"
-                            alt="Healthcare Initiative"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-square w-full h-full xl:aspect-auto
+                                    xl:w-[254px] xl:h-[254px] xl:absolute xl:top-[106px] xl:left-0">
+                        <img src="/Gallery/4.png" alt="Healthcare Initiative" className="w-full h-full object-cover block" />
                     </div>
 
                     {/* Image 1 - Center Top Large */}
-                    <div 
-                        style={{
-                            width: '444px',
-                            height: '317px',
-                            position: 'absolute',
-                            top: '0px',
-                            left: '282px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/1.png"
-                            alt="CSR Health Camp Speaker"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-[4/3] w-full h-full xl:aspect-auto
+                                    xl:w-[444px] xl:h-[317px] xl:absolute xl:top-0 xl:left-[282px]">
+                        <img src="/Gallery/1.png" alt="CSR Health Camp Speaker" className="w-full h-full object-cover block" />
                     </div>
 
                     {/* Image 2 - Right Top Small */}
-                    <div 
-                        style={{
-                            width: '208.95px',
-                            height: '254px',
-                            position: 'absolute',
-                            top: '63px',
-                            left: '756px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/2.png"
-                            alt="Mobile Medical Unit"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-[3/4] w-full h-full xl:aspect-auto
+                                    xl:w-[208.95px] xl:h-[254px] xl:absolute xl:top-[63px] xl:left-[756px]">
+                        <img src="/Gallery/2.png" alt="Mobile Medical Unit" className="w-full h-full object-cover block" />
                     </div>
 
                     {/* Image 3 - Right Top Corner */}
-                    <div 
-                        style={{
-                            width: '319px',
-                            height: '171px',
-                            position: 'absolute',
-                            top: '112px',
-                            left: '993px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/3.png"
-                            alt="Medical Equipment Testing"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-video w-full h-full xl:aspect-auto
+                                    xl:w-[319px] xl:h-[171px] xl:absolute xl:top-[112px] xl:left-[993px]">
+                        <img src="/Gallery/3.png" alt="Medical Equipment Testing" className="w-full h-full object-cover block" />
                     </div>
 
                     {/* Image 5 - Bottom Left Corner */}
-                    <div 
-                        style={{
-                            width: '254px',
-                            height: '155px',
-                            position: 'absolute',
-                            top: '381px',
-                            left: '0px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/5.png"
-                            alt="Healthcare Service Center"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-video w-full h-full xl:aspect-auto
+                                    xl:w-[254px] xl:h-[155px] xl:absolute xl:top-[381px] xl:left-0">
+                        <img src="/Gallery/5.png" alt="Healthcare Service Center" className="w-full h-full object-cover block" />
                     </div>
 
                     {/* Image 6 - Bottom Center Left */}
-                    <div 
-                        style={{
-                            width: '352px',
-                            height: '262px',
-                            position: 'absolute',
-                            top: '347px',
-                            left: '295px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/6.png"
-                            alt="Healthcare Program Event"
-                            style={{
-                                width: '50%',
-                                height: '100%',
-                                objectFit: 'fill',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-square w-full h-full xl:aspect-auto
+                                    xl:w-[352px] xl:h-[262px] xl:absolute xl:top-[347px] xl:left-[295px]">
+                        {/* Note: Fix object-fit to cover for better responsive look if needed, kept fill/cover mix as per original intent */}
+                        <img src="/Gallery/6.png" alt="Healthcare Program Event" className="w-full h-full object-cover block xl:object-fill xl:w-[50%]" />
                     </div>
 
                     {/* Image 8 - Bottom Center Right */}
-                    <div 
-                        style={{
-                            width: '444px',
-                            height: '295px',
-                            position: 'absolute',
-                            top: '347px',
-                            left: '519px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/8.png"
-                            alt="Healthcare Workspace"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-[3/2] w-full h-full xl:aspect-auto
+                                    xl:w-[444px] xl:h-[295px] xl:absolute xl:top-[347px] xl:left-[519px]">
+                        <img src="/Gallery/8.png" alt="Healthcare Workspace" className="w-full h-full object-cover block" />
                     </div>
 
                     {/* Image 7 - Bottom Right */}
-                    <div 
-                        style={{
-                            width: '336px',
-                            height: '246px',
-                            position: 'absolute',
-                            top: '302px',
-                            left: '976px',
-                            overflow: 'hidden',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        <img 
-                            src="/Gallery/7.png"
-                            alt="Medical Registration Desk"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
+                    <div className="rounded-[10px] overflow-hidden aspect-[4/3] w-full h-full xl:aspect-auto
+                                    xl:w-[336px] xl:h-[246px] xl:absolute xl:top-[302px] xl:left-[976px]">
+                        <img src="/Gallery/7.png" alt="Medical Registration Desk" className="w-full h-full object-cover block" />
                     </div>
                 </div>
             </div>

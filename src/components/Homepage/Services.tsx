@@ -21,37 +21,37 @@ const Services = () => {
             id: 2,
             image: "/Homepage/Service2.png",
             title: "Online Pharmacy & Medicine Home Delivery",
-            description: "Order genuine medicines and healthcare products online with doorstep delivery. We ensure authentic pharmaceutical products with easy ordering and tracking.",
+            description: "Order prescription medicines online through our in-house pharmacy. We ensure genuine medicines, proper storage and timely home delivery to support uninterrupted treatment.",
             points: [
-                "Genuine medicines",
-                "Doorstep delivery",
-                "Easy re-ordering"
+                "Order medicines online",
+                "Prescription upload",
+                "Refills for long-term treatment"
             ],
-            buttonText: "ORDER MEDICINES"
+            buttonText: "ORDER MEDICINES ONLINE"
         },
         {
             id: 3,
             image: "/Homepage/Service3.png",
             title: "Diagnostics & Lab Tests at Home",
-            description: "Book lab tests and health checkups from the comfort of your home. Our certified phlebotomists collect samples safely, ensuring accurate and timely reports.",
+            description: "Book lab tests online with convenient home sample collection. Trained technicians collect samples and digital reports are delivered securely for easy access and follow-up.",
             points: [
-                "Home sample collection",
-                "NABL accredited labs",
-                "Digital reports"
+                "Blood tests at home",
+                "Preventive health checkup packages",
+                "Digital lab reports"
             ],
-            buttonText: "BOOK LAB TEST"
+            buttonText: "BOOK LAB TEST AT HOME"
         },
         {
             id: 4,
             image: "/Homepage/Service4.png",
             title: "Industrial & Rural Healthcare Services",
-            description: "Comprehensive healthcare solutions for industries and rural communities, including occupational health centers, mobile medical units, and emergency support.",
+            description: "On-ground healthcare solutions for workplaces, communities and underserved regions. We support organizations and public health programs through structured medical services and mobile healthcare delivery.",
             points: [
                 "Occupational Health Centers (OHC)",
                 "Mobile Medical Units (MMU)",
-                "Corporate wellness programs"
+                "Community and rural healthcare programs"
             ],
-            buttonText: "EXPLORE SERVICES"
+            buttonText: "EXPLORE INDUSTRIAL & RURAL HEALTHCARE"
         }
     ];
 

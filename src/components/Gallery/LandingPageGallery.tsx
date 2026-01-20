@@ -1,84 +1,49 @@
 const LandingPageGallery = () => {
     return (
-        <div 
-            className="relative w-full h-[431px] flex items-center justify-center"
+        <div
+            className="w-full flex items-center justify-center relative
+                       h-auto py-16
+                       xl:h-[431px] xl:py-0"
             style={{
                 background: 'linear-gradient(228deg, #9ADDFC 14.6%, rgba(79, 197, 224, 0) 68.04%)',
             }}
         >
             {/* Center Content Container */}
-            <div className="relative w-[888px] h-[179px]">
-                
-                {/* Heading - About Atharv Healthcare */}
-                <h1 
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center capitalize"
-                    style={{
-                        width: '651px',
-                        height: '68px',
-                        fontFamily: 'Source Serif Pro, serif',
-                        fontWeight: 600,
-                        fontSize: '60px',
-                        lineHeight: '114%',
-                        letterSpacing: '-2%',
-                        color: '#011632',
-                        whiteSpace: 'nowrap'
-                    }}
+            <div className="relative flex flex-col items-center gap-6 w-full px-4 text-center
+                            xl:block xl:w-[888px] xl:h-[179px] xl:gap-0 xl:px-0">
+
+                {/* Heading - Media Gallery */}
+                <h1
+                    className="font-['Source_Serif_Pro'] font-semibold capitalize text-[#011632]
+                               text-4xl leading-tight
+                               xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2
+                               xl:w-[651px] xl:h-[68px] xl:text-[60px] xl:leading-[114%] xl:tracking-[-0.02em] xl:whitespace-nowrap"
                 >
                     Media Gallery
                 </h1>
 
                 {/* Straight Line Image */}
-                <img 
-                    src="/Aboutus/LineStraight.png" 
+                <img
+                    src="/Aboutus/LineStraight.png"
                     alt="line"
-                    className="absolute left-1/2 -translate-x-1/2"
-                    style={{
-                        width: '326px',
-                        height: '5px',
-                        top: '120px'
-                    }}
+                    className="w-1/2 max-w-[200px] h-auto object-contain
+                               xl:absolute xl:left-1/2 xl:-translate-x-1/2
+                               xl:w-[326px] xl:h-[5px] xl:top-[120px] xl:max-w-none"
                 />
 
                 {/* Subtitle Text */}
-                <p 
-                    className="absolute left-0 text-center"
-                    style={{
-                        width: '888px',
-                        height: '34px',
-                        top: '150px',
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 300,
-                        fontSize: '19px',
-                        lineHeight: '30px',
-                        letterSpacing: '0%',
-                        color: '#3C4959'
-                    }}
+                <p
+                    className="font-['DM_Sans'] font-light text-[#3C4959]
+                               text-base leading-relaxed w-full max-w-2xl mx-auto
+                               xl:absolute xl:left-0 xl:mx-0
+                               xl:w-[888px] xl:h-[34px] xl:top-[150px] xl:max-w-none
+                               xl:text-[19px] xl:leading-[30px] xl:tracking-[0%]"
                 >
-                    A visual story of our CSR health camps, mobile medical units, corporate wellness programs and community healthcare initiatives across India. 
+                    A visual story of our CSR health camps, mobile medical units, corporate wellness programs and community healthcare initiatives across India.
                 </p>
 
-                {/* Book Now Button */}
-                {/* <button 
-                    className="absolute left-1/2 -translate-x-1/2 hover:bg-[#1566B7] hover:text-white transition-all duration-300"
-                    style={{
-                        width: '267px',
-                        height: '50px',
-                        top: '190px',
-                        borderRadius: '192px',
-                        border: '1px solid #1566B7',
-                        paddingTop: '16px',
-                        paddingRight: '28px',
-                        paddingBottom: '16px',
-                        paddingLeft: '28px',
-                        background: '#FFFFFF',
-                        boxShadow: '1px 6px 7.7px 0px #3177E13D',
-                        fontWeight: 600,
-                        fontSize: '14px',
-                        color: 'black'
-                    }}
-                >
-                    BOOK NOW
-                </button> */}
+                {/* Book Now Button (Commented out in original, keeping it just in case structure matches) */}
+                {/* <div className="hidden xl:block ...">...</div> */}
             </div>
         </div>
     );

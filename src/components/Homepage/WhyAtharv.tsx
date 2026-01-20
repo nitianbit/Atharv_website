@@ -8,28 +8,38 @@ const WhyAtharv = () => {
         {
             id: 1,
             icon: "/Homepage/ISO.png",
-            title: "ISO-Certified Systems"
+            title: "ISO certified healthcare services"
         },
         {
             id: 2,
             icon: "/Homepage/MapIcon.png",
-            title: "Pan-India Presence And Strong Service Network"
+            title: "7+ years of proven healthcare experience"
         },
         {
             id: 3,
             icon: "/Homepage/HealthCare.png",
-            title: "Affordable, Price-Competitive Healthcare"
+            title: "Pan-India presence and strong service network"
         },
         {
             id: 4,
             icon: "/Homepage/donationIcon.png",
-            title: "Tailor-Made Care Solutions For Patient Needs"
+            title: "Affordable, price-competitive healthcare"
         },
         {
             id: 5,
             icon: "/Homepage/pharmacyIcon.png",
-            title: "In-House Pharmacy And Reliable Medicine Availability"
-        }
+            title: "Tailor-made care solutions for patient needs"
+        },
+        {
+            id: 6,
+            icon: "/Homepage/HealthCare.png",
+            title: "In-house pharmacy and reliable medicine availability"
+        },
+        {
+            id: 7,
+            icon: "/Homepage/pharmacyIcon.png",
+            title: "Accountability-driven, patient-first approach"
+        },
     ];
 
     useEffect(() => {
@@ -37,7 +47,7 @@ const WhyAtharv = () => {
         if (!scrollContainer) return;
 
         let scrollAmount = 0;
-        const scrollSpeed = 0.5;
+        const scrollSpeed = 0.9;
         let animationId: number;
 
         const autoScroll = () => {
@@ -92,10 +102,11 @@ const WhyAtharv = () => {
                     style={{
                         fontFamily: "'Source Serif Pro', serif",
                         fontWeight: 600,
+                        whiteSpace: "nowrap",
                     }}
                 >
-                    <span className="text-[#142349]">Why Choose </span>
-                    <span className="text-[#1566B7]">Atharv Healthcare?</span>
+                    <span className="text-[#142349]">WHY CHOOSE </span>
+                    <span className="text-[#1566B7]">ATHARV HEALTHCARE? </span>
                 </h2>
 
                 {/* Box Container - Scrolling */}

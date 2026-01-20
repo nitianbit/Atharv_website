@@ -19,9 +19,9 @@ const Callback = () => {
                     <div 
                         className="absolute hidden lg:block"
                         style={{
-                            width: '431px',
-                            height: '550px',
-                            top: '-75px',
+                            width: '531px',
+                            height: '551px',
+                            top: '-95px',
                             left: '65px',
                             zIndex: 20
                         }}
