@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const FAQ = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
     const faqs = [
         {
@@ -10,137 +10,64 @@ const FAQ = () => {
         },
         {
             question: "Do you offer medicine home delivery?",
-            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            answer: "Yes - through our online pharmacy. Upload prescription, order medicines online, and get doorstep delivery where available."
         },
         {
             question: "Can I book lab tests at home?",
-            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            answer: "Yes. You can book lab tests online with home sample collection and secure digital reports."
         },
         {
             question: "Is ambulance service 24×7?",
-            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            answer: "Emergency ambulance service availability depends on your city. Check availability while booking."
         }
     ];
 
-    const toggleAccordion = (index: any) => {
+    const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
     return (
-        <div className="w-full bg-white py-16 px-4">
-            <div className="mx-auto" style={{ maxWidth: '1512px' }}>
+        <div className="w-full bg-white py-12 px-4 xl:py-16">
+            <div className="w-full mx-auto xl:max-w-[1512px]">
 
-                {/* Main Container - 907.1875px × 385.140625px, gap: 29px */}
-                <div
-                    style={{
-                        width: '100%',
-                        maxWidth: '907.1875px',
-                        margin: '0 auto',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '29px'
-                    }}
-                >
+                {/* Main Container */}
+                <div className="w-full max-w-3xl mx-auto flex flex-col gap-8 xl:w-[907.1875px] xl:max-w-none xl:gap-[29px]">
 
-                    {/* Heading - 907.1875px × 58px */}
-                    <h2
-                        style={{
-                            width: '100%',
-                            height: '58px',
-                            fontFamily: "'Source Serif Pro', serif",
-                            fontWeight: 600,
-                            fontSize: '46px',
-                            lineHeight: '100%',
-                            letterSpacing: '0.02em',
-                            textAlign: 'center',
-                            textTransform: 'capitalize',
-                            margin: 0
-                        }}
-                    >
-                        <span style={{ color: '#142349' }}>Frequently Asked </span>
-                        <span style={{ color: '#1566B7' }}>Questions</span>
+                    {/* Heading */}
+                    <h2 className="w-full font-['Source_Serif_Pro'] font-semibold text-3xl md:text-4xl text-center capitalize text-[#142349] m-0 xl:h-[58px] xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em]">
+                        Frequently Asked <span className="text-[#1566B7]">Questions</span>
                     </h2>
 
-                    {/* Questions Dropdown Container - 907.1875px × 298.140625px */}
-                    <div
-                        style={{
-                            width: '100%'
-                        }}
-                    >
+                    {/* Questions Dropdown Container */}
+                    <div className="w-full">
                         {faqs.map((faq, index) => (
                             <div key={index}>
-                                {/* Question Box - Open or Closed */}
+                                {/* Question Box */}
                                 <div
-                                    style={{
-                                        width: '100%',
-                                        height: activeIndex === index ? '88px' : '71.078125px',
-                                        borderTop: '1px solid #E5E5E5',
-                                        borderBottom: '1px solid #E5E5E5',
-                                        position: 'relative',
-                                        cursor: 'pointer'
-                                    }}
+                                    className={`w-full border-t border-b border-[#E5E5E5] relative cursor-pointer transition-all duration-300 select-none outline-none focus:outline-none focus:ring-0
+                                                ${activeIndex === index ? 'py-6 xl:py-0 xl:h-[104px]' : 'py-5 xl:py-0 xl:h-[71.078125px]'}`}
                                     onClick={() => toggleAccordion(index)}
+                                    style={{ WebkitTapHighlightColor: 'transparent' }}
                                 >
                                     {/* Question Row */}
-                                    <div
-                                        style={{
-                                            width: '100%',
-                                            position: 'relative',
-                                            top: '25.67px',
-                                            left: '4.11px',
-                                            display: 'flex',
-                                            justifyContent: 'space-between',
-                                            alignItems: 'center'
-                                        }}
-                                    >
+                                    <div className="w-full flex justify-between items-center xl:absolute xl:top-[25.67px] xl:left-[4.11px] xl:w-full xl:pr-4">
                                         {/* Question Text */}
-                                        <span
-                                            style={{
-                                                width: 'auto',
-                                                flex: 1,
-                                                height: '30px',
-                                                fontFamily: "'DM Sans', sans-serif",
-                                                fontWeight: 400,
-                                                fontSize: index === 0 ? '20px' : '18px',
-                                                lineHeight: '30px',
-                                                letterSpacing: '0',
-                                                verticalAlign: 'middle',
-                                                color: '#141414'
-                                            }}
-                                        >
+                                        <span className={`font-['DM_Sans'] font-normal text-lg text-[#141414] leading-[30px] flex-1 pr-4 
+                                                        xl:h-[30px] xl:text-[20px] xl:tracking-0 xl:p-0
+                                                        ${index !== 0 ? 'xl:text-[18px]' : ''}`}>
                                             {faq.question}
                                         </span>
 
                                         {/* Icon */}
-                                        <span
-                                            style={{
-                                                fontSize: '20px',
-                                                color: '#141414',
-                                                fontWeight: 300
-                                            }}
-                                        >
+                                        <span className="text-xl md:text-2xl font-light text-[#141414]">
                                             {activeIndex === index ? '×' : '+'}
                                         </span>
                                     </div>
 
                                     {/* Answer - Only for Open State */}
                                     {activeIndex === index && faq.answer && (
-                                        <div
-                                            style={{
-                                                width: '716px',
-                                                height: '20px',
-                                                position: 'absolute',
-                                                top: '60px',
-                                                left: '5px',
-                                                fontFamily: "'DM Sans', sans-serif",
-                                                fontWeight: 300,
-                                                fontSize: '14px',
-                                                lineHeight: '20px',
-                                                letterSpacing: '0.02em',
-                                                verticalAlign: 'middle',
-                                                color: '#142349'
-                                            }}
-                                        >
+                                        <div className="w-full mt-2 font-['DM_Sans'] font-light text-sm md:text-base text-[#142349] leading-relaxed tracking-[0.02em]
+                                                        xl:mt-0 xl:absolute xl:top-[60px] xl:left-[5px] xl:w-[716px] xl:h-[20px] xl:text-[14px] xl:leading-[20px]">
                                             {faq.answer}
                                         </div>
                                     )}

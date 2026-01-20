@@ -12,82 +12,49 @@ const Companies = () => {
 
     return (
         <div className="w-full">
-            {/* Overall Container - 1512px × 131px */}
-            <div 
+            {/* Overall Container */}
+            <div
+                className="w-full max-w-[1512px] mx-auto relative overflow-hidden flex items-center
+                h-[80px] md:h-[100px] xl:h-[131px]"
                 style={{
-                    width: '100%',
-                    maxWidth: '1512px',
-                    height: '131px',
-                    margin: '0 auto',
                     background: 'rgba(49, 119, 225, 0.1)',
-                    overflow: 'hidden',
-                    position: 'relative',
-                    display: 'flex',
-                    alignItems: 'center',
-                    overflowX: 'hidden',
                 }}
             >
-                {/* Scrolling Container - 2142px × 106px, gap: 56px */}
-                <div 
-                    className="animate-scroll"
-                    style={{
-                        width: '2142px',
-                        height: '106px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '56px',
-                        position: 'absolute',
-                        left: 0
-                    }}
+                {/* Scrolling Container */}
+                <div
+                    className="flex items-center absolute left-0 w-max animate-scroll
+                    gap-8 md:gap-10 xl:gap-[56px]"
                 >
                     {/* First Set of Logos */}
                     {companies.map((company) => (
                         <div
                             key={`first-${company.id}`}
-                            style={{
-                                width: '151px',
-                                height: '100px',
-                                flexShrink: 0,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}
+                            className="flex-shrink-0 flex items-center justify-center
+                            w-[100px] h-[60px]
+                            md:w-[130px] md:h-[80px]
+                            xl:w-[151px] xl:h-[100px]"
                         >
                             <img
                                 src={company.image}
                                 alt={company.name}
-                                style={{
-                                    maxWidth: '100%',
-                                    maxHeight: '100%',
-                                    objectFit: 'contain'
-                                }}
-                                className="transition-all duration-300 hover:scale-110"
+                                className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
                             />
                         </div>
                     ))}
-                    
+
                     {/* Duplicate Set for Seamless Loop */}
                     {companies.map((company) => (
                         <div
                             key={`second-${company.id}`}
-                            style={{
-                                width: '151px',
-                                height: '100px',
-                                flexShrink: 0,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}
+                            className="flex-shrink-0 flex items-center justify-center
+                            w-[100px] h-[60px]
+                            md:w-[130px] md:h-[80px]
+                            xl:w-[151px] xl:h-[100px]"
                         >
                             <img
                                 src={company.image}
                                 alt={company.name}
-                                style={{
-                                    maxWidth: '100%',
-                                    maxHeight: '100%',
-                                    objectFit: 'contain'
-                                }}
-                                className="transition-all duration-300 hover:scale-110"
+                                className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
                             />
                         </div>
                     ))}
@@ -100,7 +67,7 @@ const Companies = () => {
                         transform: translateX(0);
                     }
                     100% {
-                        transform: translateX(calc(-50% - 28px));
+                        transform: translateX(-50%);
                     }
                 }
 
