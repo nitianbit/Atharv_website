@@ -41,143 +41,49 @@ const EcoSystem = () => {
     ];
 
     return (
-        <div
-            className="w-full relative overflow-hidden"
-            style={{
-                background: '#FFFFFF',
-                paddingTop: '80px',
-                paddingBottom: '80px',
-                display: 'flex',
-                justifyContent: 'center'
-            }}
-        >
-            {/* Overall Container - 1312px × 463px */}
-            <div
-                style={{
-                    width: '1312px',
-                    height: '463px',
-                    position: 'relative'
-                }}
-            >
-                {/* Main Heading - 1098px × 58px */}
-                <h2
-                    style={{
-                        width: '1098px',
-                        height: '58px',
-                        fontFamily: "'Source Serif Pro', serif",
-                        fontWeight: 600,
-                        fontSize: '46px',
-                        lineHeight: '100%',
-                        letterSpacing: '0.02em',
-                        textTransform: 'capitalize',
-                        color: '#142349',
-                        margin: 0,
-                        marginBottom: '46px'
-                    }}
-                >
+        <div className="w-full relative overflow-hidden bg-white py-16 xl:py-[80px] flex justify-center">
+            {/* Overall Container */}
+            <div className="w-full px-4 flex flex-col gap-12 xl:block xl:w-[1312px] xl:h-[463px] xl:px-0 xl:gap-0 xl:relative">
+
+                {/* Main Heading */}
+                <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize text-[#142349] text-center md:text-left
+                               text-3xl md:text-4xl leading-tight mb-8
+                               xl:w-[1098px] xl:h-[58px] xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:mb-[46px] xl:m-0 xl:block">
                     One Connected Ecosystem —{' '}
-                    <span style={{ color: '#1566B7' }}>Multiple Solutions</span>
+                    <span className="text-[#1566B7]">Multiple Solutions</span>
                 </h2>
 
-                {/* Section 1 - 1312px × 157px */}
-                <div
-                    style={{
-                        width: '1312px',
-                        height: '157px',
-                        marginBottom: '45px'
-                    }}
-                >
-                    {/* Section Heading - 612px × 26px */}
-                    <h3
-                        style={{
-                            width: '612px',
-                            height: '26px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 600,
-                            fontSize: '20px',
-                            lineHeight: '27px',
-                            letterSpacing: '0%',
-                            textTransform: 'uppercase',
-                            color: '#142349',
-                            margin: 0,
-                            marginBottom: '22px'
-                        }}
-                    >
+                {/* Section 1 */}
+                <div className="w-full xl:w-[1312px] xl:h-[157px] xl:mb-[45px]">
+                    {/* Section Heading */}
+                    <h3 className="font-['DM_Sans'] font-semibold uppercase text-[#142349] mb-6 text-center md:text-left
+                                   text-lg
+                                   xl:w-[612px] xl:h-[26px] xl:text-[20px] xl:leading-[27px] xl:tracking-[0%] xl:mb-[22px] xl:m-0">
                         We Bring Services Together So People Can:
                     </h3>
 
-                    {/* Four Boxes - 1312px × 109px */}
-                    <div
-                        style={{
-                            width: '1312px',
-                            height: '109px',
-                            display: 'flex',
-                            justifyContent: 'space-between'
-                        }}
-                    >
+                    {/* Four Boxes Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:flex xl:justify-between xl:w-[1312px] xl:h-[109px] xl:gap-0">
                         {topServices.map((service) => (
                             <div
                                 key={service.id}
-                                style={{
-                                    width: '318px',
-                                    height: '109px',
-                                    borderRadius: '8.3px',
-                                    background: '#3177E11A',
-                                    border: '2px solid #DEDEDE1A',
-                                    boxShadow: '0px 0px 4px 0px #00000036',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '20px',
-                                    padding: '0 20px',
-                                    transition: 'transform 0.3s ease',
-                                    cursor: 'pointer'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-3px)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                }}
+                                className="group flex items-center gap-5 px-5 py-4 rounded-[8.3px] bg-[#3177E11A] border-2 border-[#DEDEDE1A] shadow-sm transition-transform duration-300 hover:-translate-y-1 cursor-pointer
+                                           w-full h-auto min-h-[100px]
+                                           xl:w-[318px] xl:h-[109px] xl:gap-[20px] xl:px-[20px] xl:py-0 xl:shadow-[0px_0px_4px_0px_#00000036]"
                             >
-                                {/* Icon - 54px × 54px */}
-                                <div
-                                    style={{
-                                        width: '54px',
-                                        height: '54px',
-                                        flexShrink: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}
-                                >
+                                {/* Icon */}
+                                <div className="shrink-0 flex items-center justify-center w-[54px] h-[54px]">
                                     <img
                                         src={service.icon}
                                         alt={service.title}
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'contain'
-                                        }}
+                                        className="w-full h-full object-contain"
                                     />
                                 </div>
 
-                                {/* Title - 206px × 66px */}
-                                <h4
-                                    style={{
-                                        width: '206px',
-                                        height: '66px',
-                                        fontFamily: "'DM Sans', sans-serif",
-                                        fontWeight: 600,
-                                        fontSize: '18px',
-                                        lineHeight: '25px',
-                                        letterSpacing: '0%',
-                                        textTransform: 'capitalize',
-                                        color: '#142349',
-                                        margin: 0,
-                                        display: 'flex',
-                                        alignItems: 'center'
-                                    }}
-                                >
+                                {/* Title */}
+                                <h4 className="font-['DM_Sans'] font-semibold text-[#142349] capitalize flex items-center
+                                               text-base leading-snug
+                                               xl:w-[206px] xl:h-[66px] xl:text-[18px] xl:leading-[25px] xl:tracking-[0%]">
                                     {service.title}
                                 </h4>
                             </div>
@@ -185,110 +91,44 @@ const EcoSystem = () => {
                     </div>
                 </div>
 
-                {/* Section 2 - 981px × 157px */}
-                <div
-                    style={{
-                        width: '981px',
-                        height: '157px'
-                    }}
-                >
-                    {/* Section Heading - 612px × 26px */}
-                    <h3
-                        style={{
-                            width: '612px',
-                            height: '26px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 600,
-                            fontSize: '20px',
-                            lineHeight: '27px',
-                            letterSpacing: '0%',
-                            textTransform: 'uppercase',
-                            color: '#142349',
-                            margin: 0,
-                            marginBottom: '22px'
-                        }}
-                    >
+                {/* Section 2 */}
+                <div className="w-full xl:w-[981px] xl:h-[157px]">
+                    {/* Section Heading */}
+                    <h3 className="font-['DM_Sans'] font-semibold uppercase text-[#142349] mb-6 text-center md:text-left
+                                   text-lg
+                                   xl:w-[612px] xl:h-[26px] xl:text-[20px] xl:leading-[27px] xl:tracking-[0%] xl:mb-[22px] xl:m-0">
                         Alongside This, We Provide:
                     </h3>
 
-                    {/* Three Boxes - 981px × 109px */}
-                    <div
-                        style={{
-                            width: '981px',
-                            height: '109px',
-                            display: 'flex',
-                            justifyContent: 'space-between'
-                        }}
-                    >
+                    {/* Three Boxes Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:flex xl:justify-between xl:w-[981px] xl:h-[109px] xl:gap-0">
                         {bottomServices.map((service) => (
                             <div
                                 key={service.id}
-                                style={{
-                                    width: '318px',
-                                    height: '109px',
-                                    borderRadius: '8.3px',
-                                    background: '#3177E11A',
-                                    border: '2px solid #DEDEDE1A',
-                                    boxShadow: '0px 0px 4px 0px #00000036',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '20px',
-                                    padding: '0 20px',
-                                    transition: 'transform 0.3s ease',
-                                    cursor: 'pointer'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-3px)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                }}
+                                className="group flex items-center gap-5 px-5 py-4 rounded-[8.3px] bg-[#3177E11A] border-2 border-[#DEDEDE1A] shadow-sm transition-transform duration-300 hover:-translate-y-1 cursor-pointer
+                                           w-full h-auto min-h-[100px]
+                                           xl:w-[318px] xl:h-[109px] xl:gap-[20px] xl:px-[20px] xl:py-0 xl:shadow-[0px_0px_4px_0px_#00000036]"
                             >
-                                {/* Icon - 57px × 54px */}
-                                <div
-                                    style={{
-                                        width: '57px',
-                                        height: '54px',
-                                        flexShrink: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}
-                                >
+                                {/* Icon */}
+                                <div className="shrink-0 flex items-center justify-center w-[57px] h-[54px]">
                                     <img
                                         src={service.icon}
                                         alt={service.title}
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'contain'
-                                        }}
+                                        className="w-full h-full object-contain"
                                     />
                                 </div>
 
-                                {/* Title - 206px × 66px */}
-                                <h4
-                                    style={{
-                                        width: '206px',
-                                        height: '66px',
-                                        fontFamily: "'DM Sans', sans-serif",
-                                        fontWeight: 600,
-                                        fontSize: '18px',
-                                        lineHeight: '25px',
-                                        letterSpacing: '0%',
-                                        textTransform: 'capitalize',
-                                        color: '#142349',
-                                        margin: 0,
-                                        display: 'flex',
-                                        alignItems: 'center'
-                                    }}
-                                >
+                                {/* Title */}
+                                <h4 className="font-['DM_Sans'] font-semibold text-[#142349] capitalize flex items-center
+                                               text-base leading-snug
+                                               xl:w-[206px] xl:h-[66px] xl:text-[18px] xl:leading-[25px] xl:tracking-[0%]">
                                     {service.title}
                                 </h4>
                             </div>
                         ))}
                     </div>
                 </div>
+
             </div>
         </div>
     );

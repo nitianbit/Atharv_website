@@ -6,6 +6,7 @@ import CSRHealthcare from "./CSRHealthcare";
 import DirectorIntro from "./DirectorIntro";
 import DoctorList from "./DoctorList";
 import EcoSystem from "./EcoSystem";
+import FixGap from "./FixGap";
 import HealthFigerprint from "./HealthFigerprint";
 import HealthTrust from "./HealthTrust";
 import LandingPageAbout from "./LandingPageAbout";
@@ -20,6 +21,7 @@ const AboutUs = () => {
             <DirectorIntro />
             <Companies />
             <DoctorList />
+            <FixGap />
             <CSRHealthcare />
             <HealthTrust />
             <EcoSystem />

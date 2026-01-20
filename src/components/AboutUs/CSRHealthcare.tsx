@@ -37,228 +37,100 @@ const CSRHealthcare = () => {
     ];
 
     return (
-        <div
-            className="w-full relative overflow-hidden"
-            style={{
-                background: '#FFFFFF',
-                paddingTop: '100px',
-                paddingBottom: '100px',
-                display: 'flex',
-                justifyContent: 'center'
-            }}
-        >
-            {/* Overall Container - 1508px × 550px */}
-            <div
-                style={{
-                    width: '1508px',
-                    height: '550px',
-                    position: 'relative'
-                }}
-            >
-                {/* CSRHealth Image - 697px × 526px */}
-                <div
-                    style={{
-                        width: '697px',
-                        height: '526px',
-                        position: 'absolute',
-                        top: '24px',
-                        left: '97px',
-                        borderRadius: '10px',
-                        overflow: 'hidden'
-                    }}
-                >
+        <div className="w-full relative overflow-hidden bg-white py-12 xl:py-[100px] flex justify-center">
+            {/* Overall Container */}
+            <div className="w-full px-4 flex flex-col gap-8 xl:block xl:w-[1508px] xl:h-[550px] xl:px-0 xl:gap-0 xl:relative">
+
+                {/* CSRHealth Image */}
+                <div className="w-full h-auto aspect-[4/3] rounded-[10px] overflow-hidden sm:max-w-md sm:mx-auto xl:max-w-none xl:mx-0
+                                xl:w-[697px] xl:h-[526px] xl:absolute xl:top-[24px] xl:left-[97px]">
                     <img
                         src="/Aboutus/CSRHealth.png"
                         alt="CSR Healthcare"
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover'
-                        }}
+                        className="w-full h-full object-cover"
                     />
                 </div>
 
-                {/* Right Side Content - 519px × 201px with 42px gap */}
-                <div
-                    style={{
-                        width: '519px',
-                        position: 'absolute',
-                        top: '35px',
-                        left: '887px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '42px'
-                    }}
-                >
-                    {/* Main Heading - 519px × 112px */}
-                    <div
-                        style={{
-                            width: '519px',
-                            height: '112px'
-                        }}
-                    >
-                        <h2
-                            style={{
-                                fontFamily: "'Source Serif Pro', serif",
-                                fontWeight: 600,
-                                fontSize: '46px',
-                                lineHeight: '121%',
-                                letterSpacing: '-2%',
-                                textTransform: 'capitalize',
-                                margin: 0
-                            }}
-                        >
-                            <span style={{ color: '#1566B7' }}>CSR: Healthcare</span>
-                            <br />
-                            <span style={{ color: '#142349' }}>Where It's Needed Most</span>
-                        </h2>
+                {/* Right Side Content Container (Wrapper for desktop absolute positioning) */}
+                <div className="flex flex-col gap-8 xl:block">
+
+                    {/* Header Group */}
+                    <div className="flex flex-col gap-4 text-center md:text-left xl:block xl:absolute xl:top-[35px] xl:left-[887px] xl:w-[519px] xl:gap-[42px]">
+
+                        {/* Main Heading */}
+                        <div className="xl:w-[519px] xl:h-[112px] xl:mb-[42px]">
+                            <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize leading-tight
+                                            text-3xl md:text-4xl
+                                            xl:text-[46px] xl:leading-[121%] xl:tracking-[-0.02em] xl:m-0">
+                                <span className="text-[#1566B7]">CSR: Healthcare</span>
+                                <br className="hidden xl:block" />
+                                <span className="text-[#142349] block xl:inline"> Where It's Needed Most</span>
+                            </h2>
+                        </div>
+
+                        {/* Description */}
+                        <p className="font-['DM_Sans'] font-light text-black text-base md:text-lg leading-relaxed
+                                      xl:w-[514px] xl:h-[47px] xl:text-[18px] xl:leading-[22px] xl:tracking-[0%] xl:m-0">
+                            Our CSR programs are designed to bridge healthcare gaps by providing accessible primary care services in remote and underserved communities where medical facilities are limited.
+                        </p>
                     </div>
 
-                    {/* Description - 514px × 87px */}
-                    <p
-                        style={{
-                            width: '514px',
-                            height: '47px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '18px',
-                            lineHeight: '22px',
-                            letterSpacing: '0%',
-                            color: '#000000',
-                            margin: 0
-                        }}
-                    >
-                        Our CSR programs are designed to bridge healthcare gaps by providing accessible primary care services in remote and underserved communities where medical facilities are limited.
-                    </p>
-                </div>
-
-                {/* Accordion Sections - 503px × 268px */}
-                <div
-                    style={{
-                        width: '503px',
-                        height: '268px',
-                        position: 'absolute',
-                        top: '275px',
-                        left: '888px',
-                        borderTop: '1px solid #E5E5E5',
-                        borderBottom: '1px solid #E5E5E5'
-                    }}
-                >
-                    {sections.map((section, index) => (
-                        <div
-                            key={section.id}
-                            style={{
-                                width: '501px',
-                                borderBottom: index < sections.length - 1 ? '1px solid #E5E5E5' : 'none'
-                            }}
-                        >
-                            {/* Section Header */}
-                            <button
-                                onClick={() => toggleSection(section.id)}
-                                style={{
-                                    width: '100%',
-                                    height: openSection === section.id && section.content.length > 0 ? 'auto' : '44px',
-                                    display: 'flex',
-                                    justifyContent: 'space-between',
-                                    alignItems: 'center',
-                                    padding: '12px 0',
-                                    background: 'transparent',
-                                    border: 'none',
-                                    cursor: 'pointer'
-                                }}
+                    {/* Accordion Sections */}
+                    <div className="w-full border-t border-b border-[#E5E5E5] xl:w-[503px] xl:h-[268px] xl:absolute xl:top-[275px] xl:left-[888px] xl:border-b xl:border-t">
+                        {sections.map((section, index) => (
+                            <div
+                                key={section.id}
+                                className={`w-full ${index < sections.length - 1 ? 'border-b border-[#E5E5E5]' : ''} xl:w-[501px]`}
                             >
-                                <h3
-                                    style={{
-                                        width: '395px',
-                                        height: '30px',
-                                        fontFamily: "'DM Sans', sans-serif",
-                                        fontWeight: 500,
-                                        fontSize: '18px',
-                                        lineHeight: '30px',
-                                        letterSpacing: '0%',
-                                        color: '#142349',
-                                        margin: 0,
-                                        textAlign: 'left'
-                                    }}
+                                {/* Section Header */}
+                                <button
+                                    onClick={() => toggleSection(section.id)}
+                                    className="w-full flex justify-between items-center py-3 bg-transparent border-none cursor-pointer outline-none
+                                               xl:h-[44px] xl:py-[12px]"
                                 >
-                                    {section.title}
-                                </h3>
+                                    <h3 className="font-['DM_Sans'] font-medium text-[#142349] text-left
+                                                   text-base md:text-lg
+                                                   xl:w-[395px] xl:h-[30px] xl:text-[18px] xl:leading-[30px] xl:tracking-[0%] xl:m-0">
+                                        {section.title}
+                                    </h3>
 
-                                {/* Chevron Icon */}
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 20 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style={{
-                                        transform: openSection === section.id ? 'rotate(180deg)' : 'rotate(0deg)',
-                                        transition: 'transform 0.3s ease',
-                                        flexShrink: 0
-                                    }}
-                                >
-                                    <path
-                                        d="M5 7.5L10 12.5L15 7.5"
-                                        stroke="#142349"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </button>
-
-                            {/* Section Content - Expanded */}
-                            {openSection === section.id && section.content.length > 0 && (
-                                <div
-                                    style={{
-                                        width: '419px',
-                                        height: '80px',
-                                        paddingBottom: '12px'
-                                    }}
-                                >
-                                    <ul
-                                        style={{
-                                            listStyle: 'none',
-                                            padding: 0,
-                                            margin: 0,
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 300,
-                                            fontSize: '14px',
-                                            lineHeight: '20px',
-                                            letterSpacing: '0.02em',
-                                            color: '#142349'
-                                        }}
+                                    {/* Chevron Icon */}
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 20 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className={`shrink-0 transition-transform duration-300 ease-in-out ${openSection === section.id ? 'rotate-180' : 'rotate-0'}`}
                                     >
-                                        {section.content.map((item, index) => (
-                                            <li
-                                                key={index}
-                                                style={{
-                                                    paddingLeft: '20px',
-                                                    position: 'relative',
-                                                    marginBottom: '0px'
-                                                }}
-                                            >
-                                                {/* Bullet Dot */}
-                                                <span
-                                                    style={{
-                                                        position: 'absolute',
-                                                        left: '0',
-                                                        top: '8px',
-                                                        width: '4px',
-                                                        height: '4px',
-                                                        borderRadius: '50%',
-                                                        background: '#142349'
-                                                    }}
-                                                />
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                        <path
+                                            d="M5 7.5L10 12.5L15 7.5"
+                                            stroke="#142349"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </button>
+
+                                {/* Section Content - Expanded */}
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openSection === section.id && section.content.length > 0 ? 'max-h-[200px] opacity-100 pb-3' : 'max-h-0 opacity-0 pb-0'}`}>
+                                    <div className="xl:w-[419px]">
+                                        <ul className="list-none p-0 m-0 font-['DM_Sans'] font-light text-[#142349] text-sm leading-relaxed tracking-wide">
+                                            {section.content.map((item, i) => (
+                                                <li key={i} className="relative pl-5 mb-1 xl:mb-0">
+                                                    <span className="absolute left-0 top-2 w-1 h-1 rounded-full bg-[#142349]" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
             </div>
         </div>
     );

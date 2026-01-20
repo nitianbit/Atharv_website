@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+    const location = useLocation();
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [mobileActiveDropdown, setMobileActiveDropdown] = useState<string | null>(null);
@@ -14,7 +15,6 @@ const Navbar = () => {
     return (
         <>
             {/* Mobile/Tablet Header */}
-            {/* Added max-w-[100vw] and overflow-hidden to outer container to prevent any horizontal scroll on mobile */}
             <div className="xl:hidden fixed w-full max-w-[100vw] top-0 left-0 z-50 px-6 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.05)] border-b border-white/20">
                 <Link to="/" className="w-24 h-auto relative z-50">
                     <img src="/Homepage/AtharvLOGO.png" alt="Atharv Health Care Logo" className="w-full h-full object-contain" />
@@ -95,14 +95,14 @@ const Navbar = () => {
 
                         {/* Home Link */}
                         <Link to="/"
-                            className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors text-[#1566B7]"
+                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
                         >
                             Home
                         </Link>
 
                         {/* About Us Link */}
                         <Link to="/aboutus"
-                            className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors text-[#142349]"
+                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/aboutus' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
                         >
                             About Us
                         </Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
                             onMouseEnter={() => setActiveDropdown('services')}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <button className="flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors text-[#142349]">
+                            <button className={`flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname.startsWith('/services') ? 'text-[#1566B7]' : 'text-[#142349]'}`}>
                                 Services
                                 <ChevronDown className="w-4 h-4 ml-1" />
                             </button>
@@ -143,7 +143,7 @@ const Navbar = () => {
                             onMouseEnter={() => setActiveDropdown('industries')}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <button className="flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors text-[#142349]">
+                            <button className={`flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#1566B7]' : 'text-[#142349]'}`}>
                                 Industries
                                 <ChevronDown className="w-4 h-4 ml-1" />
                             </button>
@@ -166,14 +166,14 @@ const Navbar = () => {
 
                         {/* Why Choose Us */}
                         <Link to="/why-choose-us"
-                            className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors text-[#142349]"
+                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/why-choose-us' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
                         >
                             Why Choose Us
                         </Link>
 
                         {/* Gallery */}
                         <Link to="/gallery"
-                            className="font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors text-[#142349]"
+                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/gallery' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
                         >
                             Gallery
                         </Link>

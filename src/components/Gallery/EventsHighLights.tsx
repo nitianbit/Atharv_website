@@ -59,216 +59,105 @@ const EventsHighLights = () => {
     };
 
     return (
-        <div
-            style={{
-                width: '100%',
-                height: '610px',
-                background: 'linear-gradient(126.19deg, #176EC6 21.84%, #0F58A1 78.16%)',
-                padding: '0',
-                position: 'relative',
-                overflow: 'hidden'
-            }}
-        >
-            <div style={{ maxWidth: '1512px', height: '610px', margin: '0 auto', position: 'relative' }}>
-                {/* Left Text Section */}
-                <div
-                    style={{
-                        width: '475px',
-                        height: '238.05px',
-                        position: 'absolute',
-                        top: '82.89px',
-                        left: '100px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '18px'
-                    }}
-                >
+        <div className="w-full relative overflow-hidden"
+            style={{ background: 'linear-gradient(126.19deg, #176EC6 21.84%, #0F58A1 78.16%)' }}>
+
+            <div className="w-full flex flex-col py-12 xl:block xl:py-0 xl:max-w-[1512px] xl:h-[610px] xl:mx-auto xl:relative">
+
+                {/* Text Section */}
+                <div className="px-4 text-center md:text-left mb-8 xl:mb-0
+                                xl:w-[475px] xl:h-[238.05px] xl:absolute xl:top-[82.89px] xl:left-[100px] xl:flex xl:flex-col xl:gap-[18px] xl:p-0">
+
                     {/* Heading */}
-                    <div
-                        style={{
-                            width: '286px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '0'
-                        }}
-                    >
-                        <h2
-                            style={{
-                                fontFamily: "'Source Serif Pro', serif",
-                                fontWeight: 600,
-                                fontSize: '46px',
-                                lineHeight: '100%',
-                                letterSpacing: '0.02em',
-                                textTransform: 'capitalize',
-                                color: '#FFFFFF',
-                                margin: 0,
-                                padding: 0
-                            }}
-                        >
+                    <div className="flex flex-col gap-0 items-center md:items-start xl:w-[286px]">
+                        <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize text-white leading-tight
+                                       text-3xl md:text-4xl
+                                       xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:m-0">
                             Past Events
                         </h2>
-                        <h2
-                            style={{
-                                fontFamily: "'Source Serif Pro', serif",
-                                fontWeight: 600,
-                                fontSize: '46px',
-                                lineHeight: '100%',
-                                letterSpacing: '0.02em',
-                                textTransform: 'capitalize',
-                                color: '#FFFFFF',
-                                margin: 0,
-                                padding: 0
-                            }}
-                        >
+                        <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize text-white leading-tight
+                                       text-3xl md:text-4xl
+                                       xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:m-0">
                             & Highlights
                         </h2>
                     </div>
 
                     {/* Description */}
-                    <p
-                        style={{
-                            width: '410px',
-                            height: '90px',
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontWeight: 300,
-                            fontSize: '18px',
-                            lineHeight: '30px',
-                            letterSpacing: '0',
-                            color: '#FFFFFF',
-                            margin: 0,
-                            padding: 0
-                        }}
-                    >
+                    <p className="font-['DM_Sans'] font-light text-white mt-4 md:mt-2
+                                  text-base md:text-lg leading-relaxed max-w-2xl mx-auto md:mx-0
+                                  xl:w-[410px] xl:h-[90px] xl:text-[18px] xl:leading-[30px] xl:tracking-0 xl:m-0 xl:mt-0">
                         View moments from our recent CSR initiatives, MMU activities, diagnostic camps and awareness programs conducted across India.
                     </p>
                 </div>
 
                 {/* Carousel Container */}
-                <div
-                    style={{
-                        width: '793.5px',
-                        height: '484.6px',
-                        position: 'absolute',
-                        top: '46.76px',
-                        left: '617.25px',
-                        overflow: 'hidden'
-                    }}
-                >
-                    <div
-                        style={{
-                            display: 'flex',
-                            width: 'max-content',
-                            gap: '44.54px',
-                            transform: `translateX(-${[0, 418.54, 837.08, 1255.62, 1674.16][activeIndex]}px)`,
-                            transition: isTransitioning ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
-                            willChange: 'transform'
-                        }}
-                    >
-                        {[...Events, Events[0]].map((item, index) => (
-                            <div
-                                key={`${item.id}-${index}`}
-                                style={{
-                                    width: '374px',
-                                    height: '484.6px',
-                                    boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
-                                    flexShrink: 0,
-                                    cursor: 'pointer',
-                                    transition: 'box-shadow 0.3s ease',
-                                    position: 'relative'
-                                }}
-                                className="hover:shadow-lg"
-                                onClick={() => handleDotClick(index % 4)}
-                            >
-                                {/* Image */}
-                                <div
-                                    style={{
-                                        width: '373.53px',
-                                        height: '484.6px',
-                                        overflow: 'hidden',
-                                        position: 'relative'
-                                    }}
-                                >
-                                    <img
-                                        src={item.img}
-                                        alt={item.title}
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover'
-                                        }}
-                                    />
-                                </div>
+                <div className="group relative w-full h-[400px] md:h-[500px] overflow-hidden flex justify-center
+                                xl:w-[793.5px] xl:h-[484.6px] xl:absolute xl:top-[46.76px] xl:left-[617.25px] xl:justify-start xl:block">
 
-                                {/* Text Box Overlay */}
-                                <div
-                                    style={{
-                                        width: '374px',
-                                        height: '78.64px',
-                                        background: 'rgba(255, 255, 255, 0.9)',
-                                        position: 'absolute',
-                                        bottom: 0,
-                                        left: 0,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        gap: '11px',
-                                        padding: '11px 0'
-                                    }}
-                                >
-                                    <h3
-                                        style={{
-                                            width: '363px',
-                                            height: '26px',
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 700,
-                                            fontSize: '20px',
-                                            lineHeight: '100%',
-                                            letterSpacing: '0',
-                                            textAlign: 'center',
-                                            textTransform: 'capitalize',
-                                            color: '#1566B7',
-                                            margin: 0
-                                        }}
-                                    >
-                                        {item.title}
-                                    </h3>
-                                    <p
-                                        style={{
-                                            width: '363px',
-                                            height: '30px',
-                                            fontFamily: "'DM Sans', sans-serif",
-                                            fontWeight: 300,
-                                            fontSize: '18px',
-                                            lineHeight: '30px',
-                                            letterSpacing: '0',
-                                            textAlign: 'center',
-                                            color: '#142349',
-                                            margin: 0
-                                        }}
-                                    >
-                                        {item.location}
-                                    </p>
+                    <div className="flex gap-4 xl:gap-[44.54px] w-max px-4 xl:px-0 transition-transform duration-500 ease-out"
+                        style={{
+                            transform: `translateX(-${activeIndex * (window.innerWidth < 1280 ? 300 : 418.54)}px)`, // Simple adaptive responsive scroll 
+                            // Note: In a real app, use a ResizeObserver or media query hook for '300', simplified here for 'sm/md' vs 'xl'
+                        }}>
+
+                        {/* Desktop Layout Override: Use specific pixel transform only on XL */}
+                        <style>{`
+                            @media (min-width: 1280px) {
+                                .xl-carousel-track {
+                                    transform: translateX(-${[0, 418.54, 837.08, 1255.62, 1674.16][activeIndex]}px) !important;
+                                    transition: ${isTransitioning ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' : 'none'} !important;
+                                }
+                            }
+                         `}</style>
+
+                        <div className={`flex gap-4 xl:gap-[44.54px] h-full xl-carousel-track`}
+                            style={{
+                                // Mobile fallback logic for basic sliding
+                                transform: `translateX(-${activeIndex * 100}%)`,
+                                transition: isTransitioning ? 'transform 0.5s ease' : 'none',
+                            }}>
+
+                        </div>
+                    </div>
+
+                    {/* Mobile View: Native Scroll */}
+                    <div className="flex xl:hidden w-full overflow-x-auto hide-scrollbar gap-4 px-4 snap-x snap-mandatory">
+                        {[...Events].map((item, index) => (
+                            <div key={`mob-${index}`} className="snap-center shrink-0 w-[85vw] md:w-[350px] relative rounded-lg overflow-hidden shadow-lg h-[400px]">
+                                <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                                <div className="absolute bottom-0 left-0 w-full bg-white/90 py-3 flex flex-col items-center gap-1">
+                                    <h3 className="font-['DM_Sans'] font-bold text-[#1566B7] text-lg capitalize">{item.title}</h3>
+                                    <p className="font-['DM_Sans'] font-light text-[#142349] text-base">{item.location}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    {/* Desktop View: The JS Slider */}
+                    <div className="hidden xl:flex w-max gap-[44.54px]"
+                        style={{
+                            transform: `translateX(-${[0, 418.54, 837.08, 1255.62, 1674.16][activeIndex]}px)`,
+                            transition: isTransitioning ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
+                        }}>
+                        {[...Events, Events[0]].map((item, index) => (
+                            <div key={`desk-${index}`}
+                                className="w-[374px] h-[484.6px] shrink-0 relative cursor-pointer hover:shadow-lg transition-shadow duration-300 shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)]"
+                                onClick={() => handleDotClick(index % 4)}>
+                                <div className="w-[373.53px] h-[484.6px] overflow-hidden relative">
+                                    <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                                </div>
+                                <div className="absolute bottom-0 left-0 w-[374px] h-[78.64px] bg-white/90 flex flex-col items-center justify-center gap-[11px] py-[11px]">
+                                    <h3 className="font-['DM_Sans'] font-bold text-[#1566B7] text-[20px] leading-none capitalize m-0 w-[363px] text-center">{item.title}</h3>
+                                    <p className="font-['DM_Sans'] font-light text-[#142349] text-[18px] leading-[30px] m-0 w-[363px] text-center">{item.location}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
                 </div>
 
-                {/* Pagination Dots */}
-                <div
-                    style={{
-                        position: 'absolute',
-                        bottom: '40px',
-                        left: '617.25px',
-                        width: '793.5px',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: '10px',
-                        alignItems: 'center',
-                        zIndex: 10
-                    }}
-                >
+                {/* Pagination Dots (Desktop Only or Adapted) */}
+                <div className="hidden xl:flex absolute bottom-[40px] left-[617.25px] w-[793.5px] justify-center gap-[10px] items-center z-10">
                     {[0, 1, 2, 3].map((index) => (
                         <span
                             key={index}
@@ -285,7 +174,18 @@ const EventsHighLights = () => {
                         ></span>
                     ))}
                 </div>
+
             </div>
+
+            <style>{`
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            `}</style>
         </div>
     );
 };

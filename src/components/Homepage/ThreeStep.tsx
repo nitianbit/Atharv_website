@@ -27,19 +27,19 @@ const ThreeStep = () => {
                 {/* Title */}
                 <div className="w-full max-w-[727px] text-center">
                     <h2
-                        className="font-['Source_Serif_Pro'] font-semibold text-white capitalize
+                        className="font-['Source_Serif_Pro'] font-semibold text-white
                         text-[32px] leading-tight
                         md:text-[40px]
                         xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:mb-[10px]"
                     >
-                        Book Healthcare Services Online <br className="hidden md:block" />
+                        Book healthcare services online <br className="hidden md:block" />
                         <span
-                            className="font-['Source_Serif_Pro'] font-semibold text-white capitalize
+                            className="font-['Source_Serif_Pro'] font-semibold text-white
                             text-[32px] leading-tight
                             md:text-[40px]
                             xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em]"
                         >
-                            In 3 Simple Steps
+                            in 3 simple steps
                         </span>
                     </h2>
                 </div>
@@ -73,12 +73,12 @@ const ThreeStep = () => {
                             1
                         </div>
                         <div
-                            className="font-['DM_Sans'] font-semibold text-white text-center capitalize
+                            className="font-['DM_Sans'] font-semibold text-white text-center
                             text-[16px] leading-snug max-w-[300px]
                             md:text-[18px]
                             xl:w-[232px] xl:h-[104px] xl:text-[20px] xl:leading-[120%]"
                         >
-                            Select The Service — Doctor Consultation, Pharmacy, Diagnostics Or Ambulance
+                            Select the service - doctor consultation, pharmacy, diagnostics or ambulance
                         </div>
                     </div>
 
@@ -93,12 +93,12 @@ const ThreeStep = () => {
                             2
                         </div>
                         <div
-                            className="font-['DM_Sans'] font-semibold text-white text-center capitalize
+                            className="font-['DM_Sans'] font-semibold text-white text-center
                             text-[16px] leading-snug max-w-[200px]
                             md:text-[18px]
                             xl:w-[232px] xl:h-[104px] xl:text-[20px] xl:leading-[120%]"
                         >
-                            Share Basic Details And Preferred Time
+                            Share basic details and preferred time
                         </div>
                     </div>
 
@@ -113,12 +113,12 @@ const ThreeStep = () => {
                             3
                         </div>
                         <div
-                            className="font-['DM_Sans'] font-semibold text-white text-center capitalize
+                            className="font-['DM_Sans'] font-semibold text-white text-center
                             text-[16px] leading-snug max-w-[200px]
                             md:text-[18px]
                             xl:w-[232px] xl:h-[104px] xl:text-[20px] xl:leading-[120%]"
                         >
-                            Confirm Booking — We Handle The Rest
+                            Confirm booking - we handle the rest
                         </div>
                     </div>
                 </div>

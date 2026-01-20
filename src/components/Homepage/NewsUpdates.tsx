@@ -60,7 +60,7 @@ const NewsUpdates = () => {
                                 md:text-lg
                                 xl:w-[780px] xl:h-[60px] xl:text-[18px] xl:leading-[30px] xl:tracking-normal xl:mt-0"
                             >
-                                Catch up on company news, CSR activities, MMU deployments, health camps and corporate initiatives from Atharv Healthcare across India.
+                                Catch up on <span className="font-semibold" style={{ fontWeight: 600 }}>company news, CSR activities, MMU deployments, health camps and corporate initiatives </span> from Atharv Healthcare across India.
                             </p>
                         </div>
 

@@ -50,7 +50,7 @@ const Blog = () => {
         },
         {
             id: 3,
-            title: "Benefits of online doctor consultation in India",
+            title: "Medicine home delivery: safety, speed and reliability",
             img: "/Homepage/BlogGirl1.png",
             bgColor: "#1566B7",
             textColor: "#FFFFFF",
