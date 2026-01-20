@@ -3,6 +3,10 @@ import styles from './ohc.module.css';
 const IndustriesSection = () => {
     const industries = [
         {
+            name: 'Metal Plants',
+            image: '/OccupationalHealthCentres/power-plants-utilities.png'
+        },
+        {
             name: 'Power Plants & Utilities',
             image: '/OccupationalHealthCentres/power-plants-utilities.png'
         },
@@ -16,6 +20,10 @@ const IndustriesSection = () => {
         },
         {
             name: 'Logistics Hubs & Warehouses',
+            image: '/OccupationalHealthCentres/logistics-warehouses.png'
+        },
+        {
+            name: 'large infrastructure and construction projects ',
             image: '/OccupationalHealthCentres/logistics-warehouses.png'
         }
     ];
@@ -36,27 +44,100 @@ const IndustriesSection = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-8">
-                    {industries.map((industry, index) => (
+                {/* Scrolling industries strip, similar to Companies section */}
+                <div
+                    className="w-full mb-8"
+                >
+                    <div
+                        style={{
+                            width: '100%',
+                            maxWidth: '1512px',
+                            margin: '0 auto',
+                            overflow: 'hidden',
+                            position: 'relative',
+                            display: 'flex',
+                            alignItems: 'center'
+                        }}
+                    >
                         <div
-                            key={index}
-                            className="group cursor-pointer w-[200px] flex-shrink-0"
+                            className="animate-scroll-industries"
+                            style={{
+                                display: 'flex',
+                                alignItems: 'stretch',
+                                gap: '24px'
+                            }}
                         >
-                            <div className="relative w-full aspect-[3/4] mb-3 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                                <img 
-                                    src={industry.image} 
-                                    alt={industry.name}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 bg-[#1566B7] px-3 py-2 border-t-0">
-
+                            {/* first set */}
+                            {industries.map((industry, index) => (
+                                <div
+                                    key={`first-${index}`}
+                                    style={{
+                                        width: '220px',
+                                        flexShrink: 0
+                                    }}
+                                    className="group cursor-pointer"
+                                >
+                                    <div className="relative w-full aspect-4/5 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden ">
+                                        <img
+                                            src={industry.image}
+                                            alt={industry.name}
+                                            className="w-full h-full object-cover block"
+                                        />
+                                        {/* <div className="absolute inset-x-0 bottom-0 bg-[#1566B7] bg-opacity-90 px-3 py-2">
+                                            <p className="text-white text-sm font-medium text-center leading-snug">
+                                                {industry.name}
+                                            </p>
+                                        </div> */}
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                            ))}
 
- 
+                            {/* duplicate set for seamless loop */}
+                            {industries.map((industry, index) => (
+                                <div
+                                    key={`second-${index}`}
+                                    style={{
+                                        width: '220px',
+                                        flexShrink: 0
+                                    }}
+                                    className="group cursor-pointer"
+                                >
+                                    <div className="relative w-full aspect-4/5 shadow-md hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                                        <img
+                                            src={industry.image}
+                                            alt={industry.name}
+                                            className="w-full h-full object-cover block"
+                                        />
+                                        {/* <div className="absolute inset-x-0 bottom-0 bg-[#1566B7] bg-opacity-90 px-3 py-2">
+                                            <p className="text-white text-sm font-medium text-center leading-snug">
+                                                {industry.name}
+                                            </p>
+                                        </div> */}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <style>{`
+                        @keyframes scroll-industries {
+                            0% {
+                                transform: translateX(0);
+                            }
+                            100% {
+                                transform: translateX(-50%);
+                            }
+                        }
+
+                        .animate-scroll-industries {
+                            animation: scroll-industries 30s linear infinite;
+                        }
+
+                        .animate-scroll-industries:hover {
+                            animation-play-state: paused;
+                        }
+                    `}</style>
+                </div>
             </div>
         </div>
     );
