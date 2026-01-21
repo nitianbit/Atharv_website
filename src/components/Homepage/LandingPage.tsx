@@ -1,21 +1,22 @@
 "use client"
 
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 
 const LandingPage = () => {
-    const [currentNotification, setCurrentNotification] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
 
     const notifications = [
         {
             id: 1,
-            icon: '/Homepage/DoctorIcon.png', // Your doctor consultation icon
+            icon: '/Homepage/Not1.png',
             title: 'Online Doctor Consultation',
             subtitle: 'Booked Successfully'
         },
         {
             id: 2,
-            icon: '/Homepage/MedicineIcon.png', // Your medicine icon
+            icon: '/Homepage/Not2.png',
             title: 'Medicine Order Confirmed',
             subtitle: 'For Home Delivery'
         }
@@ -23,24 +24,68 @@ const LandingPage = () => {
 
     useEffect(() => {
         const notificationCycle = setInterval(() => {
-            // Show notification
             setIsVisible(true);
 
-            // Hide after 3 seconds
+            // Hide after 4 seconds
             setTimeout(() => {
                 setIsVisible(false);
-            }, 3000);
+            }, 5000);
 
-            // Switch to next notification after hiding
-            setTimeout(() => {
-                setCurrentNotification((prev) => (prev + 1) % notifications.length);
-            }, 3500);
-
-        }, 5000); // Full cycle every 5 seconds
+        }, 9000); // Total cycle: 4s visible + 3s hidden
 
         return () => clearInterval(notificationCycle);
-    }, [notifications.length]);
+    }, []);
 
+    // Variants for parent container
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3, // 0.2s delay between each notification
+                delayChildren: 0.2
+            }
+        },
+        exit: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.25,
+                staggerDirection: 1
+            }
+        }
+    };
+
+    // Variants for individual notification cards
+    const notificationVariants: Variants = {
+        hidden: {
+            y: 180,
+            opacity: 0
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 2.2, // Slower animation
+                ease: [0.25, 0.1, 0.25, 1], // Smooth ease curve
+                opacity: {
+                    duration: 2.2, // Fade in while sliding
+                    ease: "easeOut"
+                }
+            }
+        },
+        exit: {
+            y: -180,
+            opacity: 0,
+            transition: {
+                duration: 1.8, // Slow slide up exit (was 1s)
+                ease: [0.42, 0, 0.58, 1], // Smooth ease in-out
+                opacity: {
+                    duration: 1.8, // Fade out while sliding up
+                    ease: "easeIn"
+                }
+            }
+        }
+    };
     return (
         <div className="w-full min-h-screen flex justify-center overflow-x-hidden bg-white relative">
             {/* Responsive View (Mobile to Laptop) */}
@@ -170,55 +215,48 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            {/* Animated Notification - Bottom Right Corner */}
-            <div className="fixed bottom-8 right-8 z-50 hidden md:block">
-                <div
-                    className={`transition-all duration-700 ease-in-out ${
-                        isVisible 
-                            ? 'translate-y-0 opacity-100' 
-                            : 'translate-y-[150px] opacity-0'
-                    }`}
-                >
-                    <div className="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)] 
-                                    flex items-center gap-4 p-4 pr-6 min-w-[320px] border border-gray-100">
-                        {/* Icon */}
-                        <div className="w-[48px] h-[48px] bg-[#1566B7] rounded-[12px] flex items-center justify-center flex-shrink-0">
-                            <img 
-                                src={notifications[currentNotification].icon} 
-                                alt="Notification Icon" 
-                                className="w-[28px] h-[28px] object-contain"
-                            />
-                        </div>
+            <div className="absolute bottom-36 right-96 hidden md:block">
+                <AnimatePresence mode="wait">
+                    {isVisible && (
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            className="flex flex-col gap-3"
+                        >
+                            {notifications.map((notification) => (
+                                <motion.div
+                                    key={notification.id}
+                                    variants={notificationVariants}
+                                >
+                                    <div className="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)] 
+                                                    flex items-center gap-4 p-4 pr-6 min-w-[320px] border border-gray-100">
+                                        {/* Icon */}
+                                        <div className="w-[48px] h-[48px] bg-[#1566B7] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                                            <img
+                                                src={notification.icon}
+                                                alt="Notification Icon"
+                                                className="w-[28px] h-[28px] object-contain"
+                                            />
+                                        </div>
 
-                        {/* Text Content */}
-                        <div className="flex flex-col">
-                            <h3 className="font-['DM_Sans'] font-semibold text-[15px] leading-[20px] text-[#142349] m-0">
-                                {notifications[currentNotification].title}
-                            </h3>
-                            <p className="font-['DM_Sans'] font-normal text-[14px] leading-[18px] text-[#142349] m-0 mt-1">
-                                {notifications[currentNotification].subtitle}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                                        {/* Text Content */}
+                                        <div className="flex flex-col">
+                                            <h3 className="font-['DM_Sans'] font-semibold text-[15px] leading-[20px] text-[#142349] m-0">
+                                                {notification.title}
+                                            </h3>
+                                            <p className="font-['DM_Sans'] font-normal text-[14px] leading-[18px] text-[#142349] m-0 mt-1">
+                                                {notification.subtitle}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
-
-            <style>{`
-                @keyframes slideUpFade {
-                    0% {
-                        transform: translateY(150px);
-                        opacity: 0;
-                    }
-                    20%, 80% {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                    100% {
-                        transform: translateY(-150px);
-                        opacity: 0;
-                    }
-                }
-            `}</style>
         </div>
     );
 };
