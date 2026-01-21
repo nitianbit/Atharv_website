@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs/AboutUs'
 import OccupationalHealthCentres from './components/OccupationalHealthCentres/OccupationalHealthCentres'
 import MobileMedicalUnit from './components/MobileMedicalUnit/MobileMedicalUnit'
 import Gallery from './components/Gallery/Gallery'
+import MMU from './components/MMU/MMU'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/occupational-health-centres" element={<OccupationalHealthCentres />} />
         <Route path="/mobile-medical-units" element={<MobileMedicalUnit />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/mmu" element={<MMU />} />
       </Routes>
     </>
   )
