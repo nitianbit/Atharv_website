@@ -1,46 +1,119 @@
+"use client"
+
 const LandingPageMMU = () => {
     return (
         <div
-            className="relative w-full flex items-center justify-center py-16 xl:py-0 xl:h-[431px]"
+            className="relative w-full overflow-x-hidden"
             style={{
+                height: '539px',
                 background: 'linear-gradient(228deg, #9ADDFC 14.6%, rgba(79, 197, 224, 0) 68.04%)',
             }}
         >
-            {/* Center Content Container */}
-            <div className="relative w-full px-4 flex flex-col items-center gap-6 xl:block xl:w-[888px] xl:h-[179px] xl:px-0 xl:gap-0">
+            {/* Main Content Container - Centered at 1512px max width */}
+            <div className="relative mx-auto" style={{ maxWidth: '1512px', height: '539px' }}>
 
                 {/* Heading - Mobile Medical Unit (MMU) */}
                 <h1
-                    className="text-center capitalize font-['Source_Serif_Pro'] font-semibold text-[#011632] leading-tight
-                               text-3xl sm:text-4xl md:text-5xl lg:text-[50px]
-                               xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 xl:w-[651px] xl:h-[68px] xl:text-[60px] xl:leading-[114%] xl:tracking-[-0.02em] xl:whitespace-nowrap"
+                    className="absolute font-['Source_Serif_Pro'] font-semibold capitalize"
+                    style={{
+                        width: '1058px',
+                        height: '68px',
+                        top: '247px',
+                        left: '227px',
+                        fontSize: '60px',
+                        lineHeight: '114%',
+                        letterSpacing: '-0.02em',
+                        textAlign: 'center',
+                        color: '#011632',
+                    }}
                 >
                     Mobile Medical Unit (MMU)
                 </h1>
 
-                {/* Straight Line Image */}
-                <img
-                    src="/Aboutus/LineStraight.png"
-                    alt="line"
-                    className="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain
-                               xl:absolute xl:left-1/2 xl:-translate-x-1/2 xl:w-[326px] xl:h-[5px] xl:top-[120px]"
-                />
+                {/* Decorative Line */}
+                <div
+                    className="absolute"
+                    style={{
+                        width: '326px',
+                        height: '5px',
+                        top: '325px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                    }}
+                >
+                    <img
+                        src="/Aboutus/LineStraight.png"
+                        alt="decorative line"
+                        className="w-full h-full object-contain"
+                    />
+                </div>
 
-                {/* Subtitle Text */}
+                {/* Description Text */}
                 <p
-                    className="text-center font-['DM_Sans'] font-light text-[#3C4959] leading-relaxed
-                               text-base sm:text-lg max-w-2xl
-                               xl:absolute xl:left-0 xl:max-w-none xl:w-[1015px] xl:h-[34px] xl:top-[150px] xl:text-[18px] xl:leading-[30px] xl:tracking-[0%]"
+                    className="absolute font-['DM_Sans']"
+                    style={{
+                        width: '1015px',
+                        height: '60px',
+                        top: '335px',
+                        left: '248px',
+                        fontWeight: 500,
+                        fontSize: '18px',
+                        lineHeight: '30px',
+                        letterSpacing: '0%',
+                        textAlign: 'center',
+                        color: '#040404',
+                    }}
                 >
                     End-to-end mobile medical unit services for CSR healthcare programs, government health initiatives, rural healthcare outreach, and workforce medical support — delivered through structured operations and pan-India deployment.
                 </p>
 
-                {/* Book Now Button */}
+                {/* Request Proposal Button */}
                 <button
-                    className="hover:bg-[#1566B7] hover:text-white transition-all duration-300
-                               bg-white text-black font-semibold rounded-[192px] border border-[#1566B7] shadow-[1px_6px_7.7px_0px_#3177E13D]
-                               px-7 py-4 text-sm w-[200px] sm:w-[240px] mt-4
-                               xl:absolute xl:left-1/2 xl:-translate-x-1/2 xl:w-[389px] xl:h-[50px] xl:top-[220px] xl:mt-0 xl:px-[28px] xl:py-[16px] xl:text-[14px]"
+                    className="absolute font-['DM_Sans'] font-semibold uppercase
+                             hover:bg-[#1566B7] hover:text-white transition-all duration-300"
+                    style={{
+                        width: '389px',
+                        height: '50px',
+                        top: '418px',
+                        left: '562px',
+                        padding: '16px 28px',
+                        gap: '10px',
+                        borderRadius: '192px',
+                        border: '1px solid #1566B7',
+                        background: '#FFFFFF',
+                        boxShadow: '1px 6px 7.7px 0px #3177E13D',
+                        fontSize: '16px',
+                        color: '#142349',
+                    }}
+                >
+                    Request an MMU Program Proposal
+                </button>
+            </div>
+
+            {/* Responsive Mobile/Tablet View */}
+            <div className="lg:hidden flex flex-col items-center justify-center px-6 py-16 gap-6">
+                <h1 className="font-['Source_Serif_Pro'] font-semibold text-[#011632] text-center capitalize
+                             text-3xl sm:text-4xl md:text-5xl leading-tight">
+                    Mobile Medical Unit (MMU)
+                </h1>
+
+                <img
+                    src="/Aboutus/LineStraight.png"
+                    alt="decorative line"
+                    className="w-[250px] sm:w-[300px] h-auto object-contain"
+                />
+
+                <p className="font-['DM_Sans'] font-medium text-[#040404] text-center
+                            text-base sm:text-lg leading-relaxed max-w-2xl">
+                    End-to-end mobile medical unit services for CSR healthcare programs, government health initiatives, rural healthcare outreach, and workforce medical support — delivered through structured operations and pan-India deployment.
+                </p>
+
+                <button
+                    className="font-['DM_Sans'] font-semibold uppercase
+                             bg-white text-[#142349] border border-[#1566B7] rounded-[192px]
+                             px-7 py-4 text-sm w-full max-w-[300px]
+                             hover:bg-[#1566B7] hover:text-white transition-all duration-300
+                             shadow-[1px_6px_7.7px_0px_#3177E13D]"
                 >
                     Request an MMU Program Proposal
                 </button>
