@@ -62,6 +62,9 @@ const Navbar = () => {
                                 <Link to="/occupational-health-centres" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                     Occupational Health Centres
                                 </Link>
+                            </div>
+                        )}
+                    </div>
                             {/* Mobile Services */}
                             <div className="flex flex-col gap-3">
                                 <button onClick={() => toggleMobileDropdown('services')} className="flex items-center justify-between text-xl font-bold text-[#142349] font-['DM_Sans'] w-full text-left">
