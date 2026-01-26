@@ -167,8 +167,105 @@ export const blogs: BlogPost[] = [
             { title: "Support", content: "Therapy and counseling are effective tools." }
         ],
         faqs: []
+    },
+    {
+        id: 7,
+        category: "Mobile Medical Units",
+        title: "Telemedicine Trends:",
+        subtitle: "The Future of Remote Care",
+        date: "18 March 2026",
+        readTime: "6 min read",
+        reviewedBy: "Atharv Clinical Team",
+        image: "/Blog/BlogPet.png",
+        description: "Exploring how technology is reshaping healthcare delivery.",
+        link: "#",
+        intro: "Telemedicine is bridging the gap between patients and doctors.",
+        toc: ["Trends", "Benefits", "Future"],
+        sections: [],
+        faqs: []
+    },
+    {
+        id: 8,
+        category: "Occupational Health",
+        title: "Workplace Safety:",
+        subtitle: "Best Practices",
+        date: "19 March 2026",
+        readTime: "5 min read",
+        reviewedBy: "Atharv Clinical Team",
+        image: "/Blog/LatestBlog.png",
+        description: "Ensuring a safe environment for all employees.",
+        link: "#",
+        intro: "Safety first.",
+        toc: [],
+        sections: [],
+        faqs: []
+    },
+    {
+        id: 9,
+        category: "Preventive Healthcare",
+        title: "Vaccination Guide:",
+        subtitle: "Why It Matters",
+        date: "20 March 2026",
+        readTime: "4 min read",
+        reviewedBy: "Atharv Clinical Team",
+        image: "/Blog/Train.png",
+        description: "Understanding the importance of vaccines.",
+        link: "#",
+        intro: "Vaccines save lives.",
+        toc: [],
+        sections: [],
+        faqs: []
+    },
+    {
+        id: 10,
+        category: "CSR & Community Health",
+        title: "Rural Healthcare:",
+        subtitle: "Challenges and Solutions",
+        date: "21 March 2026",
+        readTime: "7 min read",
+        reviewedBy: "Atharv Clinical Team",
+        image: "/Blog/Train.png",
+        description: "Addressing the unique needs of rural populations.",
+        link: "#",
+        intro: "Rural areas face distinct healthcare hurdles.",
+        toc: [],
+        sections: [],
+        faqs: []
+    },
+    {
+        id: 11,
+        category: "Compliance",
+        title: "Data Privacy:",
+        subtitle: "In Healthcare",
+        date: "22 March 2026",
+        readTime: "8 min read",
+        reviewedBy: "Atharv Clinical Team",
+        image: "/Blog/Train.png",
+        description: "Protecting patient data in the digital age.",
+        link: "#",
+        intro: "Data privacy is a top priority.",
+        toc: [],
+        sections: [],
+        faqs: []
+    },
+    {
+        id: 12,
+        category: "General",
+        title: "Nutrition Basics:",
+        subtitle: "Eating for Energy",
+        date: "23 March 2026",
+        readTime: "5 min read",
+        reviewedBy: "Atharv Clinical Team",
+        image: "/Blog/LatestBlog.png",
+        description: "Fueling your body with the right foods.",
+        link: "#",
+        intro: "You are what you eat.",
+        toc: [],
+        sections: [],
+        faqs: []
     }
 ];
 
 // For backward compatibility with BlogDetail which expects a single object
 export const blogData = blogs[0];
+export const FeaturedBlog = blogs[0];
