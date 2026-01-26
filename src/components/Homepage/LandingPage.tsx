@@ -29,9 +29,9 @@ const LandingPage = () => {
             // Hide after 4 seconds
             setTimeout(() => {
                 setIsVisible(false);
-            }, 5000);
+            }, 6000);
 
-        }, 9000); // Total cycle: 4s visible + 3s hidden
+        }, 10000); // Total cycle: 4s visible + 3s hidden
 
         return () => clearInterval(notificationCycle);
     }, []);
@@ -42,14 +42,14 @@ const LandingPage = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.3, // 0.2s delay between each notification
+                staggerChildren: 0.4, // 0.2s delay between each notification
                 delayChildren: 0.2
             }
         },
         exit: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.25,
+                staggerChildren: 0.4,
                 staggerDirection: 1
             }
         }
@@ -58,29 +58,29 @@ const LandingPage = () => {
     // Variants for individual notification cards
     const notificationVariants: Variants = {
         hidden: {
-            y: 180,
+            y: 140, // Reduced from 180 to 140 to stay within bottom-36 (144px) buffer and prevent scrollbar toggle
             opacity: 0
         },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 2.2, // Slower animation
+                duration: 2.4, // Slower animation
                 ease: [0.25, 0.1, 0.25, 1], // Smooth ease curve
                 opacity: {
-                    duration: 2.2, // Fade in while sliding
+                    duration: 2.4, // Fade in while sliding
                     ease: "easeOut"
                 }
             }
         },
         exit: {
-            y: -180,
+            y: -140,
             opacity: 0,
             transition: {
-                duration: 1.8, // Slow slide up exit (was 1s)
+                duration: 2.4, // Slow slide up exit
                 ease: [0.42, 0, 0.58, 1], // Smooth ease in-out
                 opacity: {
-                    duration: 1.8, // Fade out while sliding up
+                    duration: 2.4, // Fade out while sliding up
                     ease: "easeIn"
                 }
             }
@@ -215,7 +215,7 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-36 right-96 hidden md:block">
+            <div className="absolute bottom-36 right-[464px] hidden md:block">
                 <AnimatePresence mode="wait">
                     {isVisible && (
                         <motion.div
@@ -230,23 +230,25 @@ const LandingPage = () => {
                                     key={notification.id}
                                     variants={notificationVariants}
                                 >
-                                    <div className="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)] 
-                                                    flex items-center gap-4 p-4 pr-6 min-w-[320px] border border-gray-100">
+                                    <div
+                                        className="bg-white rounded-[12px] shadow-[0px_4px_20px_rgba(0,0,0,0.15)] flex items-center gap-3 px-3 border border-gray-100 box-border"
+                                        style={{ width: '227px', height: '49px' }}
+                                    >
                                         {/* Icon */}
-                                        <div className="w-[48px] h-[48px] bg-[#1566B7] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                                        <div className="w-[29px] h-[29px] bg-[#1566B7] rounded-[8px] flex items-center justify-center flex-shrink-0">
                                             <img
                                                 src={notification.icon}
                                                 alt="Notification Icon"
-                                                className="w-[28px] h-[28px] object-contain"
+                                                className="w-[16px] h-[16px] object-contain"
                                             />
                                         </div>
 
                                         {/* Text Content */}
-                                        <div className="flex flex-col">
-                                            <h3 className="font-['DM_Sans'] font-semibold text-[15px] leading-[20px] text-[#142349] m-0">
+                                        <div className="flex flex-col justify-center">
+                                            <h3 className="font-['DM_Sans'] font-semibold text-[10px] leading-[12px] text-[#142349] m-0 whitespace-nowrap">
                                                 {notification.title}
                                             </h3>
-                                            <p className="font-['DM_Sans'] font-normal text-[14px] leading-[18px] text-[#142349] m-0 mt-1">
+                                            <p className="font-['DM_Sans'] font-normal text-[8px] leading-[10px] text-[#142349] m-0 mt-[2px]">
                                                 {notification.subtitle}
                                             </p>
                                         </div>

@@ -6,6 +6,8 @@ import OccupationalHealthCentres from './components/OccupationalHealthCentres/Oc
 import MobileMedicalUnit from './components/MobileMedicalUnit/MobileMedicalUnit'
 import Gallery from './components/Gallery/Gallery'
 import MMU from './components/MMU/MMU'
+import Blogs from './components/Blogs/Blogs'
+import BlogDetails from './components/BlogDetail.tsx/BlogDetails'
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
         <Route path="/mobile-medical-units" element={<MobileMedicalUnit />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/mmu" element={<MMU />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog-detail/:id" element={<BlogDetails />} />
       </Routes>
     </>
   )

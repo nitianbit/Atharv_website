@@ -1,6 +1,7 @@
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import EventsHighLights from "./EventsHighLights";
+import HealthCareVideo from "./HealthCareVideo";
 import HealthInitiative from "./HealthInitiative";
 import HealthProgram from "./HealthProgram";
 import LandingPageGallery from "./LandingPageGallery";
@@ -12,6 +13,7 @@ const Gallery = () => {
             <Navbar />
             <LandingPageGallery />
             <HealthProgram />
+            <HealthCareVideo />
             <EventsHighLights/>
             <UpcomingEvent/>
             <HealthInitiative />
