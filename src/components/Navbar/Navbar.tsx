@@ -31,6 +31,40 @@ const Navbar = () => {
                             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-[#1566B7] font-['DM_Sans']">Home</Link>
                             <Link to="/aboutus" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-[#142349] font-['DM_Sans']">About Us</Link>
 
+                    {/* Services Dropdown */}
+                    <div
+                        className="relative group h-[23px]"
+                        onMouseEnter={() => setActiveDropdown('services')}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                        <button className="flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors"
+                            style={{ color: '#142349' }}
+                        >
+                            Services
+                            <ChevronDown className="w-4 h-4 ml-1" />
+                        </button>
+
+                        {/* Dropdown Menu */}
+                        {activeDropdown === 'services' && (
+                            <div className="absolute top-full left-0 mt-6 w-56 bg-white rounded-xl shadow-xl py-3 z-50 border border-gray-100">
+                                <Link to="/services/consultation" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                    Online Consultation
+                                </Link>
+                                <Link to="/services/pharmacy" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                    Pharmacy
+                                </Link>
+                                <Link to="/services/lab" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                    Lab Tests
+                                </Link>
+                                <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                    Ambulance Service
+                                </Link>
+                                <Link to="/occupational-health-centres" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                    Occupational Health Centres
+                                </Link>
+                            </div>
+                        )}
+                    </div>
                             {/* Mobile Services */}
                             <div className="flex flex-col gap-3">
                                 <button onClick={() => toggleMobileDropdown('services')} className="flex items-center justify-between text-xl font-bold text-[#142349] font-['DM_Sans'] w-full text-left">
