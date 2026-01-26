@@ -62,7 +62,7 @@ const BenefitsSection = () => {
             {benefits.map((benefit, index) => (
                 <div
                     key={index}
-                    className="bg-white rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-100 flex items-center gap-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-sm"
+                    className="bg-white rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-100 flex items-center gap-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-12px)] max-w-sm"
                 >
                     <div className="flex-shrink-0">
                         <img
