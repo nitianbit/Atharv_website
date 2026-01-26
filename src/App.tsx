@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Homepage from './components/Homepage/Homepage'
 import AboutUs from './components/AboutUs/AboutUs'
 import OccupationalHealthCentres from './components/OccupationalHealthCentres/OccupationalHealthCentres'
+import HomeHealthcare from './components/HomeHealthcare/HomeHealthcare'
+import Pharmacy from './components/Pharmacy/Pharmacy'
 import MobileMedicalUnit from './components/MobileMedicalUnit/MobileMedicalUnit'
 import Gallery from './components/Gallery/Gallery'
 import MMU from './components/MMU/MMU'
@@ -18,6 +20,8 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/occupational-health-centres" element={<OccupationalHealthCentres />} />
+        <Route path="/home-healthcare" element={<HomeHealthcare />} />
+        <Route path="/pharmacy" element={<Pharmacy />} />
         <Route path="/mobile-medical-units" element={<MobileMedicalUnit />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/mmu" element={<MMU />} />
