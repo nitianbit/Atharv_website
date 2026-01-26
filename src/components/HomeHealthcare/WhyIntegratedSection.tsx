@@ -14,9 +14,12 @@ const WhyIntegratedSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image Section */}
                     <div>
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center relative">
-                            <span className="text-[#1566B7] font-medium text-center px-4 z-10">Doctor with Patient Image</span>
-                            <div className="absolute inset-0 bg-[#1566B7] opacity-10 rounded-2xl"></div>
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative">
+                            <img
+                                src="/HomeHealthcare/integrate-home-healthcare.png"
+                                alt="Why Integrated Home Healthcare Matters"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
 

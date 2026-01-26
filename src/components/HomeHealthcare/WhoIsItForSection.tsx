@@ -35,9 +35,12 @@ const WhoIsItForSection = () => {
 
                     {/* Image Section */}
                     <div>
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center relative">
-                            <span className="text-[#1566B7] font-medium text-center px-4 z-10">Doctor Consulting Elderly Patient Image</span>
-                            <div className="absolute inset-0 bg-[#1566B7] opacity-10 rounded-2xl"></div>
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative">
+                            <img
+                                src="/HomeHealthcare/home-healthcare-sevices-3rd-section.png"
+                                alt="Who Home Healthcare Services Are For"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
                 </div>

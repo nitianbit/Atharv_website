@@ -7,8 +7,12 @@ const WhatIsHomeHealthcareSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image Section */}
                     <div>
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                            <span className="text-[#1566B7] font-medium text-center px-4">Home Healthcare Consultation Image</span>
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative">
+                            <img
+                                src="/HomeHealthcare/home-healthcare.png"
+                                alt="What Is Home Healthcare"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
 

@@ -3,29 +3,29 @@ import styles from '../OccupationalHealthCentres/ohc.module.css';
 const WhyChooseSection = () => {
     const features = [
         {
-            icon: '🏠',
+            icon: '/HomeHealthcare/integrated-medical.png',
             title: 'Integrated Medical And Pharmacy Support'
         },
         {
-            icon: '🏢',
+            icon: '/HomeHealthcare/delivery-models.png',
             title: 'Experience Across Multiple Healthcare Delivery Models'
         },
         {
-            icon: '🗺️',
+            icon: '/HomeHealthcare/pan-india.png',
             title: 'Pan-India Operational Capability'
         },
         {
-            icon: '⚙️',
+            icon: '/HomeHealthcare/coordination.png',
             title: 'Coordination Across Consultation, Diagnostics, And Medicine Supply'
         },
         {
-            icon: '📋',
+            icon: '/HomeHealthcare/accountability.png',
             title: 'Focus On Accountability, Documentation, And Reliability'
         }
     ];
 
     return (
-        <div className="w-full bg-white py-12 md:py-16 px-4">
+        <div className="w-full py-12 md:py-16 px-4" style={{ background: '#F0F7FF' }}>
             <div className="max-w-7xl mx-auto">
                 <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} text-center mb-4 max-w-3xl mx-auto`}>
                     Why Choose <span className={styles.primaryBlue}>Atharv Healthcare</span>
@@ -35,16 +35,24 @@ const WhyChooseSection = () => {
                     Atharv Healthcare brings operational discipline and coordination to home healthcare delivery.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="flex flex-wrap justify-center gap-6">
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+                            className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-sm"
                         >
-                            <div className="text-5xl mb-4">{feature.icon}</div>
-                            <h3 className={`${styles.bodyText} font-semibold text-lg leading-tight`}>
-                                {feature.title}
-                            </h3>
+                            <div className="flex items-start gap-4">
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center shrink-0">
+                                    <img
+                                        src={feature.icon}
+                                        alt={feature.title}
+                                        className="w-10 h-10 object-contain"
+                                    />
+                                </div>
+                                <h3 className={`${styles.bodyText} font-semibold text-lg leading-tight text-[#142349] flex-1`}>
+                                    {feature.title}
+                                </h3>
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -57,30 +57,34 @@ const ServicesSection = () => {
     const currentService = services[activeTab as keyof typeof services];
 
     return (
-        <div className="w-full bg-white py-12 md:py-16 px-4">
+        <div className="w-full bg-white py-12 md:py-16 px-4" style={{ background: '#F0F7FF' }}>
             <div className="max-w-7xl mx-auto">
-                <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} text-center mb-4 max-w-3xl mx-auto`}>
-                    Our <span className={`${styles.primaryBlue} underline`}>Home Healthcare Services</span>
+                <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} text-left mb-1 max-w-3xl `}>
+                    Our <span className={`${styles.primaryBlue}`}>Home Healthcare Services</span>
                 </h2>
 
-                <p className={`${styles.bodyText} text-center text-lg mb-12 max-w-3xl mx-auto leading-relaxed`}>
+                <p className={`${styles.bodyText} text-lg mb-8 max-w-7xl leading-relaxed`}>
                     Atharv Healthcare delivers structured medical services at home, supported by coordinated workflows and verified service partners.
                 </p>
 
                 {/* Image Section */}
                 <div className="mb-12">
-                    <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                        <span className="text-[#1566B7] font-medium text-center px-4">Home Healthcare Services Image</span>
+                    <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden relative">
+                        <img
+                            src="/HomeHealthcare/healthcare-services.png"
+                            alt="Home Healthcare Services"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
 
                 {/* Tabbed Navigation */}
-                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <div className="flex gap-0 mb-8">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`px-6 py-3 rounded-lg font-semibold text-sm uppercase transition-all duration-300 ${
+                            className={`flex-1 px-6 py-3 font-semibold text-sm uppercase transition-all duration-300 ${
                                 activeTab === tab.id
                                     ? 'bg-[#1566B7] text-white'
                                     : 'bg-white text-[#142349] border border-gray-300 hover:border-[#1566B7]'
@@ -92,7 +96,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Tab Content */}
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl ">
                     <h3 className={`${styles.headingSerif} text-2xl md:text-3xl mb-4 ${styles.primaryBlue}`}>
                         {currentService.title}
                     </h3>

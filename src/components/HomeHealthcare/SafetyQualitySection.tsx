@@ -35,8 +35,12 @@ const SafetyQualitySection = () => {
                     {/* Image Section */}
                     <div className="relative">
                         <div className="relative z-10">
-                            <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                                <span className="text-[#1566B7] font-medium text-center px-4 z-10">Healthcare Professionals Image</span>
+                            <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative">
+                                <img
+                                    src="/HomeHealthcare/safety.png"
+                                    alt="Safety, Quality & Reliability"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                         </div>
                         <div className={`${styles.blueGradientBg} opacity-20 rounded-2xl w-full aspect-[4/3] absolute top-8 right-8 -z-10`}></div>
