@@ -8,6 +8,7 @@ import Gallery from './components/Gallery/Gallery'
 import MMU from './components/MMU/MMU'
 import Blogs from './components/Blogs/Blogs'
 import BlogDetails from './components/BlogDetail.tsx/BlogDetails'
+import CSR from './components/CSR/CSR'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
         <Route path="/mmu" element={<MMU />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-detail/:id" element={<BlogDetails />} />
+        <Route path="/csr" element={<CSR />} />
+
       </Routes>
     </>
   )
