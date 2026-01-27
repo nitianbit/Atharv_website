@@ -2,7 +2,7 @@
 
 const MMUExperience = () => {
     return (
-        <div className="w-full bg-white py-16 md:py-20 lg:py-24 px-6 md:px-10 lg:px-20">
+        <div className="w-full bg-white py-16 md:py-20 lg:py-24 px-6 md:px-10 lg:px-20 mb-8">
             <div className="max-w-[1400px] mx-auto">
 
                 {/* Main Container with Blue Background */}
@@ -10,7 +10,7 @@ const MMUExperience = () => {
                               rounded-[28px] md:rounded-[32px] lg:rounded-[40px] 
                               overflow-hidden
                               px-8 md:px-12 lg:px-16 xl:px-20
-                              py-12 md:py-14 lg:py-16 xl:py-20">
+                              py-12 md:py-14 lg:py-16 xl:py-20 mb-12" >
 
                     {/* Decorative Background Circles */}
                     <div className="absolute top-0 right-0 w-[400px] h-[400px] 

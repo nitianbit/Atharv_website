@@ -1,6 +1,6 @@
 import styles from './ohc.module.css';
 
-const SocialProofSection = () => {
+const SocialProofSection2 = () => {
     return (
         <div className="w-full bg-white py-12 md:py-16 px-4">
             <div className="max-w-7xl mx-auto">
@@ -8,18 +8,18 @@ const SocialProofSection = () => {
                     {/* Text Section */}
                     <div>
                         <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} mb-6`}>
-                            Social Proof & <span className={styles.primaryBlue}>Experience</span>
+                            Experience &<span className={styles.primaryBlue}>{' '}Program <br/>Footprint</span> 
                         </h2>
 
                         <p className={`${styles.bodyText} text-lg mb-8 leading-relaxed`}>
-                            Atharv Healthcare has experience supporting <strong>large industries</strong> and <strong>national organizations</strong> across India through:
+                            Atharv Healthcare has supported community and CSR healthcare initiatives for <b>corporates, PSUs and institutions across<br/> India</b>, operating in urban, semi-urban and remote regions.
                         </p>
 
                         <ul className="space-y-4">
                             {[
-                                'OHC Operations',
-                                'Mobile Medical Units',
-                                'Preventive & Occupational Health Programs'
+                                'Community healthcare programs',
+                                'CSR-aligned outreach initiatives',
+                                'Rural and underserved population health support '
                             ].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <span className="w-8 h-8 rounded-full bg-[#E8F4FD] text-[#1566B7] font-bold text-lg flex items-center justify-center flex-shrink-0">✓</span>
@@ -43,4 +43,4 @@ const SocialProofSection = () => {
     );
 };
 
-export default SocialProofSection;
+export default SocialProofSection2;

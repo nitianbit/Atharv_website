@@ -5,34 +5,34 @@ const HowItWorksSection = () => {
     {
         number: '1',
         title: 'Program Assessment',
-        description: 'Understanding objectives, geography, population, and overall program scope.'
+        description: 'Understanding objectives, geography, population, and scope. '
     },
     {
         number: '2',
         title: 'MMU Configuration & Planning',
-        description: 'Designing healthcare services, staffing models, and deployment schedules.'
+        description: 'Designing services, staffing, and deployment schedules.'
     },
     {
         number: '3',
         title: 'On-ground Deployment',
-        description: 'Executing healthcare delivery as per the defined program design.'
+        description: 'Executing healthcare delivery as per program design.'
     },
     {
         number: '4',
         title: 'Documentation & Reporting',
-        description: 'Maintaining records, summaries, referrals, and compliance reports.'
+        description: 'Maintaining records, summaries, and referral tracking.'
     },
     {
         number: '5',
         title: 'Ongoing Support & Scale-up',
-        description: 'Program review, optimisation, and expansion where required.'
+        description: 'Program review, optimisation, and expansion where required.'
     }
 ];
 
 
     return (
         <div className={`w-full py-12 md:py-20 px-4 bg-[#0F58A1] `}>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-9xl mx-auto">
                 <h2 className={`${styles.headingSerif} ${styles.headingSerifMedium} text-center mb-16 text-white max-w-4xl mx-auto`}>
                     <span className="text-white">How Our MMU Programs Are Delivered </span>
                 </h2>
@@ -59,12 +59,12 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-white font-medium text-base lg:text-lg mb-2">
+                <h3 className="text-white font-medium text-base lg:text-lg mb-2 max-w-[170px]">
                     {step.title}
                 </h3>
 
                 {/* DESCRIPTION */}
-                <p className="text-white/90 font-light text-xs lg:text-sm leading-relaxed">
+                <p className="text-white/90 font-light text-xs lg:text-sm leading-relaxed max-w-[200px]">
                     {step.description}
                 </p>
             </div>
