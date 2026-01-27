@@ -82,63 +82,35 @@ const WhyAtharv = () => {
     }, []);
 
     return (
-        <div className="w-full py-16 px-4">
+        <div className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12 xl:px-[100px] overflow-hidden">
             {/* Overall Container */}
-            <div
-                className="w-full mx-auto flex flex-col gap-10 md:gap-[54px] overflow-hidden rounded-[20px] xl:rounded-none
-                py-10 xl:py-0
-                xl:max-w-[1521px] xl:h-[567px] xl:overflow-visible"
-                style={{
-                    background: 'rgba(49, 119, 225, 0.1)',
-                }}
-            >
+            <div className="w-full mx-auto flex flex-col gap-8 md:gap-12 lg:gap-16 py-10 md:py-14 lg:py-[60px] rounded-[20px] bg-[rgba(49,119,225,0.1)] relative">
 
                 {/* Heading */}
-                <h2
-                    className="w-full max-w-[727px] mx-auto text-center capitalize relative
-                    text-[32px] mt-0
-                    md:text-[40px]
-                    xl:h-[58px] xl:top-[80px] xl:translate-y-[-50%] xl:text-[46px] xl:leading-[100%] xl:tracking-[0.02em] xl:mt-0"
-                    style={{
-                        fontFamily: "'Source Serif Pro', serif",
-                        fontWeight: 600,
-                        whiteSpace: "nowrap",
-                    }}
-                >
-                    <span className="text-[#142349]">WHY CHOOSE </span>
-                    <span className="text-[#1566B7]">ATHARV HEALTHCARE? </span>
+                <h2 className="w-full px-4 text-center">
+                    <span className="block font-['Source_Serif_Pro'] font-semibold text-[#142349] text-1xl md:text-4xl lg:text-[46px] leading-tight tracking-tight uppercase whitespace-nowrap">
+                        Why Choose <span className="text-[#1566B7]">Atharv Healthcare?</span>
+                    </span>
                 </h2>
 
                 {/* Box Container - Scrolling */}
                 <div
                     ref={scrollRef}
-                    className="w-full flex relative gap-5 overflow-x-hidden hide-scrollbar
-                    mt-4
-                    xl:w-full xl:max-w-[1521px] xl:mx-auto xl:h-[315px] xl:top-[50px] xl:gap-[20px] xl:mt-0"
-                    style={{
-                        scrollBehavior: 'auto'
-                    }}
+                    className="w-full flex gap-5 md:gap-6 lg:gap-8 overflow-x-hidden overflow-y-hidden"
                 >
                     {/* First Set */}
                     {features.map((feature) => (
                         <div
                             key={`first-${feature.id}`}
-                            className="flex flex-col items-center justify-center bg-white flex-shrink-0 transition-all duration-300 feature-card
-                            w-[260px] h-[260px] p-8 gap-6 rounded-[8px]
-                            md:w-[280px] md:h-[280px]
-                            xl:w-[315px] xl:h-[315px] xl:gap-[33px] xl:pt-[54px] xl:pb-[54px] xl:rounded-[8.3px]"
-                            style={{
-                                border: '2px solid rgba(222, 222, 222, 0.1)',
-                                boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.21)',
-                            }}
+                            className="group flex flex-col items-center justify-center bg-white flex-shrink-0 transition-all duration-300 
+                            w-[260px] h-[260px] p-6 gap-6 rounded-[8px]
+                            md:w-[280px] md:h-[280px] md:p-8
+                            lg:w-[315px] lg:h-[315px] lg:gap-8 lg:py-[54px] lg:rounded-[8px]
+                            border-2 border-[rgba(222,222,222,0.1)] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.21)]
+                            hover:shadow-[0px_4px_20px_rgba(21,102,183,0.25)] hover:-translate-y-1"
                         >
                             {/* Icon */}
-                            <div
-                                className="flex items-center justify-center
-                                w-[70px] h-[70px]
-                                md:w-[80px] md:h-[80px]
-                                xl:w-[98px] xl:h-[98px]"
-                            >
+                            <div className="flex items-center justify-center w-[70px] h-[70px] md:w-[80px] md:h-[80px] lg:w-[98px] lg:h-[98px]">
                                 <img
                                     src={feature.icon}
                                     alt={feature.title}
@@ -147,11 +119,10 @@ const WhyAtharv = () => {
                             </div>
 
                             {/* Title */}
-                            <h3
-                                className="font-['DM_Sans'] font-semibold text-center align-middle capitalize text-[#142349] flex items-center justify-center m-0
-                                text-[16px] leading-snug w-full
-                                md:text-[18px]
-                                xl:w-[217px] xl:h-[76px] xl:text-[20px] xl:leading-[27px] xl:tracking-normal"
+                            <h3 className="font-['DM_Sans'] font-semibold text-center text-[#142349] flex items-center justify-center
+                                text-base leading-snug w-full
+                                md:text-lg
+                                lg:text-[20px] lg:leading-[27px] lg:w-[220px]"
                             >
                                 {feature.title}
                             </h3>
@@ -162,21 +133,14 @@ const WhyAtharv = () => {
                     {features.map((feature) => (
                         <div
                             key={`second-${feature.id}`}
-                            className="flex flex-col items-center justify-center bg-white flex-shrink-0 transition-all duration-300 feature-card
-                            w-[260px] h-[260px] p-8 gap-6 rounded-[8px]
-                            md:w-[280px] md:h-[280px]
-                            xl:w-[315px] xl:h-[315px] xl:gap-[33px] xl:pt-[54px] xl:pb-[54px] xl:rounded-[8.3px]"
-                            style={{
-                                border: '2px solid rgba(222, 222, 222, 0.1)',
-                                boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.21)',
-                            }}
+                            className="group flex flex-col items-center justify-center bg-white flex-shrink-0 transition-all duration-300 
+                            w-[260px] h-[260px] p-6 gap-6 rounded-[8px]
+                            md:w-[280px] md:h-[280px] md:p-8
+                            lg:w-[315px] lg:h-[315px] lg:gap-8 lg:py-[54px] lg:rounded-[8px]
+                            border-2 border-[rgba(222,222,222,0.1)] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.21)]
+                            hover:shadow-[0px_4px_20px_rgba(21,102,183,0.25)] hover:-translate-y-1"
                         >
-                            <div
-                                className="flex items-center justify-center
-                                w-[70px] h-[70px]
-                                md:w-[80px] md:h-[80px]
-                                xl:w-[98px] xl:h-[98px]"
-                            >
+                            <div className="flex items-center justify-center w-[70px] h-[70px] md:w-[80px] md:h-[80px] lg:w-[98px] lg:h-[98px]">
                                 <img
                                     src={feature.icon}
                                     alt={feature.title}
@@ -184,11 +148,10 @@ const WhyAtharv = () => {
                                 />
                             </div>
 
-                            <h3
-                                className="font-['DM_Sans'] font-semibold text-center align-middle capitalize text-[#142349] flex items-center justify-center m-0
-                                text-[16px] leading-snug w-full
-                                md:text-[18px]
-                                xl:w-[217px] xl:h-[76px] xl:text-[20px] xl:leading-[27px] xl:tracking-normal"
+                            <h3 className="font-['DM_Sans'] font-semibold text-center text-[#142349] flex items-center justify-center
+                                text-base leading-snug w-full
+                                md:text-lg
+                                lg:text-[20px] lg:leading-[27px] lg:w-[220px]"
                             >
                                 {feature.title}
                             </h3>
@@ -196,22 +159,6 @@ const WhyAtharv = () => {
                     ))}
                 </div>
             </div>
-
-            <style>{`
-                .hide-scrollbar {
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
-                }
-                
-                .hide-scrollbar::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .feature-card:hover {
-                    box-shadow: 0px 4px 20px rgba(21, 102, 183, 0.25) !important;
-                    transform: translateY(-4px);
-                }
-            `}</style>
         </div>
     );
 };

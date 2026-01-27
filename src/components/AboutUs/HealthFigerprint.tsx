@@ -1,11 +1,11 @@
 const HealthFigerprint = () => {
     return (
-        <div className="w-full relative overflow-hidden bg-white py-12 xl:py-[80px] flex justify-center items-center">
+        <div className="w-full relative overflow-hidden bg-white py-12 lg:py-[80px] flex justify-center items-center">
             {/* Overall Container */}
-            <div className="w-full flex flex-col items-center bg-[#3177E11A] rounded-[30px] p-6 lg:p-12 xl:w-[1305px] xl:h-[544px] xl:flex-row xl:justify-between xl:items-center xl:p-[60px] xl:relative">
+            <div className="w-full flex flex-col items-center bg-[#3177E11A] rounded-[30px] p-6 lg:p-12 lg:w-[1305px] lg:h-[544px] lg:flex-row lg:justify-between lg:items-center lg:px-[60px] lg:py-[60px] lg:relative lg:scale-[0.8] xl:scale-100 lg:mx-auto">
 
                 {/* Left Side - iPhone Image */}
-                <div className="relative w-[280px] h-[200px] sm:w-[400px] sm:h-[300px] mb-8 xl:mb-0 xl:w-[645px] xl:h-[470px] xl:shrink-0">
+                <div className="relative w-[280px] h-[200px] sm:w-[400px] sm:h-[300px] mb-8 lg:mb-0 lg:w-[645px] lg:h-[470px] lg:shrink-0">
                     <img
                         src="/Aboutus/iPhone15.png"
                         alt="Healthcare App"
@@ -14,31 +14,31 @@ const HealthFigerprint = () => {
                 </div>
 
                 {/* Right Side - Text Content */}
-                <div className="flex flex-col gap-4 w-full max-w-lg xl:block xl:w-[650px] xl:h-[323px] xl:gap-[16px] xl:max-w-none">
+                <div className="flex flex-col gap-4 w-full max-w-lg lg:block lg:w-[650px] lg:h-[323px] lg:gap-[16px] lg:max-w-none">
 
                     {/* Main Heading */}
                     <h2 className="font-['Source_Serif_Pro'] font-semibold capitalize text-[#1566B7]
                                    text-3xl text-center md:text-left
-                                   xl:w-[605px] xl:h-[56px] xl:text-[42px] xl:leading-[121%] xl:tracking-[-0.02em] xl:m-0">
+                                   lg:w-[605px] lg:h-[56px] lg:text-[42px] lg:leading-[121%] lg:tracking-[-0.02em] lg:m-0">
                         Healthcare At Your Fingertips
                     </h2>
 
                     {/* Subheading and Description */}
-                    <div className="flex flex-col gap-2 text-center md:text-left xl:block xl:w-[560.93px] xl:h-[82px] xl:gap-0">
+                    <div className="flex flex-col gap-2 text-center md:text-left lg:block lg:w-[560.93px] lg:h-[82px] lg:gap-0">
                         <p className="font-['DM_Sans'] font-bold text-[#142349]
                                       text-lg
-                                      xl:text-[20px] xl:leading-[27px] xl:tracking-[0%] xl:mb-[1px] xl:m-0">
+                                      lg:text-[20px] lg:leading-[27px] lg:tracking-[0%] lg:mb-[1px] lg:m-0">
                             Atharv Healthcare mobile app — coming soon.
                         </p>
                         <p className="font-['DM_Sans'] font-light text-[#142349]
                                       text-base
-                                      xl:text-[18px] xl:leading-[27px] xl:tracking-[0%] xl:m-0">
+                                      lg:text-[18px] lg:leading-[27px] lg:tracking-[0%] lg:m-0">
                             Book consultations, order medicines, schedule lab tests and access reports from one place.
                         </p>
                     </div>
 
                     {/* Bullet Points List */}
-                    <ul className="flex flex-col gap-2 text-left w-full pl-4 mt-2 sm:pl-0 xl:block xl:w-[560.93px] xl:h-[120px] xl:mt-0 xl:pl-0 xl:gap-0">
+                    <ul className="flex flex-col gap-2 text-left w-full pl-4 mt-2 sm:pl-0 lg:block lg:w-[560.93px] lg:h-[120px] lg:mt-0 lg:pl-0 lg:gap-0">
                         {[
                             'Simple, hassle-free online booking',
                             'E-prescriptions and digital test reports',
@@ -47,8 +47,8 @@ const HealthFigerprint = () => {
                         ].map((item, index) => (
                             <li key={index} className="relative pl-5 font-['DM_Sans'] font-light text-[#142349]
                                                        text-base leading-snug
-                                                       xl:text-[18px] xl:leading-[30px] xl:tracking-[0%]">
-                                <span className="absolute left-0 top-[8px] w-[6px] h-[6px] rounded-full bg-[#1566B7] xl:top-[12px]" />
+                                                       lg:text-[18px] lg:leading-[30px] lg:tracking-[0%]">
+                                <span className="absolute left-0 top-[8px] w-[6px] h-[6px] rounded-full bg-[#1566B7] lg:top-[12px]" />
                                 {item}
                             </li>
                         ))}
@@ -57,7 +57,7 @@ const HealthFigerprint = () => {
                     {/* Final Bold Statement */}
                     <p className="font-['DM_Sans'] font-bold text-[#142349] mt-4 text-center md:text-left
                                   text-lg
-                                  xl:text-[20px] xl:leading-[27px] xl:tracking-[0%] xl:w-[600px] xl:h-[27px] xl:mt-0 xl:m-0">
+                                  lg:text-[20px] lg:leading-[27px] lg:tracking-[0%] lg:w-[600px] lg:h-[27px] lg:mt-0 lg:m-0">
                         Everything you need for primary healthcare — in one app.
                     </p>
                 </div>

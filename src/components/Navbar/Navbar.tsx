@@ -31,8 +31,8 @@ const Navbar = () => {
                             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-[#1566B7] font-['DM_Sans']">Home</Link>
                             <Link to="/aboutus" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-[#142349] font-['DM_Sans']">About Us</Link>
 
-                    {/* Services Dropdown */}
-                    
+                            {/* Services Dropdown */}
+
                             {/* Mobile Services */}
                             <div className="flex flex-col gap-3">
                                 <button onClick={() => toggleMobileDropdown('services')} className="flex items-center justify-between text-xl font-bold text-[#142349] font-['DM_Sans'] w-full text-left">
@@ -60,18 +60,18 @@ const Navbar = () => {
                 )}
             </div>
             <div className="hidden xl:block relative w-full z-50 ">
-             <div className="absolute top-[0px] left-[clamp(32px,4vw,64px)] w-[119px] h-[127px]">
-    <Link to="/" className="block w-full h-full">
-      <img
-        src="/Homepage/AtharvLOGO.png"
-        alt="Atharv Health Care Logo"
-        className="w-full h-full object-contain"
-      />
-    </Link>
-  </div>
-            {/* Desktop Navbar - Refactored for Responsiveness */}
-             <nav className="absolute top-[17px] right-6 xl:right-12 2xl:right-20">
-    <div className="flex items-center gap-10 h-[86px]
+                <div className="absolute top-[0px] left-[clamp(32px,4vw,64px)] w-[119px] h-[127px]">
+                    <Link to="/" className="block w-full h-full">
+                        <img
+                            src="/Homepage/AtharvLOGO.png"
+                            alt="Atharv Health Care Logo"
+                            className="w-full h-full object-contain"
+                        />
+                    </Link>
+                </div>
+                {/* Desktop Navbar - Refactored for Responsiveness */}
+                <nav className="absolute top-[17px] right-6 xl:right-12 2xl:right-20">
+                    <div className="flex items-center gap-10 h-[86px]
 w-[clamp(900px,85vw,1020px)]
 px-12 rounded-full
 bg-gradient-to-r from-[#EAF6FF] via-[#F5FBFF] to-[#EAF6FF]
@@ -80,77 +80,77 @@ backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
 
 
 
-                    {/* Navigation Links Group */}
-                    <div className="flex items-center justify-between w-full whitespace-nowrap">
+                        {/* Navigation Links Group */}
+                        <div className="flex items-center justify-between w-full whitespace-nowrap">
 
 
-                        {/* Home Link */}
-                        <Link to="/"
-                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
-                        >
-                            Home
-                        </Link>
+                            {/* Home Link */}
+                            <Link to="/"
+                                className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
+                            >
+                                Home
+                            </Link>
 
-                        {/* About Us Link */}
-                        <Link to="/aboutus"
-                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/aboutus' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
-                        >
-                            About Us
-                        </Link>
+                            {/* About Us Link */}
+                            <Link to="/aboutus"
+                                className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/aboutus' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
+                            >
+                                About Us
+                            </Link>
 
-                        {/* Services Dropdown */}
-                        <div
-                            className="relative group h-[23px]"
-                            onMouseEnter={() => setActiveDropdown('services')}
-                            onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                            <button className={`flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname.startsWith('/services') ? 'text-[#1566B7]' : 'text-[#142349]'}`}>
-                                Services
-                                <ChevronDown className="w-4 h-4 ml-1" />
-                            </button>
+                            {/* Services Dropdown */}
+                            <div
+                                className="relative group h-[23px]"
+                                onMouseEnter={() => setActiveDropdown('services')}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <button className={`flex items-center gap-1 font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname.startsWith('/services') ? 'text-[#1566B7]' : 'text-[#142349]'}`}>
+                                    Services
+                                    <ChevronDown className="w-4 h-4 ml-1" />
+                                </button>
 
-                            {/* Dropdown Menu */}
-                            {activeDropdown === 'services' && (
-                                <div className="absolute top-full left-0 mt-6 w-56 bg-white rounded-xl shadow-xl py-3 z-50 border border-gray-100">
-                                    <Link to="/services/consultation" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                        Online Consultation
-                                    </Link>
-                                    <Link to="/services/pharmacy" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                        Pharmacy
-                                    </Link>
-                                    <Link to="/services/lab" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                        Lab Tests
-                                    </Link>
-                                    <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                        Ambulance Service
-                                    </Link>
-                                    
-                                </div>
-                            )}
+                                {/* Dropdown Menu */}
+                                {activeDropdown === 'services' && (
+                                    <div className="absolute top-full left-0 mt-6 w-56 bg-white rounded-xl shadow-xl py-3 z-50 border border-gray-100">
+                                        <Link to="/services/consultation" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                            Online Consultation
+                                        </Link>
+                                        <Link to="/services/pharmacy" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                            Pharmacy
+                                        </Link>
+                                        <Link to="/services/lab" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                            Lab Tests
+                                        </Link>
+                                        <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
+                                            Ambulance Service
+                                        </Link>
+
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Gallery */}
+                            <Link to="/gallery"
+                                className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/gallery' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
+                            >
+                                Gallery
+                            </Link>
+                            <Link to="/blogs"
+                                className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/gallery' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
+                            >
+                                Blogs
+                            </Link>
+                            <Link
+                                to="/contact"
+                                className="flex items-center justify-center transition-all hover:opacity-90 hover:scale-105 active:scale-95 text-white bg-[#1566B7] shadow-[1px_4px_12.7px_0px_#3177E13D] uppercase font-['DM_Sans'] font-semibold text-[16px] leading-[100%] rounded-[192px] w-[236px] h-[55px]"
+                            >
+                                CONTACT US
+                            </Link>
                         </div>
-        
-                        {/* Gallery */}
-                        <Link to="/gallery"
-                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/gallery' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
-                        >
-                            Gallery
-                        </Link>
-                        <Link to="/blogs"
-                            className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/gallery' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
-                        >
-                            Blogs
-                        </Link>
-                        <Link
-                            to="/contact"
-                            className="flex items-center justify-center transition-all hover:opacity-90 hover:scale-105 active:scale-95 text-white bg-[#1566B7] shadow-[1px_4px_12.7px_0px_#3177E13D] uppercase font-['DM_Sans'] font-semibold text-[16px] leading-[100%] rounded-[192px] w-[236px] h-[55px]"
-                        >
-                            CONTACT US
-                        </Link>
+
+
                     </div>
-                    
-                   
-                </div>
-            </nav>
+                </nav>
             </div>
         </>
     );
