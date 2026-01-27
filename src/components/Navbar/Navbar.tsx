@@ -72,7 +72,7 @@ const Navbar = () => {
             {/* Desktop Navbar - Refactored for Responsiveness */}
              <nav className="absolute top-[17px] right-6 xl:right-12 2xl:right-20">
     <div className="flex items-center gap-10 h-[86px]
-w-[clamp(860px,82vw,980px)]
+w-[clamp(900px,85vw,1020px)]
 px-12 rounded-full
 bg-gradient-to-r from-[#EAF6FF] via-[#F5FBFF] to-[#EAF6FF]
 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
