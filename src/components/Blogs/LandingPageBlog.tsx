@@ -1,39 +1,48 @@
 const LandingPageBlog = () => {
     return (
         <div
-            className="relative w-full flex items-center justify-center py-16 xl:py-0 xl:w-[1512px] xl:h-[508px] xl:mx-auto overflow-hidden"
+            className="w-full relative overflow-hidden"
             style={{
                 background: 'linear-gradient(228deg, #9ADDFC 14.6%, rgba(79, 197, 224, 0) 68.04%)',
             }}
         >
-            {/* Center Content Container */}
-            <div className="relative w-full px-4 flex flex-col items-center gap-6 xl:block xl:absolute xl:w-[763px] xl:h-[229px] xl:top-[199px] xl:left-[399px] xl:px-0 xl:gap-0">
-
-                {/* Heading - About Atharv Healthcare */}
-                <h1
-                    className="text-center capitalize font-['Source_Serif_Pro'] font-semibold text-[#011632] leading-tight
-                               text-3xl sm:text-4xl md:text-5xl lg:text-[50px]
-                               xl:absolute xl:top-0 xl:left-0 xl:w-[763px] xl:h-[136px] xl:text-[60px] xl:leading-[114%] xl:tracking-[-0.02em]"
-                >
+            <div className="lg:hidden w-full px-6 py-16 md:py-24 flex flex-col items-center text-center gap-6 md:gap-8">
+                <h1 className="font-['Source_Serif_Pro'] font-semibold text-[#011632] leading-tight text-3xl sm:text-4xl md:text-5xl">
                     Insights & Updates from Atharv Healthcare
                 </h1>
 
-                {/* Straight Line Image */}
                 <img
                     src="/Aboutus/LineStraight.png"
                     alt="line"
-                    className="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain
-                               xl:absolute xl:left-[219px] xl:w-[326px] xl:h-[5px] xl:top-[144px]"
+                    className="w-[180px] sm:w-[240px] md:w-[300px] h-auto object-contain"
                 />
 
-                {/* Subtitle Text */}
-                <p
-                    className="text-center font-['DM_Sans'] font-light text-[#3C4959] leading-relaxed
-                               text-base sm:text-lg max-w-2xl
-                               xl:absolute xl:left-[12px] xl:max-w-none xl:w-[706px] xl:h-[60px] xl:top-[169px] xl:text-[18px] xl:leading-[30px] xl:tracking-[0%]"
-                >
+                <p className="font-['DM_Sans'] font-light text-[#3C4959] leading-relaxed text-base sm:text-lg md:text-xl max-w-2xl">
                     Industry insights on occupational health, mobile healthcare delivery, CSR initiatives, and preventive healthcare in India.
                 </p>
+            </div>
+
+            <div className="hidden lg:block w-full overflow-hidden">
+                {/* Container Heights adjusted for scale */}
+                <div className="w-full flex justify-center lg:h-[360px] xl:h-[440px] 2xl:h-[508px]">
+                    <div className="relative w-[1512px] h-[508px] origin-top transform lg:scale-[0.7] xl:scale-[0.85] 2xl:scale-100">
+
+                        {/* Re-implementing EXACT Absolute Positioning for Inner Elements as requested to 'keep same' */}
+                        <div className="absolute w-[763px] h-[229px] top-[199px] left-[399px]">
+                            <h1 className="absolute top-0 left-0 w-full text-center font-['Source_Serif_Pro'] font-semibold text-[#011632] text-[60px] leading-[114%] tracking-[-0.02em]">
+                                Insights & Updates from Atharv Healthcare
+                            </h1>
+                            <img
+                                src="/Aboutus/LineStraight.png"
+                                alt="line"
+                                className="absolute left-[219px] top-[144px] w-[326px] h-[5px] object-contain"
+                            />
+                            <p className="absolute top-[169px] left-[12px] w-[706px] h-[60px] text-center font-['DM_Sans'] font-light text-[#3C4959] text-[18px] leading-[30px]">
+                                Industry insights on occupational health, mobile healthcare delivery, CSR initiatives, and preventive healthcare in India.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

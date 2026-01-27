@@ -51,7 +51,7 @@ const Services = () => {
                 "Mobile Medical Units (MMU)",
                 "Community and rural healthcare programs"
             ],
-            buttonText: "EXPLORE INDUSTRIAL & RURAL HEALTHCARE"
+            buttonText: "EXPLORE RURAL HEALTHCARE"
         }
     ];
 
@@ -145,7 +145,7 @@ const Services = () => {
                                         className="hover:opacity-90 transition-opacity rounded-[192px] bg-[#1566B7] border-none cursor-pointer flex items-center justify-center mt-auto xl:mt-[11px]
                                         w-[200px] h-[36px]
                                         md:w-[220px]
-                                        xl:w-[247px] xl:h-[37px]"
+                                        xl:w-[247px] xl:h-[37px] whitespace-nowrap"
                                     >
                                         <span
                                             className="font-['DM_Sans'] font-semibold uppercase text-white

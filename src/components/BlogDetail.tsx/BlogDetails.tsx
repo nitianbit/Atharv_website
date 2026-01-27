@@ -6,7 +6,7 @@ import RelatedArticles from "./RelatedArticles";
 
 const BlogDetails = () => {
     return (
-        <div className="pt-[160px]">
+        <div>
             <Navbar />
             <BlogDetail />
             <RelatedArticles />
