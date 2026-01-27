@@ -59,29 +59,30 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-
+            <div className="hidden xl:block relative w-full z-50 ">
+             <div className="absolute top-[0px] left-[clamp(32px,4vw,64px)] w-[119px] h-[127px]">
+    <Link to="/" className="block w-full h-full">
+      <img
+        src="/Homepage/AtharvLOGO.png"
+        alt="Atharv Health Care Logo"
+        className="w-full h-full object-contain"
+      />
+    </Link>
+  </div>
             {/* Desktop Navbar - Refactored for Responsiveness */}
-            <nav className="hidden xl:flex absolute top-[17px] left-0 right-0 z-50 items-center justify-between w-full max-w-[1200px] mx-auto px-4 gap-4">
+             <nav className="absolute top-[17px] right-6 xl:right-12 2xl:right-20">
+    <div className="flex items-center gap-10 h-[86px]
+w-[clamp(860px,82vw,980px)]
+px-12 rounded-full
+bg-gradient-to-r from-[#EAF6FF] via-[#F5FBFF] to-[#EAF6FF]
+backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
 
 
-                {/* Logo Section */}
-                <div className="relative shrink-0 w-[119px] h-[127px]">
-                    <Link to="/" className="block w-full h-full">
-                        <img
-                            src="/Homepage/AtharvLOGO.png"
-                            alt="Atharv Health Care Logo"
-                            className="w-full h-full object-contain"
-                        />
-                    </Link>
-                </div>
 
-                {/* Navbar Box - Glassmorphism Container */}
-                {/* Made fluid with flex-1 and max-width. Removed strict pixel width to prevent overflow on smaller desktop screens */}
-                <div
-                    className="relative flex items-center justify-between flex-1 h-[86px] rounded-[45px] bg-white/40 backdrop-blur-[10px] pl-[61px] pr-[28px] max-w-[1251px]"
-                >
+
                     {/* Navigation Links Group */}
-                    <div className="flex items-center gap-[20px] 2xl:gap-[30px] whitespace-nowrap">
+                    <div className="flex items-center justify-between w-full whitespace-nowrap">
+
 
                         {/* Home Link */}
                         <Link to="/"
@@ -123,6 +124,7 @@ const Navbar = () => {
                                     <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
                                         Ambulance Service
                                     </Link>
+                                    
                                 </div>
                             )}
                         </div>
@@ -138,10 +140,6 @@ const Navbar = () => {
                         >
                             Blogs
                         </Link>
-                    </div>
-                    
-                    {/* Contact Us Button */}
-                    <div className="shrink-0">
                         <Link
                             to="/contact"
                             className="flex items-center justify-center transition-all hover:opacity-90 hover:scale-105 active:scale-95 text-white bg-[#1566B7] shadow-[1px_4px_12.7px_0px_#3177E13D] uppercase font-['DM_Sans'] font-semibold text-[16px] leading-[100%] rounded-[192px] w-[236px] h-[55px]"
@@ -149,8 +147,11 @@ const Navbar = () => {
                             CONTACT US
                         </Link>
                     </div>
+                    
+                   
                 </div>
             </nav>
+            </div>
         </>
     );
 };
