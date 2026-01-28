@@ -1,6 +1,6 @@
 const ThreeStep = () => {
     return (
-        <div className="w-full relative mx-auto mt-[50px] md:mt-[100px] xl:h-[538px] xl:max-w-[1511px]">
+        <div className="w-full relative mx-auto mt-[50px] md:mt-[100px] xl:h-[538px] xl:max-w-[1550px]">
             {/* Unified Blue Gradient Background */}
             <div
                 className="w-full h-full absolute inset-0 rounded-[20px] xl:rounded-none

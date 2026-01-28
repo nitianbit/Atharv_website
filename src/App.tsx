@@ -11,6 +11,7 @@ import MMU from './components/MMU/MMU'
 import Blogs from './components/Blogs/Blogs'
 import BlogDetails from './components/BlogDetail.tsx/BlogDetails'
 import CSR from './components/CSR/CSR'
+import Contact from './components/ContactUS/Contact'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-detail/:id" element={<BlogDetails />} />
         <Route path="/csr" element={<CSR />} />
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
     </>

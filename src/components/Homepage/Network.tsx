@@ -1,10 +1,10 @@
 const Network = () => {
     return (
-        <div className="w-full bg-white py-12 px-4 md:py-16 xl:p-0 xl:py-16">
+        <div className="w-full bg-white py-12 md:py-16 xl:py-16">
             {/* Overall Container */}
             <div
                 className="w-full relative mx-auto flex flex-col items-center gap-10
-                xl:block xl:w-[1512px] xl:h-[633px] xl:overflow-hidden xl:gap-0"
+                xl:block xl:w-[1550px] xl:h-[633px] xl:overflow-hidden xl:gap-0"
             >
 
                 {/* Heading */}

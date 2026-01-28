@@ -23,17 +23,25 @@ const LandingPage = () => {
     ];
 
     useEffect(() => {
-        const notificationCycle = setInterval(() => {
-            setIsVisible(true);
+        let timeoutId: any;
 
-            // Hide after 4 seconds
-            setTimeout(() => {
+        const showNotifications = () => {
+            setIsVisible(true);
+            // Hide after 6 seconds
+            timeoutId = setTimeout(() => {
                 setIsVisible(false);
             }, 6000);
+        };
 
-        }, 10000); // Total cycle: 4s visible + 3s hidden
+        // Show immediately
+        showNotifications();
 
-        return () => clearInterval(notificationCycle);
+        const notificationCycle = setInterval(showNotifications, 10000); // Total cycle: 6s visible + 4s hidden
+
+        return () => {
+            clearInterval(notificationCycle);
+            clearTimeout(timeoutId);
+        };
     }, []);
 
     // Variants for parent container
