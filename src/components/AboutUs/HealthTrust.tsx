@@ -87,7 +87,7 @@ const HealthTrust = () => {
     }, []);
 
     return (
-        <div className="w-full py-12 px-4 xl:py-16">
+        <div className="w-full py-12 xl:py-16">
             {/* Overall Container */}
             <div className="w-full flex flex-col gap-12 bg-[#3177E11A]/10 rounded-xl overflow-hidden py-10
                             xl:bg-[rgba(49,119,225,0.1)] xl:rounded-none xl:py-0

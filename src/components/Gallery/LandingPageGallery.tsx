@@ -10,7 +10,8 @@ const LandingPageGallery = () => {
         >
             {/* Center Content Container */}
             <div className="relative flex flex-col items-center gap-6 w-full px-4 text-center
-                            xl:block xl:w-[888px] xl:h-[179px] xl:gap-0 xl:px-0">
+                            xl:block xl:w-[888px] xl:h-[179px] xl:gap-0 xl:px-0 pt-24">
+
 
                 {/* Heading - Media Gallery */}
                 <h1
@@ -22,25 +23,28 @@ const LandingPageGallery = () => {
                     Media Gallery
                 </h1>
 
+
                 {/* Straight Line Image */}
                 <img
                     src="/Aboutus/LineStraight.png"
                     alt="line"
-                    className="w-1/2 max-w-[200px] h-auto object-contain
+                    className="w-3/4 max-w-[250px] h-auto object-contain
                                xl:absolute xl:left-1/2 xl:-translate-x-1/2
                                xl:w-[326px] xl:h-[5px] xl:top-[120px] xl:max-w-none"
                 />
 
+
                 {/* Subtitle Text */}
                 <p
                     className="font-['DM_Sans'] font-light text-[#3C4959]
-                               text-base leading-relaxed w-full max-w-2xl mx-auto
-                               xl:absolute xl:left-0 xl:mx-0
+                               text-sm leading-relaxed w-full max-w-2xl mx-auto px-2
+                               xl:absolute xl:left-0 xl:mx-0 xl:px-0
                                xl:w-[888px] xl:h-[34px] xl:top-[150px] xl:max-w-none
                                xl:text-[19px] xl:leading-[30px] xl:tracking-[0%]"
                 >
-                    A visual story of our CSR health camps, mobile medical units, corporate wellness programs and community healthcare initiatives across India.
+                    A visual story of our CSR health camps, mobile medical units, corporate wellness programs and community healthcare initiatives across India.
                 </p>
+
 
                 {/* Book Now Button (Commented out in original, keeping it just in case structure matches) */}
                 {/* <div className="hidden xl:block ...">...</div> */}
@@ -48,5 +52,6 @@ const LandingPageGallery = () => {
         </div>
     );
 };
+
 
 export default LandingPageGallery;

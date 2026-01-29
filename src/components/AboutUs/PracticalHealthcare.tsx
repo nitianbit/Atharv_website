@@ -25,7 +25,7 @@ const PracticalHealthcare = () => {
                     <div className="w-full relative flex flex-col items-center gap-10 lg:absolute lg:top-[190px] lg:left-0 lg:w-[1512px] lg:h-[515px] lg:block lg:gap-0">
 
                         {/* Purple Background Box */}
-                        <div className="hidden lg:block lg:absolute lg:top-[140px] lg:left-0 lg:w-[1512px] lg:h-[277px] lg:bg-[#3177E11A]" />
+                        <div className="hidden lg:block lg:absolute lg:top-[140px] lg:left-0 lg:w-[1540px] lg:h-[277px] lg:bg-[#3177E11A]" />
 
                         {/* Center Image */}
                         <div className="order-1 lg:order-none relative w-full max-w-md md:max-w-lg lg:absolute lg:top-0 lg:left-[521px] lg:w-[499.69px] lg:h-[515px] lg:max-w-none">

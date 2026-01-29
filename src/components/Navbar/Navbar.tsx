@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <>
             {/* Mobile/Tablet Header */}
-            <div className="xl:hidden fixed w-full max-w-[100vw] top-0 left-0 z-50 px-6 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.05)] border-b border-white/20">
+            <div className="xl:hidden fixed w-full max-w-[100vw] top-0 left-0 z-50 px-6 flex items-center justify-between bg-white/90 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.05)] border-b border-white/20">
                 <Link to="/" className="w-24 h-auto relative z-50">
                     <img src="/Homepage/AtharvLOGO.png" alt="Atharv Health Care Logo" className="w-full h-full object-contain" />
                 </Link>
@@ -40,10 +40,11 @@ const Navbar = () => {
                                 </button>
                                 {mobileActiveDropdown === 'services' && (
                                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-[#1566B7]/20">
-                                        <Link to="/services/consultation" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Online Consultation</Link>
-                                        <Link to="/services/pharmacy" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Pharmacy</Link>
-                                        <Link to="/services/lab" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Lab Tests</Link>
-                                        <Link to="/services/ambulance" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Ambulance Service</Link>
+                                        <Link to="/occupational-health-centres" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Occupational Health Centres (OHCs)</Link>
+                                        <Link to="/mobile-medical-units" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Mobile Medical Units (MMUs)</Link>
+                                        <Link to="/csr" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">CSR & Community Connect</Link>
+                                        <Link to="/home-healthcare" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Home Healthcare</Link>
+                                        <Link to="/pharmacy" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-[#142349] font-['DM_Sans'] py-1">Pharmacy & Medicine Supply</Link>
                                     </div>
                                 )}
                             </div>
@@ -111,20 +112,24 @@ backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
 
                                 {/* Dropdown Menu */}
                                 {activeDropdown === 'services' && (
-                                    <div className="absolute top-full left-0 mt-6 w-56 bg-white rounded-xl shadow-xl py-3 z-50 border border-gray-100">
-                                        <Link to="/services/consultation" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                            Online Consultation
-                                        </Link>
-                                        <Link to="/services/pharmacy" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                            Pharmacy
-                                        </Link>
-                                        <Link to="/services/lab" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                            Lab Tests
-                                        </Link>
-                                        <Link to="/services/ambulance" className="block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors">
-                                            Ambulance Service
-                                        </Link>
-
+                                    <div className="absolute top-full -left-10 pt-6 w-[340px] z-50">
+                                        <div className="bg-white rounded-xl shadow-xl py-3 border border-gray-100 flex flex-col items-start overflow-hidden">
+                                            <Link to="/occupational-health-centres" className="w-full text-left block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors whitespace-normal">
+                                                Occupational Health Centres (OHCs)
+                                            </Link>
+                                            <Link to="/mobile-medical-units" className="w-full text-left block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors whitespace-normal">
+                                                Mobile Medical Units (MMUs)
+                                            </Link>
+                                            <Link to="/csr" className="w-full text-left block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors whitespace-normal">
+                                                CSR & Community Connect
+                                            </Link>
+                                            <Link to="/home-healthcare" className="w-full text-left block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors whitespace-normal">
+                                                Home Healthcare
+                                            </Link>
+                                            <Link to="/pharmacy" className="w-full text-left block px-5 py-3 text-[#142349] font-['DM_Sans'] font-medium hover:bg-blue-50 hover:text-[#1566B7] transition-colors whitespace-normal">
+                                                Pharmacy & Medicine Supply
+                                            </Link>
+                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -136,7 +141,7 @@ backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
                                 Gallery
                             </Link>
                             <Link to="/blogs"
-                                className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/gallery' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
+                                className={`font-['DM_Sans'] font-bold text-[18px] leading-[100%] tracking-[0.04em] capitalize transition-colors ${location.pathname === '/blogs' ? 'text-[#1566B7]' : 'text-[#142349]'}`}
                             >
                                 Blogs
                             </Link>
