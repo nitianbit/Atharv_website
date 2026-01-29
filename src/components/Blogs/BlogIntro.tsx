@@ -3,7 +3,7 @@ import { FeaturedBlog } from './BlogData';
 
 const BlogIntro = () => {
     return (
-        <div className="w-full relative py-12 lg:py-0 overflow-hidden">
+        <div className="w-full relative py-12 lg:py-0 overflow-hidden lg:pt-6 xl:pt-8">
             {/* =========================================
                MOBILE & TABLET VIEW (< lg)
                Vertical Stack: Image Top -> White Card Bottom
@@ -15,7 +15,7 @@ const BlogIntro = () => {
                     style={{
                         backgroundImage: `url('${FeaturedBlog.image}')`,
                         backgroundPosition: 'center',
-                        backgroundSize: 'cover'
+                        backgroundSize: 'contain'
                     }}
                 />
 

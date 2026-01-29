@@ -17,7 +17,7 @@ import FAQ from "./FAQ";
 
 const MobileMedicalUnit = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
             <Navbar />
             <LandingOverviewSection />
             <StatsSection />
