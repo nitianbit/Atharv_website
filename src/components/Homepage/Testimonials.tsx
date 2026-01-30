@@ -33,9 +33,9 @@ const Testimonials = () => {
     ];
 
     return (
-        <section className="w-full xl:w-full xl:max-w-[1512px] mx-auto bg-[#3177E11A] relative 
+        <section className="w-full xl:w-full xl:max-w-8xl mx-auto bg-[#3177E11A] relative 
             py-16 
-            lg:py-[50px] lg:min-h-[750px] lg:overflow-hidden
+            lg:py-[50px] lg:min-h-[750px] lg:overflow-hidden lg:w-full lg:max-w-8xl
             xl:py-[64px] xl:h-[875px]">
             <div className="max-w-[1512px] mx-auto relative flex flex-col items-center lg:block h-full gap-10 lg:gap-0">
                 

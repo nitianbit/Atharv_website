@@ -3,7 +3,7 @@ const PracticalHealthcare = () => {
         <div className="w-full bg-white relative py-12 lg:py-16 overflow-hidden">
             {/* Overall Container - with proper scaling wrapper */}
             <div className="w-full lg:flex lg:justify-start lg:items-start">
-                <div className="w-full flex flex-col gap-12 lg:block lg:relative lg:gap-0 lg:w-[1512px] lg:h-[705px] lg:transform lg:scale-[0.67] lg:origin-left xl:scale-[0.85] 2xl:scale-100">
+                <div className="w-full flex flex-col gap-12 lg:block lg:relative lg:gap-0 lg:w-full lg:max-w-8xl lg:h-[705px] lg:transform lg:scale-[0.67] lg:origin-left xl:scale-[0.85] 2xl:scale-100">
 
                     {/* Overall Text Content Top */}
                     <div className="w-full px-4 flex flex-col items-center gap-4 lg:absolute lg:top-0 lg:left-[312px] lg:w-[888px] lg:h-[182px] lg:block lg:px-0 lg:gap-0">

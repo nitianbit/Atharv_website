@@ -4,8 +4,8 @@ const Network = () => {
             {/* Overall Container */}
             <div
                 className="w-full relative mx-auto flex flex-col items-center gap-10
-                lg:block lg:w-[1080px] lg:h-[420px] lg:overflow-hidden lg:gap-0
-                xl:block xl:w-[1550px] xl:h-[633px] xl:overflow-hidden xl:gap-0"
+                lg:block lg:w-full lg:max-w-8xl lg:h-[420px] lg:overflow-hidden lg:gap-0
+                xl:block xl:w-full xl:max-w-8xl xl:h-[633px] xl:overflow-hidden xl:gap-0"
             >
 
                 {/* Heading */}
@@ -23,7 +23,7 @@ const Network = () => {
                 <div
                     className="relative w-full max-w-[400px] aspect-square flex-shrink-0 z-10
                     md:max-w-[500px]
-                    lg:absolute lg:w-[380px] lg:h-[380px] lg:top-[70px] lg:left-[300px] lg:max-w-none
+                    lg:absolute lg:w-[380px] lg:h-[380px] lg:top-[70px] lg:left-[350px] lg:max-w-none
                     xl:absolute xl:w-[555px] xl:h-[555px] xl:top-[78px] xl:left-[478px] xl:max-w-none"
                 >
                     <img
@@ -97,7 +97,7 @@ const Network = () => {
                 {/* Right Text Container */}
                 <div
                     className="flex flex-col items-start gap-4 z-20 w-full max-w-[400px]
-                    lg:absolute lg:w-[260px] lg:h-[105px] lg:top-[240px] lg:left-[660px] lg:gap-0
+                    lg:absolute lg:w-[260px] lg:h-[105px] lg:top-[240px] lg:left-[760px] lg:gap-0
                     xl:absolute xl:w-[325px] xl:h-[122px] xl:top-[289px] xl:left-[1105px] xl:gap-0"
                 >
                     {/* Right Heading */}

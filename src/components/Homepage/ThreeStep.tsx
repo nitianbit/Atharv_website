@@ -28,8 +28,8 @@ const ThreeStep = () => {
 
     return (
         <div className="w-full relative mx-auto mt-[50px] md:mt-[100px] 
-            lg:h-[450px] lg:max-w-[980px]
-            xl:h-[538px] xl:max-w-[1550px]">
+            lg:h-[450px] lg:w-full lg:max-w-8xl
+            xl:h-[538px] xl:w-full xl:max-w-8xl">
             {/* Unified Blue Gradient Background */}
             <div
                 className="w-full h-full absolute inset-0 rounded-[20px] 
@@ -53,8 +53,8 @@ const ThreeStep = () => {
             {/* Content Container */}
             <div
                 className="relative z-20 w-full flex flex-col items-center justify-center px-4 py-8
-                lg:absolute lg:max-w-[600px] lg:h-[350px] lg:left-[330px] lg:top-[50px] lg:gap-[12px] lg:py-0 lg:px-0
-                xl:absolute xl:max-w-[1009px] xl:h-[412px] xl:left-[467px] xl:top-[75px] xl:gap-[16px] xl:py-0 xl:px-0"
+                lg:absolute lg:max-w-5xl lg:h-[350px] lg:left-[200px] lg:top-[50px] lg:gap-[12px] lg:py-0 lg:px-0
+                xl:absolute xl:max-w-6xl xl:h-[412px] xl:left-[350px] xl:top-[75px] xl:gap-[16px] xl:py-0 xl:px-0"
             >
                 {/* Title */}
                 <div className="w-full text-center
