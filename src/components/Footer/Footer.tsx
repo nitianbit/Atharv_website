@@ -223,13 +223,13 @@ const Footer = () => {
                             </div>
 
                             {/* Address */}
-                            <div className="flex items-center lg:items-start justify-center lg:justify-start gap-2">
+                            <div className="flex items-center justify-center lg:items-start lg:justify-start gap-2">
                                 <HiLocationMarker className="shrink-0 mt-0.5 w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[22px] lg:h-[22px]" color="#FFFFFF" />
                                 <p className="font-['DM_Sans'] 
                                     text-[13px] md:text-[14px] lg:text-[16px] xl:text-[17px] 
                                     leading-[22px] md:leading-[22px] lg:leading-[26px] xl:leading-[28px]
                                     text-white m-0 text-left">
-                                    Unit No: ANR 033, Astra Tower, Action Area 2C, New Town, Kolkata – 700161
+                                    Unit No: ANR 033, Astra Tower, <br /> Action Area 2C, New Town, <br /> Kolkata – 700161
                                 </p>
                             </div>
 
