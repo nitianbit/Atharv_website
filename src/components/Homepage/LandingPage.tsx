@@ -131,7 +131,7 @@ const LandingPage = () => {
             </div>
 
             {/* Notifications */}
-            <div className="absolute bottom-50 right-130 lg:bottom-130 lg:right-60 xl:bottom-36 xl:right-[35%] hidden md:block z-20">
+            <div className="absolute bottom-50 right-10 md:bottom-50 md:right-[5%] lg:bottom-130 lg:right-[5%] xl:bottom-36 xl:right-[5%] z-20">
                 <AnimatePresence mode="wait">
                     {isVisible && (
                         <motion.div

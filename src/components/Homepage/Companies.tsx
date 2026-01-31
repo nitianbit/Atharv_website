@@ -14,7 +14,7 @@ const Companies = () => {
         <div className="w-full">
             {/* Overall Container */}
             <div
-                className="w-full max-w-[1512px] mx-auto relative overflow-hidden flex items-center
+                className="w-full max-w-8xl mx-auto relative overflow-hidden flex items-center
                 h-[80px] md:h-[100px] xl:h-[131px]"
                 style={{
                     background: 'rgba(49, 119, 225, 0.1)',
