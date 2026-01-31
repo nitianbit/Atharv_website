@@ -5,7 +5,7 @@ const CTASection = () => {
                 
                 {/* Main Container */}
                 <div 
-                    className="relative flex items-center overflow-visible mx-auto"
+                    className="relative flex items-center overflow-visible mx-auto w-full"
                     style={{
                         maxWidth: '1311px',
                         minHeight: '346px',
@@ -39,18 +39,15 @@ const CTASection = () => {
 
                     {/* Content Section */}
                     <div 
-                        className="w-full lg:ml-auto flex flex-col p-8 lg:p-0"
+                        className="w-full mx-auto lg:ml-auto lg:mr-0 flex flex-col p-8 lg:pl-0 lg:pr-0 lg:pt-0 lg:pb-0 lg:py-0 lg:max-w-[593px]"
                         style={{
-                            maxWidth: '593px',
-                            gap: '13px',
-                            paddingRight: '0',
-                            marginLeft: 'auto'
+                            gap: '13px'
                         }}
                     >
                         
                         {/* Heading */}
                         <h2 
-                            className="lg:w-[586px]"
+                            className="w-full lg:w-[586px]"
                             style={{
                                 fontFamily: "'Source Serif Pro', serif",
                                 fontWeight: 600,
@@ -62,12 +59,12 @@ const CTASection = () => {
                                 margin: 0
                             }}
                         >
-                            Get Reliable Home Healthcare Support 
+                            Get Reliable Home Healthcare Support 
                         </h2>
 
                         {/* Description */}
                         <p 
-                            className="lg:w-[540px]"
+                            className="w-full lg:w-[540px]"
                             style={{
                                 fontFamily: "'DM Sans', sans-serif",
                                 fontWeight: 300,
@@ -82,10 +79,9 @@ const CTASection = () => {
 
                         {/* Button */}
                         <button 
-                            className="hover:opacity-90 transition-all hover:shadow-xl"
+                            className="hover:opacity-90 transition-all hover:shadow-xl w-full lg:w-[365px]"
                             style={{
-                                width: '365px',
-                                height: '50px',
+                                minHeight: '50px',
                                 borderRadius: '192px',
                                 padding: '16px 28px',
                                 background: '#FFFFFF',
@@ -98,14 +94,16 @@ const CTASection = () => {
                             }}
                         >
                             <span 
+                                className="text-center"
                                 style={{
                                     fontFamily: "'DM Sans', sans-serif",
                                     fontWeight: 600,
-                                    fontSize: '16px',
+                                    fontSize: 'clamp(14px, 2vw, 16px)',
                                     lineHeight: '100%',
                                     textTransform: 'uppercase',
                                     color: '#142349',
-                                    whiteSpace: 'nowrap'
+                                    whiteSpace: 'normal',
+                                    wordBreak: 'break-word'
                                 }}
                             >
                                 REQUEST HOME HEALTHCARE SUPPORT
