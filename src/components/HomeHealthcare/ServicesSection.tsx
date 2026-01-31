@@ -79,18 +79,18 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Tabbed Navigation */}
-                <div className="flex gap-0 mb-8">
+                <div className="grid grid-cols-2 md:flex md:flex-nowrap gap-0 mb-8">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`flex-1 px-6 py-3 font-semibold text-sm uppercase transition-all duration-300 ${
+                            className={`px-3 sm:px-4 md:px-6 py-3 font-semibold text-xs sm:text-sm md:text-sm uppercase transition-all duration-300 whitespace-normal break-words md:flex-1 ${
                                 activeTab === tab.id
                                     ? 'bg-[#1566B7] text-white'
                                     : 'bg-white text-[#142349] border border-gray-300 hover:border-[#1566B7]'
                             }`}
                         >
-                            {tab.label}
+                            <span className="block text-center leading-tight">{tab.label}</span>
                         </button>
                     ))}
                 </div>
