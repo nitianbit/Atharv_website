@@ -1,6 +1,5 @@
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import Callback from "../Homepage/Callback";
 import LandingOverviewSection from "./LandingOverviewSection";
 import StatsSection from "./StatsSection";
 import WhatIsOHCSection from "./WhatIsOHCSection";
@@ -14,6 +13,7 @@ import MMUUseCases from "./MMUUseCases";
 import ExperienceSection from "./ExperienceSection";
 import MMUServicesSection from "./MMUServiceSection";
 import FAQ from "./FAQ";
+import CTACallback from "../Shared/CTACallback";
 
 const MobileMedicalUnit = () => {
     return (
@@ -32,7 +32,14 @@ const MobileMedicalUnit = () => {
             <ExperienceSection/>
             <Companies/>
             <FAQ/>
-            <Callback />
+            <CTACallback
+                title="Partner With Atharv Healthcare for Mobile Medical Unit Programs "
+                description="Structured deployment. Operational discipline. Pan-India capability. "
+                buttonText="Request an MMU Program Proposal"
+                imagePosition="bottom"
+                buttonWidth="361px"
+                useResponsiveBottom={true}
+            />
             <Footer />
         </div>
     );
