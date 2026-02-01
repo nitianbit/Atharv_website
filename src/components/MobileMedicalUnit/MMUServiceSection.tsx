@@ -3,22 +3,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const services = [
   {
-    image: '/MobileMedicalUnit/Service-1.png',
+    image: '/MobileMedicalUnit/4-2.png',
     title: "Vaccination and medicine distribution",
     subtitle: "(where applicable)",
   },
   {
-    image:'/MobileMedicalUnit/Service-1.png',
-    title: "Maternal and child healthcare",
-    subtitle: "(prenatal and postnatal care)",
-  },
-  {
-    image: '/MobileMedicalUnit/Service-1.png',
+    image: '/MobileMedicalUnit/4-1.png',
     title: "General health checkups",
     subtitle: "(screening and diagnostics)",
   },
   {
-    image: '/MobileMedicalUnit/Service-1.png',
+    image: '/MobileMedicalUnit/4-4.png',
     title: "Mobile health outreach",
     subtitle: "(rural and remote areas)",
   },
