@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 interface CTACallbackProps {
     title: string;
     description?: string;
@@ -7,6 +9,8 @@ interface CTACallbackProps {
     useResponsiveBottom?: boolean;
     imageSrc?: string;
     imageAlt?: string;
+    linkTo?: string;
+    onButtonClick?: () => void;
 }
 
 const CTACallback = ({
@@ -17,16 +21,19 @@ const CTACallback = ({
     buttonWidth,
     useResponsiveBottom = false,
     imageSrc = '/Homepage/maledoctor.png',
-    imageAlt = 'Healthcare professional'
+    imageAlt = 'Healthcare professional',
+    linkTo,
+    onButtonClick
 }: CTACallbackProps) => {
+    const navigate = useNavigate();
     return (
         <>
-  
+
             <div className="w-full bg-white py-8 lg:py-12 px-4 lg:my-15">
                 <div className="mx-auto" style={{ maxWidth: '1512px' }}>
-                    
+
                     {/* Main Container */}
-                    <div 
+                    <div
                         className={`relative flex flex-col lg:flex-row items-center overflow-hidden lg:overflow-visible mx-auto w-full lg:min-h-[380px]`}
                         style={{
                             maxWidth: '1311px',
@@ -35,22 +42,22 @@ const CTACallback = ({
                             border: '3px solid #1566B7'
                         }}
                     >
-                        
+
                         {/* Doctor Image */}
-                        <div 
+                        <div
                             className={`absolute hidden lg:block ${useResponsiveBottom ? 'doctor-image-cta' : ''}`}
                             style={{
                                 width: 'clamp(300px, 40vw, 531px)',
                                 height: 'auto',
-                                ...(imagePosition === 'bottom' 
-                                    ? { bottom:'0' }
+                                ...(imagePosition === 'bottom'
+                                    ? { bottom: '0' }
                                     : { top: '-95px' }
                                 ),
                                 zIndex: 20,
                                 maxHeight: '551px'
                             }}
                         >
-                            <img 
+                            <img
                                 src={imageSrc}
                                 alt={imageAlt}
                                 className="w-full h-auto max-h-[551px] object-contain"
@@ -63,15 +70,15 @@ const CTACallback = ({
                         </div>
 
                         {/* Content Section */}
-                        <div 
+                        <div
                             className="w-full flex flex-col items-center text-center lg:items-start lg:text-left p-6 sm:p-8 lg:p-8 lg:max-w-[593px] lg:ml-auto relative z-10"
                             style={{
                                 gap: '13px'
                             }}
                         >
-                            
+
                             {/* Heading */}
-                            <h2 
+                            <h2
                                 className="w-full"
                                 style={{
                                     fontFamily: "'Source Serif Pro', serif",
@@ -90,7 +97,7 @@ const CTACallback = ({
 
                             {/* Description */}
                             {description && (
-                                <p 
+                                <p
                                     className="w-full"
                                     style={{
                                         fontFamily: "'DM Sans', sans-serif",
@@ -107,7 +114,14 @@ const CTACallback = ({
                             )}
 
                             {/* Button */}
-                            <button 
+                            <button
+                                onClick={() => {
+                                    if (onButtonClick) {
+                                        onButtonClick();
+                                    } else if (linkTo) {
+                                        navigate(linkTo);
+                                    }
+                                }}
                                 className={`hover:opacity-90 transition-all hover:shadow-xl ${buttonWidth ? '' : 'w-full lg:w-[365px]'} lg:mx-0 mx-auto`}
                                 style={{
                                     minHeight: '50px',
@@ -123,7 +137,7 @@ const CTACallback = ({
                                     ...(buttonWidth && { width: buttonWidth })
                                 }}
                             >
-                                <span 
+                                <span
                                     className="text-center"
                                     style={{
                                         fontFamily: "'DM Sans', sans-serif",

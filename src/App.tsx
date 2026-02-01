@@ -7,7 +7,7 @@ import HomeHealthcare from './components/HomeHealthcare/HomeHealthcare'
 import Pharmacy from './components/Pharmacy/Pharmacy'
 import MobileMedicalUnit from './components/MobileMedicalUnit/MobileMedicalUnit'
 import Gallery from './components/Gallery/Gallery'
-import MMU from './components/MMU/MMU'
+// import MMU from './components/MMU/MMU'
 import Blogs from './components/Blogs/Blogs'
 import BlogDetails from './components/BlogDetail.tsx/BlogDetails'
 import CSR from './components/CSR/CSR'
@@ -25,7 +25,7 @@ function App() {
         <Route path="/pharmacy" element={<Pharmacy />} />
         <Route path="/mobile-medical-units" element={<MobileMedicalUnit />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/mmu" element={<MMU />} />
+        {/* <Route path="/mmu" element={<MMU />} /> */}
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-detail/:id" element={<BlogDetails />} />
         <Route path="/csr" element={<CSR />} />

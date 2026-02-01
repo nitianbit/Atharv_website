@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import styles from '../OccupationalHealthCentres/ohc.module.css';
 
 const LandingSection = () => {
+    const navigate = useNavigate();
     return (
         <div className={`relative w-full ${styles.gradientBg} pt-32 md:pt-40 pb-12 md:pb-16`}>
             <div className="max-w-7xl mx-auto px-4">
@@ -17,7 +19,9 @@ const LandingSection = () => {
                         Atharv Healthcare operates licensed pharmacy services focused on wholesale and institutional medicine supply, with limited retail support for local healthcare needs, supporting various organizations.
                     </p>
 
-                    <button className="bg-transparent border-2 border-[#1566B7] text-[#142349] rounded-[192px] h-[50px] px-8 font-semibold text-base uppercase hover:bg-[#1566B7] hover:text-white transition-all duration-300">
+                    <button
+                        onClick={() => navigate('/contact')}
+                        className="bg-transparent border-2 border-[#1566B7] text-[#142349] rounded-[192px] h-[50px] px-8 font-semibold text-base uppercase hover:bg-[#1566B7] hover:text-white transition-all duration-300">
                         CONTACT PHARMACY TEAM
                     </button>
                 </div>

@@ -3,9 +3,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const navigate = useNavigate();
 
     const notifications = [
         {
@@ -109,10 +111,14 @@ const LandingPage = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-                        <button className="flex items-center justify-center gap-[10px] w-full sm:w-auto bg-[#1566B7] text-white px-8 py-4 rounded-full font-['DM_Sans'] font-semibold text-base uppercase shadow-[1px_6px_7.7px_0px_#3177E13D] hover:opacity-90 transition-opacity whitespace-nowrap">
+                        <button
+                            onClick={() => navigate('/contact')}
+                            className="flex items-center justify-center gap-[10px] w-full sm:w-auto bg-[#1566B7] text-white px-8 py-4 rounded-full font-['DM_Sans'] font-semibold text-base uppercase shadow-[1px_6px_7.7px_0px_#3177E13D] hover:opacity-90 transition-opacity whitespace-nowrap">
                             Consult Doctor Online
                         </button>
-                        <button className="flex items-center justify-center gap-[10px] w-full sm:w-auto bg-white border border-[#1566B7] text-[#142349] px-8 py-4 rounded-full font-['DM_Sans'] font-semibold text-base uppercase shadow-[1px_6px_7.7px_0px_#3177E13D] hover:bg-gray-50 transition-colors whitespace-nowrap">
+                        <button
+                            onClick={() => navigate('/contact')}
+                            className="flex items-center justify-center gap-[10px] w-full sm:w-auto bg-white border border-[#1566B7] text-[#142349] px-8 py-4 rounded-full font-['DM_Sans'] font-semibold text-base uppercase shadow-[1px_6px_7.7px_0px_#3177E13D] hover:bg-gray-50 transition-colors whitespace-nowrap">
                             Order Medicines Online
                         </button>
                     </div>

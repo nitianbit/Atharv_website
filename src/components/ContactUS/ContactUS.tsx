@@ -1,7 +1,12 @@
 'use client';
 import { useState } from 'react';
 
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyG2HO5rjVUg8tSxxnM8grfO6QOKn91YasREPnVLk5LAd7e4lAhbjtCiMajGcdnTcia/exec";
+// const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxycLMTqE_mHUZIrYqFOh5JPA7LObAWHZSCulJxJlUFtenbYfTg8oLEQ4zwQv_VKD7L/exec";
+
 const ContactUs = () => {
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -23,9 +28,40 @@ const ContactUs = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+        setStatus('submitting');
+
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            setStatus('success');
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                phoneNumber: '',
+                countryCode: 'IN',
+                state: '',
+                city: '',
+                pincode: '',
+                query: '',
+                message: ''
+            });
+
+            // Reset status after 5 seconds
+            setTimeout(() => setStatus('idle'), 5000);
+
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setStatus('error');
+        }
     };
 
     return (
@@ -360,27 +396,23 @@ const ContactUs = () => {
                                     Phone number<span className="text-red-500">*</span>
                                 </label>
                                 <div className="flex gap-2">
-                                    <select
-                                        name="countryCode"
-                                        value={formData.countryCode}
-                                        onChange={handleChange}
+                                    <div
                                         style={{
-                                            width: '80px',
+                                            width: '60px',
                                             height: '48px',
                                             borderRadius: '10px',
                                             border: '1px solid #B8D9E8',
-                                            padding: '12px 8px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             background: 'rgba(255, 255, 255, 0.7)',
                                             fontFamily: 'DM Sans, sans-serif',
                                             fontSize: '14px',
-                                            outline: 'none'
+                                            color: '#142349'
                                         }}
-                                        className="focus:border-[#1566B7] transition-colors"
                                     >
-                                        <option value="IN">IN</option>
-                                        <option value="US">US</option>
-                                        <option value="UK">UK</option>
-                                    </select>
+                                        +91
+                                    </div>
                                     <input
                                         type="tel"
                                         id="phoneNumber"
@@ -418,11 +450,13 @@ const ContactUs = () => {
                                 >
                                     State<span className="text-red-500">*</span>
                                 </label>
-                                <select
+                                <input
+                                    type="text"
                                     id="state"
                                     name="state"
                                     value={formData.state}
                                     onChange={handleChange}
+                                    placeholder="Enter State"
                                     required
                                     style={{
                                         width: '100%',
@@ -433,20 +467,10 @@ const ContactUs = () => {
                                         background: 'rgba(255, 255, 255, 0.7)',
                                         fontFamily: 'DM Sans, sans-serif',
                                         fontSize: '14px',
-                                        outline: 'none',
-                                        appearance: 'none',
-                                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%233C4959' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
-                                        backgroundRepeat: 'no-repeat',
-                                        backgroundPosition: 'right 16px center'
+                                        outline: 'none'
                                     }}
-                                    className="cursor-pointer focus:border-[#1566B7] transition-colors"
-                                >
-                                    <option value="">Select State</option>
-                                    <option value="Bihar">Bihar</option>
-                                    <option value="Delhi">Delhi</option>
-                                    <option value="Maharashtra">Maharashtra</option>
-                                    <option value="West Bengal">West Bengal</option>
-                                </select>
+                                    className="focus:border-[#1566B7] transition-colors placeholder:text-gray-400"
+                                />
                             </div>
 
                             {/* City & Pincode Row */}
@@ -463,11 +487,13 @@ const ContactUs = () => {
                                     >
                                         City<span className="text-red-500">*</span>
                                     </label>
-                                    <select
+                                    <input
+                                        type="text"
                                         id="city"
                                         name="city"
                                         value={formData.city}
                                         onChange={handleChange}
+                                        placeholder="Enter City"
                                         required
                                         style={{
                                             width: '100%',
@@ -478,19 +504,10 @@ const ContactUs = () => {
                                             background: 'rgba(255, 255, 255, 0.7)',
                                             fontFamily: 'DM Sans, sans-serif',
                                             fontSize: '14px',
-                                            outline: 'none',
-                                            appearance: 'none',
-                                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%233C4959' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
-                                            backgroundRepeat: 'no-repeat',
-                                            backgroundPosition: 'right 16px center'
+                                            outline: 'none'
                                         }}
-                                        className="cursor-pointer focus:border-[#1566B7] transition-colors"
-                                    >
-                                        <option value="">Select City</option>
-                                        <option value="Patna">Patna</option>
-                                        <option value="Kolkata">Kolkata</option>
-                                        <option value="Mumbai">Mumbai</option>
-                                    </select>
+                                        className="focus:border-[#1566B7] transition-colors placeholder:text-gray-400"
+                                    />
                                 </div>
                                 <div>
                                     <label
@@ -504,11 +521,13 @@ const ContactUs = () => {
                                     >
                                         Pincode<span className="text-red-500">*</span>
                                     </label>
-                                    <select
+                                    <input
+                                        type="text"
                                         id="pincode"
                                         name="pincode"
                                         value={formData.pincode}
                                         onChange={handleChange}
+                                        placeholder="Enter Pincode"
                                         required
                                         style={{
                                             width: '100%',
@@ -519,18 +538,10 @@ const ContactUs = () => {
                                             background: 'rgba(255, 255, 255, 0.7)',
                                             fontFamily: 'DM Sans, sans-serif',
                                             fontSize: '14px',
-                                            outline: 'none',
-                                            appearance: 'none',
-                                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%233C4959' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
-                                            backgroundRepeat: 'no-repeat',
-                                            backgroundPosition: 'right 16px center'
+                                            outline: 'none'
                                         }}
-                                        className="cursor-pointer focus:border-[#1566B7] transition-colors"
-                                    >
-                                        <option value="">Select Pincode</option>
-                                        <option value="700161">700161</option>
-                                        <option value="800001">800001</option>
-                                    </select>
+                                        className="focus:border-[#1566B7] transition-colors placeholder:text-gray-400"
+                                    />
                                 </div>
                             </div>
 
@@ -545,13 +556,15 @@ const ContactUs = () => {
                                         fontWeight: 500
                                     }}
                                 >
-                                    Select your query<span className="text-red-500">*</span>
+                                    Subject / Query<span className="text-red-500">*</span>
                                 </label>
-                                <select
+                                <input
+                                    type="text"
                                     id="query"
                                     name="query"
                                     value={formData.query}
                                     onChange={handleChange}
+                                    placeholder="Enter your query"
                                     required
                                     style={{
                                         width: '100%',
@@ -562,20 +575,10 @@ const ContactUs = () => {
                                         background: 'rgba(255, 255, 255, 0.7)',
                                         fontFamily: 'DM Sans, sans-serif',
                                         fontSize: '14px',
-                                        outline: 'none',
-                                        appearance: 'none',
-                                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%233C4959' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
-                                        backgroundRepeat: 'no-repeat',
-                                        backgroundPosition: 'right 16px center'
+                                        outline: 'none'
                                     }}
-                                    className="cursor-pointer focus:border-[#1566B7] transition-colors"
-                                >
-                                    <option value="">Online doctor consultation</option>
-                                    <option value="pharmacy">Online pharmacy orders</option>
-                                    <option value="lab">Lab tests at home</option>
-                                    <option value="ambulance">Ambulance services</option>
-                                    <option value="csr">CSR healthcare programs</option>
-                                </select>
+                                    className="focus:border-[#1566B7] transition-colors placeholder:text-gray-400"
+                                />
                             </div>
 
                             {/* Message */}
@@ -631,8 +634,20 @@ const ContactUs = () => {
                                     color: '#142349'
                                 }}
                             >
-                                SUBMIT ENQUIRY
+                                {status === 'submitting' ? 'SUBMITTING...' : 'SUBMIT ENQUIRY'}
                             </button>
+
+                            {/* Status Messages */}
+                            {status === 'success' && (
+                                <div className="text-green-600 text-center font-medium font-['DM_Sans']">
+                                    Thank you! Your enquiry has been submitted successfully.
+                                </div>
+                            )}
+                            {status === 'error' && (
+                                <div className="text-red-500 text-center font-medium font-['DM_Sans']">
+                                    Something went wrong. Please try again later.
+                                </div>
+                            )}
 
                         </form>
                     </div>

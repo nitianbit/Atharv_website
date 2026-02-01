@@ -1,10 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+
 const Callback = () => {
+    const navigate = useNavigate();
     return (
         <div className="w-full bg-white py-8 lg:py-12 px-4">
             <div className="mx-auto" style={{ maxWidth: '1512px' }}>
-                
+
                 {/* Main Container */}
-                <div 
+                <div
                     className="relative flex items-center overflow-visible mx-auto"
                     style={{
                         maxWidth: '1311px',
@@ -14,9 +17,9 @@ const Callback = () => {
                         border: '3px solid #1566B7'
                     }}
                 >
-                    
+
                     {/* Doctor Image - Overlapping */}
-                    <div 
+                    <div
                         className="absolute hidden lg:block"
                         style={{
                             width: '531px',
@@ -26,8 +29,8 @@ const Callback = () => {
                             zIndex: 20
                         }}
                     >
-                        <img 
-                            src="/Homepage/maledoctor.png" 
+                        <img
+                            src="/Homepage/maledoctor.png"
                             alt="Healthcare professional"
                             style={{
                                 width: '100%',
@@ -38,7 +41,7 @@ const Callback = () => {
                     </div>
 
                     {/* Content Section */}
-                    <div 
+                    <div
                         className="w-full lg:ml-auto flex flex-col p-8 lg:p-0"
                         style={{
                             maxWidth: '593px',
@@ -47,9 +50,9 @@ const Callback = () => {
                             marginLeft: 'auto'
                         }}
                     >
-                        
+
                         {/* Heading */}
-                        <h2 
+                        <h2
                             className="lg:w-[586px]"
                             style={{
                                 fontFamily: "'Source Serif Pro', serif",
@@ -62,12 +65,12 @@ const Callback = () => {
                                 margin: 0
                             }}
                         >
-                            Need healthcare help?<br/>
+                            Need healthcare help?<br />
                             We'll call you back.
                         </h2>
 
                         {/* Description */}
-                        <p 
+                        <p
                             className="lg:w-[540px]"
                             style={{
                                 fontFamily: "'DM Sans', sans-serif",
@@ -82,7 +85,8 @@ const Callback = () => {
                         </p>
 
                         {/* Button */}
-                        <button 
+                        <button
+                            onClick={() => navigate('/contact')}
                             className="hover:opacity-90 transition-all hover:shadow-xl"
                             style={{
                                 width: '267px',
@@ -98,7 +102,7 @@ const Callback = () => {
                                 justifyContent: 'center'
                             }}
                         >
-                            <span 
+                            <span
                                 style={{
                                     fontFamily: "'DM Sans', sans-serif",
                                     fontWeight: 600,

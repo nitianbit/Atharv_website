@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <>
             {/* Mobile/Tablet Header */}
-            <div className="xl:hidden fixed w-full max-w-[100vw] top-0 left-0 z-50 px-6 flex items-center justify-between bg-white/90 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.05)] border-b border-white/20">
+            <div className="xl:hidden fixed w-full max-w-[100vw] top-0 left-0 z-50 px-6 flex items-center justify-between bg-white/90 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.05)] border-b border-white/20 outline-none">
                 <Link to="/" className="w-24 h-auto relative z-50">
                     <img src="/Homepage/AtharvLOGO.png" alt="Atharv Health Care Logo" className="w-full h-full object-contain" />
                 </Link>
