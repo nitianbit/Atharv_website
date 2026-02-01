@@ -10,67 +10,67 @@ const PanMap = () => {
             name: 'Karnataka',
             cities: ['Bangalore', 'Kudgi'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map1.png"
+            image: "/Homepage/karnataka.png"
         },
         {
             name: 'Kerala',
             cities: ['Kochi', 'Kozhikode', 'Thiruvananthapuram', 'Thrissur'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map2.png"
+            image: "/Homepage/kerala.png"
         },
         {
             name: 'Gujarat',
             cities: ['Ahmedabad'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map3.png"
+            image: "/Homepage/gujarat.png"
         },
         {
             name: 'Maharashtra',
             cities: ['Mumbai', 'Pune', 'Thane', 'Navi Mumbai', 'Amravati'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map4.png"
+            image: "/Homepage/maharashtra.png"
         },
         {
             name: 'Rajasthan',
             cities: ['Jaipur', 'Udaipur', 'Jodhpur', 'Ajmer', 'Kota'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map5.png"
+            image: "/Homepage/rajasthan.png"
         },
         {
             name: 'Uttar Pradesh',
             cities: ['Lucknow', 'Kanpur', 'Ghaziabad', 'Agra', 'Varanasi'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map6.png"
+            image: "/Homepage/uttarPradesh.png"
         },
         {
             name: 'Bihar',
             cities: ['Patna', 'Gaya', 'Muzaffarpur', 'Darbhanga', 'Bhagalpur'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map7.png"
+            image: "/Homepage/bihar.png"
         },
         {
             name: 'West Bengal',
             cities: ['Kolkata', 'Howrah', 'Asansol', 'Siliguri', 'Durgapur'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map8.png"
+            image: "/Homepage/westBengal.png"
         },
         {
             name: 'Tamil Nadu',
             cities: ['Chennai', 'Coimbatore', 'Madurai', 'Tiruchirappalli'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map9.png"
+            image: "/Homepage/tamilNadu.png"
         },
         {
             name: 'Madhya Pradesh',
             cities: ['Indore', 'Bhopal', 'Jabalpur', 'Gwalior', 'Ujjain'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map10.png"
+            image: "/Homepage/madhyaPradesh.png"
         },
         {
             name: 'Andhra Pradesh',
             cities: ['Visakhapatnam', 'Vijayawada', 'Guntur', 'Nellore'],
             description: 'Online doctor consultation (pan-India) Online pharmacy & medicine home delivery serviceable pin',
-            image: "/Homepage/Map11.png"
+            image: "/Homepage/andhraPradesh.png"
         },
     ];
 
