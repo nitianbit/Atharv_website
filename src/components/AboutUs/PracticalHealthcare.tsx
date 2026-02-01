@@ -43,16 +43,15 @@ const PracticalHealthcare = () => {
                                 Our Vision
                             </h3>
 
-                            <div className="flex flex-col gap-3 lg:absolute lg:top-[34px] lg:left-[26px] lg:w-[403px] lg:h-[120px] lg:block lg:gap-0">
+                            <div className="flex flex-col gap-3 lg:absolute lg:top-[34px] lg:left-[26px] lg:w-[403px] lg:h-auto lg:block lg:gap-0">
                                 {[
-                                    "Care is easier to reach",
-                                    "Medicines and diagnostics are closer to home",
-                                    "Timely medical help is accessible",
-                                    "Healthcare remains responsible and dependable"
+                                    "Deliver primary healthcare services at scale.",
+                                    "Raise awareness on health, safety, and overall well-being.",
+                                    "Lead the development of preventive, health-centric systems.",
                                 ].map((text, i) => (
                                     <div key={i} className="flex items-start gap-3 lg:block lg:relative lg:h-[30px] lg:gap-0 pl-2 lg:pl-0">
                                         <img src="/Homepage/check.png" alt="" className="w-5 h-5 mt-1 lg:absolute lg:w-[17px] lg:h-[17px] lg:left-[-26px] lg:top-[6px] lg:mt-0" />
-                                        <span className="font-['DM_Sans'] font-light text-base text-black leading-relaxed lg:text-[18px] lg:leading-[30px]">{text}</span>
+                                        <span className="font-['DM_Sans'] font-light text-base text-black leading-relaxed lg:text-[16px] lg:leading-[30px]">{text}</span>
                                     </div>
                                 ))}
                             </div>
@@ -65,16 +64,15 @@ const PracticalHealthcare = () => {
                                 Our Mission
                             </h3>
 
-                            <div className="flex flex-col gap-3 lg:absolute lg:top-[32px] lg:left-[22.3px] lg:w-[450px] lg:h-[150px] lg:block lg:gap-0">
+                            <div className="flex flex-col gap-3 lg:absolute lg:top-[32px] lg:left-[22.3px] lg:w-[450px] lg:h-auto lg:block lg:gap-0">
                                 {[
-                                    "Simplify access to doctors, medicines and diagnostics",
-                                    "Bring essential care closer to homes and workplaces",
-                                    "Deliver ethical, compliant and dependable services",
-                                    "Support communities through outreach and awareness"
+                                    "Provide effective and dependable healthcare services.",
+                                    "Focus on underserved and often neglected populations.",
+                                    "Deliver care through accessible, on-ground healthcare models.",
                                 ].map((text, i) => (
                                     <div key={i} className="flex items-start gap-3 lg:block lg:relative lg:h-[30px] lg:gap-0 pl-2 lg:pl-0">
                                         <img src="/Homepage/check.png" alt="" className="w-5 h-5 mt-1 lg:absolute lg:w-[17px] lg:h-[17px] lg:left-[-22.3px] lg:top-[6px] lg:mt-0" />
-                                        <span className="font-['DM_Sans'] font-light text-base text-black leading-relaxed lg:text-[18px] lg:leading-[30px]">{text}</span>
+                                        <span className="font-['DM_Sans'] font-light text-base text-black leading-relaxed lg:text-[16px] lg:leading-[30px]">{text}</span>
                                     </div>
                                 ))}
                             </div>
