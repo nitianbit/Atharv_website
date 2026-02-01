@@ -20,13 +20,13 @@ const doctors: Doctor[] = [
         image: '/Aboutus/Poonam.png'
     },
     {
-        name: 'Rajdeep',
+        name: 'Mayur Agarwal',
         role: '(Head Of Clinical Operations)',
         description: 'He oversees clinical operations and care delivery across services, ensuring patient safety and quality standards are consistently met. He works closely with teams to maintain compliant, patient-first healthcare practices.',
-        image: '/Aboutus/FemaleDoctor.png',
+        image: '/Aboutus/Mayur.png',
     },
     {
-        name: 'Vijay',
+        name: 'Rajdeep',
         role: '(Compliance Head)',
         description: 'He handles regulatory and statutory compliance across all healthcare services, ensuring operations follow legal and ethical guidelines. His role helps maintain safe, compliant and well-governed healthcare delivery.',
         image: '/Aboutus/Rajdeep.png',
