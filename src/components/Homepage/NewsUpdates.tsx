@@ -1,30 +1,31 @@
 const NewsUpdates = () => {
     const newsItems = [
-        {
-            id: 1,
-            category: "CSR events",
-            description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/Homepage/Teeth.png"
-        },
-        {
-            id: 2,
-            category: "New OHC openings",
-            description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/Homepage/Teeth.png"
-        },
-        {
-            id: 3,
-            category: "Partnerships",
-            description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/Homepage/Teeth.png"
-        },
-        {
-            id: 4,
-            category: "Press mentions",
-            description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/Homepage/Teeth.png"
-        }
-    ];
+  {
+    id: 1,
+    category: "Vypaar Zone Event",
+    description: "Atharv Pharmacy franchise business meeting",
+    image: "/Homepage/vypaar.jpeg"
+  },
+  {
+    id: 2,
+    category: "Business Meet with Kewal Ji",
+    description: "Discussion with Kewal Kishan on automation solutions for Atharv Healthcare",
+    image: "/Homepage/Kewal.jpeg"
+  },
+  {
+    id: 3,
+    category: "Atharv Pharmacy Launch",
+    description: "Inauguration of Atharv Pharmacy in Kolkata",
+    image: "/Homepage/atharvPhramacy.png"
+  },
+  {
+    id: 4,
+    category: "OHC Expansion",
+    description: "Launch of new Occupational Health Centers across India",
+    image: "/Homepage/ohc.png"
+  }
+];
+
 
     return (
         <div className="w-full bg-white py-12 px-4 md:py-16 xl:py-16">
