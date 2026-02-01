@@ -8,6 +8,7 @@ const CTASection = () => {
             buttonText="REQUEST HOME HEALTHCARE SUPPORT"
             imagePosition="bottom"
             useResponsiveBottom={true}
+            linkTo="/contact"
         />
     );
 };

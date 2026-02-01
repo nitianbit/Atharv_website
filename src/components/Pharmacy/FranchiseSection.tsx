@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import styles from '../OccupationalHealthCentres/ohc.module.css';
 
 const FranchiseSection = () => {
+    const navigate = useNavigate();
     return (
         <div className="w-full bg-white py-12 md:py-16 px-4">
             <div className="max-w-7xl mx-auto">
@@ -25,7 +27,9 @@ const FranchiseSection = () => {
                             </p>
                         </div>
 
-                        <button className="bg-transparent border-2 border-[#1566B7] text-[#1566B7] rounded-2xl h-[50px] px-8 font-semibold text-base uppercase hover:bg-[#1566B7] hover:text-white transition-all duration-300">
+                        <button
+                            onClick={() => navigate('/contact')}
+                            className="bg-transparent border-2 border-[#1566B7] text-[#1566B7] rounded-2xl h-[50px] px-8 font-semibold text-base uppercase hover:bg-[#1566B7] hover:text-white transition-all duration-300">
                             CONTACT US
                         </button>
                     </div>

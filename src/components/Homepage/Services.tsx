@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
     const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+    const navigate = useNavigate();
 
     const services = [
         {
@@ -151,6 +153,7 @@ const Services = () => {
 
                                     {/* Button */}
                                     <button
+                                        onClick={() => navigate('/contact')}
                                         className="hover:opacity-90 transition-opacity rounded-[192px] bg-[#1566B7] border-none cursor-pointer flex items-center justify-center mt-auto
                                         w-[200px] h-[36px]
                                         md:w-[220px]

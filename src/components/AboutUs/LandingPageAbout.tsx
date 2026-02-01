@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 const LandingPageAbout = () => {
+    const navigate = useNavigate();
     return (
         <div
             className="relative w-full flex items-center justify-center h-[431px] md:h-[431px] lg:h-[431px]"
@@ -37,6 +40,7 @@ const LandingPageAbout = () => {
 
                 {/* Book Now Button */}
                 <button
+                    onClick={() => navigate('/contact')}
                     className="hover:bg-[#1566B7] hover:text-white transition-all duration-300
                                bg-white text-black font-semibold rounded-[192px] border border-[#1566B7] shadow-[1px_6px_7.7px_0px_#3177E13D]
                                px-8 py-3.5 text-sm sm:text-base md:px-9 md:py-4 mt-2 md:mt-4

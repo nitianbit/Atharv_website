@@ -17,7 +17,7 @@ import WhyAtharv from "./WhyAtharv"
 
 const Homepage = () => {
     return (
-        <div className="w-full overflow-x-hidden">
+        <div className="w-full overflow-x-hidden outline-none">
             <Navbar />
             <LandingPage />
             <Companies />

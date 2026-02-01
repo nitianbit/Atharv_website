@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CSRCommunity = () => {
+    const navigate = useNavigate();
     return (
         <div className="w-full bg-white py-8 lg:py-12 xl:py-16 px-4">
             <div className="mx-auto max-w-[1512px]">
@@ -97,17 +99,17 @@ const CSRCommunity = () => {
                         </div>
 
                         {/* CTA */}
-                        <a
-                            href="#csr-initiatives"
+                        <button
+                            onClick={() => navigate('/contact')}
                             className="inline-flex items-center gap-2 group hover:opacity-80 transition-opacity
                             font-['Plus_Jakarta_Sans'] font-semibold uppercase text-[#1566B7] no-underline
                             text-sm tracking-[0.15em] leading-[100%]
                             lg:text-[14px]
-                            xl:text-[15px]"
+                            xl:text-[15px] bg-transparent border-none cursor-pointer"
                         >
                             EXPLORE CSR INITIATIVES
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

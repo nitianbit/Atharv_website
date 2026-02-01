@@ -23,15 +23,15 @@ const MobileMedicalUnit = () => {
             <StatsSection />
             <FullWidthImageSection />
             <WhatIsOHCSection />
-            <MMUServicesSection/>
+            <MMUServicesSection />
             <StaffingSection />
-            <MMUUseCases/>
+            <MMUUseCases />
             <BenefitsSection />
             <HowItWorksSection />
-            <SecondStatsSection/>
-            <ExperienceSection/>
-            <Companies/>
-            <FAQ/>
+            <SecondStatsSection />
+            <ExperienceSection />
+            <Companies />
+            <FAQ />
             <CTACallback
                 title="Partner With Atharv Healthcare for Mobile Medical Unit Programs "
                 description="Structured deployment. Operational discipline. Pan-India capability. "
@@ -39,6 +39,7 @@ const MobileMedicalUnit = () => {
                 imagePosition="bottom"
                 buttonWidth="361px"
                 useResponsiveBottom={true}
+                linkTo="/contact"
             />
             <Footer />
         </div>

@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './ohc.module.css';
 
 const ComplianceSection = () => {
+    const navigate = useNavigate();
     const complianceAreas = [
         'Factories Act & relevant State Rules',
         'Occupational Safety, Health & Working Conditions (OSHWC) Code',
@@ -61,10 +63,10 @@ const ComplianceSection = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                                <button className={`${styles.buttonPrimary} flex-1 min-h-[50px] h-[50px] px-6 flex-shrink-0`}>
+                                <button onClick={() => navigate('/contact')} className={`${styles.buttonPrimary} flex-1 min-h-[50px] h-[50px] px-6 flex-shrink-0`}>
                                     GET AN OHC ASSESSMENT
                                 </button>
-                                <button className="bg-transparent border-2 border-[#1566B7] text-black rounded-[192px] min-h-[50px] h-[50px] px-6 font-semibold uppercase hover:text-[#1566B7] transition-all duration-300 flex-1 flex-shrink-0 text-sm flex items-center justify-center">
+                                <button onClick={() => navigate('/contact')} className="bg-transparent border-2 border-[#1566B7] text-black rounded-[192px] min-h-[50px] h-[50px] px-6 font-semibold uppercase hover:text-[#1566B7] transition-all duration-300 flex-1 flex-shrink-0 text-sm flex items-center justify-center">
                                     CHECK COMPLIANCE READINESS
                                 </button>
                             </div>

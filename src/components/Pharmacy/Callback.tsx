@@ -8,6 +8,7 @@ const Callback = () => {
             imagePosition="bottom"
             buttonWidth="267px"
             useResponsiveBottom={true}
+            linkTo="/contact"
         />
     );
 };
