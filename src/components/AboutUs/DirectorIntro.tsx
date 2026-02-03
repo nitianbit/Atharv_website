@@ -27,7 +27,7 @@ const DirectorIntro = () => {
                         (Director)
                     </p>
                     <p className="font-['DM_Sans'] font-light text-base sm:text-lg text-[#142349] leading-relaxed">
-                        Leads strategic direction, service expansion and quality assurance. Focuses on building reliable healthcare systems and strengthening partnerships. Leads strategic direction, service expansion and quality assurance.
+                        “Our organisation is built on a foundation of “patient-first” philosophy. We are not only providing primary health care services but also helping our patients in their wellness journey. Our team focus is on providing proactive, preventive care that keeps you healthy and thriving. Primary Care is about more than just treating symptoms – its about understanding the person behind the patient.” 
                     </p>
                 </div>
             </div>
@@ -67,7 +67,7 @@ const DirectorIntro = () => {
                                 (Director)
                             </p>
                             <p className="font-['DM_Sans'] font-light text-[#142349] text-[18px] leading-[30px] w-[542px] h-[150px]">
-                                Leads strategic direction, service expansion and quality assurance. Focuses on building reliable healthcare systems and strengthening partnerships. Leads strategic direction, service expansion and quality assurance. Focuses on building reliable healthcare systems and strengthening partnerships.
+                                “Our organisation is built on a foundation of “patient-first” philosophy. We are not only providing primary health care services but also helping our patients in their wellness journey. Our team focus is on providing proactive, preventive care that keeps you healthy and thriving. Primary Care is about more than just treating symptoms – its about understanding the person behind the patient.” 
                             </p>
                         </div>
                     </div>
