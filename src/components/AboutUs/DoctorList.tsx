@@ -26,7 +26,7 @@ const doctors: Doctor[] = [
         image: '/Aboutus/Mayur.png',
     },
     {
-        name: 'Rajdeep',
+        name: 'Rajdeep Basak',
         role: '(Compliance Head)',
         description: 'He handles regulatory and statutory compliance across all healthcare services, ensuring operations follow legal and ethical guidelines. His role helps maintain safe, compliant and well-governed healthcare delivery.',
         image: '/Aboutus/Rajdeep.png',
@@ -41,22 +41,22 @@ const teamMembers: TeamMember[] = [
         image: '/Aboutus/11.png'
     },
     {
-        name: 'Deboshmita',
+        name: 'Debosmita Pramanik',
         role: '(Human Resources)',
         description: 'She manages recruitment, HR operations and people practices, supporting a positive and well-organised work environment.',
         image: '/Aboutus/12.png'
     },
     {
-        name: 'Vijay',
+        name: 'Vijay Kumar Mandal',
         role: '(Sales & Marketing)',
         description: "He manages sales and marketing activities to drive growth and visibility. His role focuses on outreach, partnerships and promoting Atharv Healthcare's services.",
         image: '/Aboutus/13.png'
     },
     {
-        name: 'Riya',
+        name: 'SK Abdul Azim',
         role: '(Accounts)',
-        description: 'She handles accounting processes, billing and financial documentation to ensure accuracy and operational continuity.',
-        image: '/Aboutus/14.png'
+        description: 'He handles accounting processes, billing and financial documentation to ensure accuracy and operational continuity.',
+        image: '/Aboutus/SK_ABDUL_AZIM.png'
     },
     {
         name: 'Rabi Patwa',
