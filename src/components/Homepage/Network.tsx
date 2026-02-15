@@ -46,14 +46,14 @@ const Network = () => {
 
                 {/* Left Text Container */}
                 <div
-                    className="flex flex-col items-start gap-4 z-20 w-full max-w-[400px]
+                    className="flex flex-col items-center lg:items-start gap-4 z-20 w-full max-w-[400px]
                     lg:absolute lg:w-[280px] lg:h-[130px] lg:top-[225px] lg:left-[60px] lg:gap-0
                     xl:absolute xl:w-[362px] xl:h-[153px] xl:top-[270px] xl:left-[100px] xl:gap-0"
                 >
                     {/* Left Heading */}
                     <h3
-                        className="font-['DM_Sans'] font-bold capitalize text-[#142349]
-                        text-xl leading-none mb-2
+                        className="relative font-['DM_Sans'] font-bold capitalize text-[#142349]
+                        text-xl leading-none mb-2 text-center right-16 md:right-0 lg:right-0 xl:right-0 lg:text-left
                         lg:w-[180px] lg:h-[24px] lg:text-[18px] lg:mb-[6px]
                         xl:w-[216px] xl:h-[26px] xl:text-[20px] xl:mb-[7px]"
                     >
@@ -61,8 +61,8 @@ const Network = () => {
                     </h3>
 
                     {/* Left List Items */}
-                    <div className="flex flex-col gap-2 
-                        lg:gap-0 lg:block lg:w-[260px] lg:h-[100px] lg:pl-[22px]
+                    <div className="flex flex-col gap-2 items-start w-[270px] lg:items-start lg:w-[260px]
+                        lg:gap-0 lg:block lg:h-[100px] lg:pl-[22px]
                         xl:gap-0 xl:block xl:w-[336px] xl:h-[120px] xl:pl-[26px] 
                         relative">
                         {[
@@ -73,13 +73,13 @@ const Network = () => {
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center relative text-black
+                                className="flex items-start relative text-black
                                 font-['DM_Sans'] font-light text-base leading-snug
-                                lg:text-[15px] lg:leading-[25px] lg:mb-0
+                                lg:items-center lg:text-[15px] lg:leading-[25px] lg:mb-0
                                 xl:text-[18px] xl:leading-[30px] xl:mb-0"
                             >
-                                <div className="w-[17px] h-[17px] mr-3 
-                                    lg:w-[14px] lg:h-[14px] lg:absolute lg:left-[-22px] lg:top-[6px] lg:mr-0
+                                <div className="w-[17px] h-[17px] mr-3 mt-1
+                                    lg:w-[14px] lg:h-[14px] lg:absolute lg:left-[-22px] lg:top-[6px] lg:mr-0 lg:mt-0
                                     xl:w-[17px] xl:h-[17px] xl:absolute xl:left-[-26px] xl:top-[7px] xl:mr-0 
                                     flex-shrink-0">
                                     <img
@@ -96,14 +96,14 @@ const Network = () => {
 
                 {/* Right Text Container */}
                 <div
-                    className="flex flex-col items-start gap-4 z-20 w-full max-w-[400px]
+                    className="flex flex-col items-center lg:items-start gap-4 z-20 w-full max-w-[400px]
                     lg:absolute lg:w-[260px] lg:h-[105px] lg:top-[240px] lg:left-[760px] lg:gap-0
                     xl:absolute xl:w-[325px] xl:h-[122px] xl:top-[289px] xl:left-[1105px] xl:gap-0"
                 >
                     {/* Right Heading */}
                     <h3
-                        className="font-['DM_Sans'] font-bold capitalize text-[#142349]
-                        text-xl leading-none mb-2
+                        className="relative font-['DM_Sans'] font-bold capitalize text-[#142349]
+                        text-xl leading-none mb-2 text-center right-8 md:right-0 lg:right-0 xl:right-0 lg:text-left
                         lg:w-[190px] lg:h-[24px] lg:text-[18px] lg:mb-[5px]
                         xl:w-[234px] xl:h-[26px] xl:text-[20px] xl:mb-[6px]"
                     >
@@ -111,8 +111,8 @@ const Network = () => {
                     </h3>
 
                     {/* Right List Items */}
-                    <div className="flex flex-col gap-2 
-                        lg:gap-0 lg:block lg:w-[245px] lg:h-[75px] lg:pl-[22px]
+                    <div className="flex flex-col gap-2 items-start w-[270px] lg:items-start lg:w-[245px]
+                        lg:gap-0 lg:block lg:h-[75px] lg:pl-[22px]
                         xl:gap-0 xl:block xl:w-[299px] xl:h-[90px] xl:pl-[26px] 
                         relative">
                         {[
@@ -122,13 +122,13 @@ const Network = () => {
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center relative text-black
+                                className="flex items-start relative text-black
                                 font-['DM_Sans'] font-light text-base leading-snug
-                                lg:text-[15px] lg:leading-[25px] lg:mb-0
+                                lg:items-center lg:text-[15px] lg:leading-[25px] lg:mb-0
                                 xl:text-[18px] xl:leading-[30px] xl:mb-0"
                             >
-                                <div className="w-[17px] h-[17px] mr-3 
-                                    lg:w-[14px] lg:h-[14px] lg:absolute lg:left-[-22px] lg:top-[6px] lg:mr-0
+                                <div className="w-[17px] h-[17px] mr-3 mt-1
+                                    lg:w-[14px] lg:h-[14px] lg:absolute lg:left-[-22px] lg:top-[6px] lg:mr-0 lg:mt-0
                                     xl:w-[17px] xl:h-[17px] xl:absolute xl:left-[-26px] xl:top-[7px] xl:mr-0 
                                     flex-shrink-0">
                                     <img
