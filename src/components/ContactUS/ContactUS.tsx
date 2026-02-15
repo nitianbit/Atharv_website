@@ -114,12 +114,20 @@ const ContactUs = () => {
                             className="bg-white rounded-[20px] overflow-hidden relative"
                         >
                             <div className="w-full h-[240px] relative">
-                                <img
-                                    src="/Contact/Map.png"
-                                    alt="Office Location Map"
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                            </div>
+  <a
+    href="https://maps.app.goo.gl/xdeXBdBGrcCXGkFS7"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute inset-0"
+  >
+    <img
+      src="/Contact/Map.png"
+      alt="Office Location Map"
+      className="w-full h-full object-cover"
+    />
+  </a>
+</div>
+
                             <div className="absolute inset-0 border-2 border-[#4FC5E0] rounded-[20px] pointer-events-none z-10"></div>
 
                             {/* Office Address with Icon - Inside Map Card */}
