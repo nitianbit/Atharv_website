@@ -50,7 +50,7 @@ const teamMembers: TeamMember[] = [
         name: 'Vijay Kumar Mandal',
         role: '(Sales & Marketing)',
         description: "He manages sales and marketing activities to drive growth and visibility. His role focuses on outreach, partnerships and promoting Atharv Healthcare's services.",
-        image: '/Aboutus/13.png'
+        image: '/Aboutus/vijay.png'
     },
     {
         name: 'SK Abdul Azim',
