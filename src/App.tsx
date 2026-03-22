@@ -12,6 +12,7 @@ import Blogs from './components/Blogs/Blogs'
 import BlogDetails from './components/BlogDetail.tsx/BlogDetails'
 import CSR from './components/CSR/CSR'
 import Contact from './components/ContactUS/Contact'
+import NewBlogForm from './components/NewBlogs'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/blog-detail/:id" element={<BlogDetails />} />
         <Route path="/csr" element={<CSR />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/new-blog" element={<NewBlogForm />} />
 
       </Routes>
     </>
