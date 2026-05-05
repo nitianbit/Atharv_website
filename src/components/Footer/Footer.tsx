@@ -81,7 +81,7 @@ const Footer = () => {
                             lg:max-w-[280px] lg:text-left
                             xl:max-w-[300px]"
                         >
-                            © 2025 Atharv Healthcare. All Rights Reserved. |{' '}
+                            © 2025 Atharv Eye Hospital Pvt Ltd. All Rights Reserved. |{' '}
                             <Link to="/privacy-policy" className="underline-offset-4 hover:underline">
                                 Privacy Policy
                             </Link>{' '}
