@@ -81,7 +81,11 @@ const Footer = () => {
                             lg:max-w-[280px] lg:text-left
                             xl:max-w-[300px]"
                         >
-                            © 2025 Atharv Healthcare. All Rights Reserved. | Privacy Policy | Terms & Conditions
+                            © 2025 Atharv Healthcare. All Rights Reserved. |{' '}
+                            <Link to="/privacy-policy" className="underline-offset-4 hover:underline">
+                                Privacy Policy
+                            </Link>{' '}
+                            | Terms & Conditions
                         </p>
 
                         {/* ISO Certification Badges */}
@@ -153,6 +157,12 @@ const Footer = () => {
                                 leading-[22px] md:leading-[22px] lg:leading-[26px] xl:leading-[28px]
                                 text-white hover:opacity-75 transition-opacity whitespace-nowrap">
                                 Contact Us
+                            </Link>
+                            <Link to="/privacy-policy" className="footer-link font-['DM_Sans'] 
+                                text-[13px] md:text-[14px] lg:text-[16px] xl:text-[17px] 
+                                leading-[22px] md:leading-[22px] lg:leading-[26px] xl:leading-[28px]
+                                text-white hover:opacity-75 transition-opacity whitespace-nowrap">
+                                Privacy Policy
                             </Link>
                         </div>
                     </div>

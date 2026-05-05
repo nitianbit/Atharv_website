@@ -13,6 +13,7 @@ import BlogDetails from './components/BlogDetail.tsx/BlogDetails'
 import CSR from './components/CSR/CSR'
 import Contact from './components/ContactUS/Contact'
 import NewBlogForm from './components/NewBlogs'
+import PrivacyPolicyPage from './components/PrivacyPolicy/PrivacyPolicyPage'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/csr" element={<CSR />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/new-blog" element={<NewBlogForm />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
       </Routes>
     </>
