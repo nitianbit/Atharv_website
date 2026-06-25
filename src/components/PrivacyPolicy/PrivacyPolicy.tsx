@@ -46,9 +46,25 @@ const paragraphs: string[] = [
     "does not control or endorse those sites and is not responsible for their " +
     "content, availability, or any temporary unavailability of the Platform " +
     "caused by technical issues beyond our control.",
-  "For any account deletion request, please contact us at " +
-    "it@ops-atharvhealthcare.com.",
 ];
+
+const policySections = [
+  {
+    title: "Data Retention",
+    content:
+      "We retain user data only for as long as a user's account remains active " +
+      "and only for the purpose of providing services to that user. We do not " +
+      "retain or use user data for organizational, marketing, or unrelated " +
+      "business purposes beyond serving the user through the Platform.",
+  },
+  {
+    title: "Data Deletion / Account Deletion",
+    content:
+      "Users may request deletion of their account and associated data by " +
+      "sending an email to it@ops-atharvheathcare.com from their registered " +
+      "email address. Once an account is deleted, we do not retain user data.",
+  },
+] as const;
 
 const highlightedParagraphs: string[] = [
   "To the maximum extent permitted by applicable law, we disclaim liability " +
@@ -91,6 +107,17 @@ const PrivacyPolicy = () => {
                 >
                   {paragraph}
                 </p>
+              ))}
+
+              {policySections.map((section) => (
+                <div key={section.title} className="rounded-2xl border border-[#D9E8F6] bg-white px-5 py-5">
+                  <h2 className="font-['Source_Serif_4'] text-2xl font-semibold text-[#142349]">
+                    {section.title}
+                  </h2>
+                  <p className="mt-3 font-['DM_Sans'] text-[15px] leading-8 text-[#28415F] sm:text-base">
+                    {section.content}
+                  </p>
+                </div>
               ))}
 
               {highlightedParagraphs.map((paragraph) => (
